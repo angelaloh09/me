@@ -127,7 +127,7 @@
 }
 
 .title {
-  color: var(--main-purple);
+  color: var(--main-orange);
   font-family: Righteous;
   font-size: 36px;
   font-weight: lighter;
@@ -149,4 +149,5 @@
   line-height: 1.6;
   color: var(--idea-grey);
   margin: 0;
+  font-style: italic;
 }
