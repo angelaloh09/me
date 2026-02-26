@@ -1,6 +1,35 @@
+.noeLampSection :global(.home__icon h1) {
+  color: var(--lamp-warm-brown);
+}
+
+.noeLampSection :global(.home__icon h1:hover) {
+  text-decoration-color: var(--lamp-body-color);
+}
+
+.noeLampSection :global(.list__items li a) {
+  color: var(--lamp-warm-brown);
+}
+
+.noeLampSection :global(.list__items li a:hover) {
+  color: var(--lamp-body-color);
+  text-decoration-color: var(--lamp-body-color);
+}
+
+.noeLampSection :global(.list__items) {
+  background: transparent;
+  backdrop-filter: none;
+}
+
 .noeLampSection {
   display: flex;
   flex-direction: column;
+  position: relative;
+  background: rgb(112, 110, 81);
+  background-image:
+    radial-gradient(ellipse 90% 70% at 20% 30%, rgba(220, 230, 210, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 80% 70%, rgba(235, 242, 220, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 55% at 50% 85%, rgba(225, 235, 215, 0.18) 0%, transparent 50%);
+  min-height: 100vh;
 }
 
 .contentWrapper {
@@ -127,7 +156,7 @@
 }
 
 .title {
-  color: var(--main-orange);
+  color: var(--lamp-nav-title);
   font-family: Righteous;
   font-size: 36px;
   font-weight: lighter;
@@ -147,7 +176,7 @@
   font-family: Poppins;
   font-size: 13px;
   line-height: 1.6;
-  color: var(--idea-grey);
+  color: var(--lamp-nav-title);
   margin: 0;
   font-style: italic;
 }

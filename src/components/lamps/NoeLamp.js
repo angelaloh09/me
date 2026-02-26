@@ -59,10 +59,7 @@ const NoeLamp = () => {
                         <div className={style.textColumn}>
                             <h1 className={style.title}>Noe Lamp</h1>
                             <p className={style.body}>
-                                Named after a cute street in San Francisco I used to live on. 
-                                <br></br>
-                                <br></br>
-                                I designed this lamp as a gift for my Noe Street roommates and to capture what it felt like to live on Noe Street.
+                                Designed for my roommates. Capturing what it felt like to live on the lovely Noe Street.
                             </p>
                         </div>
                     </div>

@@ -39,6 +39,9 @@
   --photo-caption-yellow: #FFF8E7;
   --warm-cobalt: #566DD0;
   --warm-cobalt-hover: #6B82E0;
+  --lamp-warm-brown: #5d3300;
+  --lamp-body-color: #825927;
+  --lamp-nav-title: #fbe1ab;
   }
   
   *::after,*::before {
