@@ -36,7 +36,7 @@ const AboutMe = () => {
 
     const hobbyProjects = [
         {
-            text: "3D Printed Lamp (i love aesthetic lamps with warm lighting)",
+            text: "3D Printed Lamps (i love aesthetic lamps with warm lighting)",
             subItems: [
                 { name: "Noe Lamp", to: "/lamps/noe-lamp" },
                 "Bino Lamp"

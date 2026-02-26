@@ -13,7 +13,7 @@ const NoeLamp = () => {
     const [selectedImage, setSelectedImage] = useState(0)
     const [hoveredImage, setHoveredImage] = useState(null)
 
-    const displayedImage = hoveredImage !== null ? hoveredImage : selectedImage
+    const displayedImage = selectedImage
 
     return (
         <section className={`ideas ${style.noeLampSection}`}>
@@ -27,12 +27,9 @@ const NoeLamp = () => {
                                 {images.map((img, idx) => (
                                     <div
                                         key={idx}
-                                        className={`${style.thumbnailWrapper} ${selectedImage === idx ? style.thumbnailActive : ''} ${displayedImage === idx ? style.thumbnailDisplayed : ''}`}
+                                        className={`${style.thumbnailWrapper} ${selectedImage === idx ? style.thumbnailActive : ''} ${(displayedImage === idx || hoveredImage === idx) ? style.thumbnailDisplayed : ''}`}
                                         onClick={() => setSelectedImage(idx)}
-                                        onMouseEnter={() => {
-                                            setHoveredImage(idx)
-                                            setSelectedImage(idx)
-                                        }}
+                                        onMouseEnter={() => setHoveredImage(idx)}
                                         onMouseLeave={() => setHoveredImage(null)}
                                     >
                                         <img
@@ -44,11 +41,18 @@ const NoeLamp = () => {
                                     </div>
                                 ))}
                             </div>
-                            <img
-                                src={images[displayedImage]}
-                                alt="Noe Lamp"
-                                className={style.mainImage}
-                            />
+                            <div className={style.mainImageWrapper}>
+                                {displayedImage !== null ? (
+                                    <img
+                                        key={displayedImage}
+                                        src={images[displayedImage]}
+                                        alt="Noe Lamp"
+                                        className={style.mainImage}
+                                    />
+                                ) : (
+                                    <div className={style.mainImagePlaceholder} />
+                                )}
+                            </div>
                         </div>
 
                         {/* Right column - text */}
