@@ -29,7 +29,10 @@ const NoeLamp = () => {
                                         key={idx}
                                         className={`${style.thumbnailWrapper} ${selectedImage === idx ? style.thumbnailActive : ''} ${displayedImage === idx ? style.thumbnailDisplayed : ''}`}
                                         onClick={() => setSelectedImage(idx)}
-                                        onMouseEnter={() => setHoveredImage(idx)}
+                                        onMouseEnter={() => {
+                                            setHoveredImage(idx)
+                                            setSelectedImage(idx)
+                                        }}
                                         onMouseLeave={() => setHoveredImage(null)}
                                     >
                                         <img
@@ -52,7 +55,8 @@ const NoeLamp = () => {
                         <div className={style.textColumn}>
                             <h1 className={style.title}>Noe Lamp</h1>
                             <p className={style.body}>
-                                The Noe Lamp is named after a cute street in San Francisco I used to live on. 
+                                Named after a cute street in San Francisco I used to live on. 
+                                <br></br>
                                 <br></br>
                                 I designed this lamp as a gift for my Noe Street roommates and to capture what it felt like to live on Noe Street.
                             </p>
