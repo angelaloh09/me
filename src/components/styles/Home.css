@@ -13,6 +13,7 @@
   html, body {
     background: #FFF8E7;
     min-height: 100%;
+    overflow-x: hidden;
   }
   
   body {
