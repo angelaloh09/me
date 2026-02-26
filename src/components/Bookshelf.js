@@ -16,6 +16,8 @@ const Bookshelf = () => {
                     <h2>2026</h2>
                 </div>
                 {[
+                    {title: "Poor Charlie's Almanack", author: "Charlie Munger"},
+                    {title: "Song of Achilles", author: "Madeline Miller"},
                     {title: "Circe", author: "Madeline Miller"},
                     {title: "Breakneck: China's Quest to Engineer the Future", author: "Dan Wang"},
                 ].map((book, idx) => (
