@@ -9,6 +9,7 @@ import Scratchpad from './components/Scratchpad';
 import Photography from './components/Photography';
 import HowToAvoidAClimateDisaster from './components/books/HowToAvoidAClimateDisaster'; /* Make this more scalable*/
 import CapacitiveTouch from './components/thoughts/capacitive-touch';
+import NoeLamp from './components/lamps/NoeLamp';
 
 
 ReactDOM.render(
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route path='/thoughts/capacitive-touch' element={<CapacitiveTouch/>}/>
       <Route path='/photography' element={<Photography/>}/>
       <Route path='/scratchpad' element={<Scratchpad/>}/>
+      <Route path='/lamps/noe-lamp' element={<NoeLamp/>}/>
     </Routes>
   </Router>,
 

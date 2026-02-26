@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/aboutme.module.css'
@@ -34,7 +35,13 @@ const AboutMe = () => {
     ];
 
     const hobbyProjects = [
-        "3D Printed Lamp (i love aesthetic lamps with warm lighting)",
+        {
+            text: "3D Printed Lamp (i love aesthetic lamps with warm lighting)",
+            subItems: [
+                { name: "Noe Lamp", to: "/lamps/noe-lamp" },
+                "Bino Lamp"
+            ]
+        },
         "Vimputer (a digital typewriter with vim interface and infinite battery life)"
     ];
 
@@ -94,7 +101,26 @@ const AboutMe = () => {
                     <p>More hobbyist projects:</p>
                     <ul>
                         {hobbyProjects.map((project, idx) => (
-                            <li key={idx}>{project}</li>
+                            typeof project === 'string' ? (
+                                <li key={idx}>{project}</li>
+                            ) : (
+                                <li key={idx}>
+                                    {project.text}
+                                    <ul className={style.subList}>
+                                        {project.subItems.map((item, i) => (
+                                            <li key={i}>
+                                                {typeof item === 'string' ? (
+                                                    item
+                                                ) : (
+                                                    <Link to={item.to} className={style.Link}>
+                                                        {item.name}
+                                                    </Link>
+                                                )}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </li>
+                            )
                         ))}
                     </ul>
                 </div>

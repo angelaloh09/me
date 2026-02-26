@@ -16,6 +16,13 @@
   padding-left: 5%;
 }
 
+.subList {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  padding-left: 1.25em;
+  list-style-type: disc;
+}
+
 .Writing p {
   /* padding-left: 1%; */
   margin-bottom: 20px; /* Add extra space below each paragraph */
