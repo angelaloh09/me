@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.a108666d.chunk.css",
-    "main.js": "/static/js/main.d8cc2bb7.chunk.js",
-    "main.js.map": "/static/js/main.d8cc2bb7.chunk.js.map",
+    "main.css": "/static/css/main.5325426c.chunk.css",
+    "main.js": "/static/js/main.d6f4195f.chunk.js",
+    "main.js.map": "/static/js/main.d6f4195f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7176250e.js",
     "runtime-main.js.map": "/static/js/runtime-main.7176250e.js.map",
-    "static/js/2.7f42cf27.chunk.js": "/static/js/2.7f42cf27.chunk.js",
-    "static/js/2.7f42cf27.chunk.js.map": "/static/js/2.7f42cf27.chunk.js.map",
+    "static/js/2.49b0735c.chunk.js": "/static/js/2.49b0735c.chunk.js",
+    "static/js/2.49b0735c.chunk.js.map": "/static/js/2.49b0735c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6b588936f2b6f9b825d474a076bcc1b9.js": "/precache-manifest.6b588936f2b6f9b825d474a076bcc1b9.js",
+    "precache-manifest.e167d7d7603a47f5319c669c64d6147e.js": "/precache-manifest.e167d7d7603a47f5319c669c64d6147e.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.a108666d.chunk.css.map": "/static/css/main.a108666d.chunk.css.map",
-    "static/js/2.7f42cf27.chunk.js.LICENSE.txt": "/static/js/2.7f42cf27.chunk.js.LICENSE.txt",
+    "static/css/main.5325426c.chunk.css.map": "/static/css/main.5325426c.chunk.css.map",
+    "static/js/2.49b0735c.chunk.js.LICENSE.txt": "/static/js/2.49b0735c.chunk.js.LICENSE.txt",
     "static/media/4B4F2FE8-3EF9-40C3-B869-F89F1FB81DDA.jpg": "/static/media/4B4F2FE8-3EF9-40C3-B869-F89F1FB81DDA.0776d8e4.jpg",
     "static/media/DSCF2560.jpg": "/static/media/DSCF2560.eb7b59f0.jpg",
     "static/media/DSCF2843.jpg": "/static/media/DSCF2843.03b4a62e.jpg",
@@ -25,12 +25,15 @@
     "static/media/IMG_8183.jpg": "/static/media/IMG_8183.71e4c7da.jpg",
     "static/media/IMG_8878.jpg": "/static/media/IMG_8878.ba433d95.jpg",
     "static/media/IMG_mountain.JPG": "/static/media/IMG_mountain.ade1dd5b.JPG",
-    "static/media/bookshelf.png": "/static/media/bookshelf.d86f1113.png"
+    "static/media/bookshelf.png": "/static/media/bookshelf.d86f1113.png",
+    "static/media/noe-lamp-img1.jpg": "/static/media/noe-lamp-img1.e6d87426.jpg",
+    "static/media/noe-lamp-img2.jpg": "/static/media/noe-lamp-img2.ec67a30a.jpg",
+    "static/media/noe-lamp-img3.jpg": "/static/media/noe-lamp-img3.00797093.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7176250e.js",
-    "static/js/2.7f42cf27.chunk.js",
-    "static/css/main.a108666d.chunk.css",
-    "static/js/main.d8cc2bb7.chunk.js"
+    "static/js/2.49b0735c.chunk.js",
+    "static/css/main.5325426c.chunk.css",
+    "static/js/main.d6f4195f.chunk.js"
   ]
 }

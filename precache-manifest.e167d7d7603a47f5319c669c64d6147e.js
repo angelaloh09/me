@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "90f1314fda6b55655b8e5254e2fe91ee",
+    "revision": "2716a1d0b50ff5382c88779d1151e317",
     "url": "/index.html"
   },
   {
-    "revision": "982172739e2ac25ca351",
-    "url": "/static/css/main.a108666d.chunk.css"
+    "revision": "7e40ab430258baf4b58e",
+    "url": "/static/css/main.5325426c.chunk.css"
   },
   {
-    "revision": "154640945b4782613ee9",
-    "url": "/static/js/2.7f42cf27.chunk.js"
+    "revision": "6a1b0985dbb53c0b0881",
+    "url": "/static/js/2.49b0735c.chunk.js"
   },
   {
     "revision": "22b6b7433aa4c411f8dae3fa4da162af",
-    "url": "/static/js/2.7f42cf27.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.49b0735c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "982172739e2ac25ca351",
-    "url": "/static/js/main.d8cc2bb7.chunk.js"
+    "revision": "7e40ab430258baf4b58e",
+    "url": "/static/js/main.d6f4195f.chunk.js"
   },
   {
     "revision": "113885a85f93ea0d218e",
@@ -78,5 +78,17 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d86f1113262fc4ed577afed140e5b73c",
     "url": "/static/media/bookshelf.d86f1113.png"
+  },
+  {
+    "revision": "e6d8742689ef3d663673985ab586eb24",
+    "url": "/static/media/noe-lamp-img1.e6d87426.jpg"
+  },
+  {
+    "revision": "ec67a30a3a8bc0c61d12c257aee01083",
+    "url": "/static/media/noe-lamp-img2.ec67a30a.jpg"
+  },
+  {
+    "revision": "007970930b178e4c4c7e048f990d04cd",
+    "url": "/static/media/noe-lamp-img3.00797093.jpg"
   }
 ]);
