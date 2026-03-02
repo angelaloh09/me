@@ -7,6 +7,7 @@ import Home from './components/Home';
 import AboutMe from './components/AboutMe';
 import Scratchpad from './components/Scratchpad';
 import Photography from './components/Photography';
+import Projects from './components/Projects';
 import HowToAvoidAClimateDisaster from './components/books/HowToAvoidAClimateDisaster'; /* Make this more scalable*/
 import CapacitiveTouch from './components/thoughts/capacitive-touch';
 import NoeLamp from './components/lamps/NoeLamp';
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path='/thoughts' element={<Thoughts/>}/>
         <Route path='/thoughts/capacitive-touch' element={<CapacitiveTouch/>}/>
       <Route path='/photography' element={<Photography/>}/>
+      <Route path='/projects' element={<Projects/>}/>
       <Route path='/scratchpad' element={<Scratchpad/>}/>
       <Route path='/lamps/noe-lamp' element={<NoeLamp/>}/>
     </Routes>
