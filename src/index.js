@@ -10,7 +10,7 @@ import Photography from './components/Photography';
 import Projects from './components/Projects';
 import HowToAvoidAClimateDisaster from './components/books/HowToAvoidAClimateDisaster'; /* Make this more scalable*/
 import CapacitiveTouch from './components/thoughts/capacitive-touch';
-import NoeLamp from './components/lamps/NoeLamp';
+import NoeLamp from './components/tinkio-projects/NoeLamp';
 
 
 ReactDOM.render(
@@ -25,7 +25,7 @@ ReactDOM.render(
       <Route path='/photography' element={<Photography/>}/>
       <Route path='/projects' element={<Projects/>}/>
       <Route path='/scratchpad' element={<Scratchpad/>}/>
-      <Route path='/lamps/noe-lamp' element={<NoeLamp/>}/>
+      <Route path='/tinkio-projects/noe-lamp' element={<NoeLamp/>}/>
     </Routes>
   </Router>,
 

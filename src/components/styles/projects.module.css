@@ -1,0 +1,59 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.card:hover .cardImage {
+  box-shadow: 0 8px 24px rgba(86, 67, 233, 0.15);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--img-back);
+  border: 1px solid rgba(94, 92, 118, 0.15);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: box-shadow 0.2s ease;
+}
+
+.cardTitle {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--idea-grey);
+  margin-top: 1rem;
+  padding: 0 0.25rem;
+}
+
+.card:hover .cardTitle {
+  color: var(--main-purple);
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

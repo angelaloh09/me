@@ -38,7 +38,7 @@ const AboutMe = () => {
         {
             text: "3D Printed Lamps (i love aesthetic lamps with warm lighting)",
             subItems: [
-                { name: "Noe Lamp", to: "/lamps/noe-lamp" },
+                { name: "Noe Lamp", to: "/tinkio-projects/noe-lamp" },
                 "Bino Lamp"
             ]
         },
