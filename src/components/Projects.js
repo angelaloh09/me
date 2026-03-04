@@ -22,7 +22,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section className='ideas'>
+        <section className={`ideas ${style.projectsPage}`}>
             <Navbar/>
             <div className="bookshelf"> 
                 <div className="cards title">

@@ -1,50 +1,86 @@
+.projectsPage :global(.cards h1) {
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: center;
 }
 
 .card {
   text-decoration: none;
   color: inherit;
   display: block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 320px;
+  opacity: 0;
+  animation: cardFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   cursor: pointer;
-}
-
-.card:hover .cardImage {
-  box-shadow: 0 8px 24px rgba(86, 67, 233, 0.15);
 }
 
 .cardImageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  border-radius: 8px;
   background: var(--img-back);
-  border: 1px solid rgba(94, 92, 118, 0.15);
+  border: 1px solid rgba(94, 92, 118, 0.08);
+  transition: border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .cardImageWrapper {
+  border-color: rgba(94, 92, 118, 0.12);
+  box-shadow: 0 12px 40px rgba(86, 67, 233, 0.08);
 }
 
 .cardImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: box-shadow 0.2s ease;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.03);
 }
 
 .cardTitle {
   font-family: Poppins;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   color: var(--idea-grey);
-  margin-top: 1rem;
+  margin-top: 1.25rem;
   padding: 0 0.25rem;
+  text-align: center;
+  transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card:hover .cardTitle {
@@ -53,7 +89,7 @@
 
 @media (max-width: 600px) {
   .gallery {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2.5rem;
+    margin-top: 2rem;
   }
 }

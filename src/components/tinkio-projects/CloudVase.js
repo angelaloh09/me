@@ -5,7 +5,7 @@ import style from '../styles/cloud-vase.module.css'
 
 import img1 from './cloud-vase/img1.jpg'
 import img2 from './cloud-vase/img2.jpg'
-import img3 from './cloud-vase/im3.jpg'
+import img3 from './cloud-vase/img3.jpg'
 
 const images = [img1, img2, img3]
 
