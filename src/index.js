@@ -11,6 +11,7 @@ import Projects from './components/Projects';
 import HowToAvoidAClimateDisaster from './components/books/HowToAvoidAClimateDisaster'; /* Make this more scalable*/
 import CapacitiveTouch from './components/thoughts/capacitive-touch';
 import NoeLamp from './components/tinkio-projects/NoeLamp';
+import CloudVase from './components/tinkio-projects/CloudVase';
 
 
 ReactDOM.render(
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route path='/projects' element={<Projects/>}/>
       <Route path='/scratchpad' element={<Scratchpad/>}/>
       <Route path='/tinkio-projects/noe-lamp' element={<NoeLamp/>}/>
+      <Route path='/tinkio-projects/cloud-vase' element={<CloudVase/>}/>
     </Routes>
   </Router>,
 
