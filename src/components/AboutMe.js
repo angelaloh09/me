@@ -34,16 +34,16 @@ const AboutMe = () => {
         }
     ];
 
-    const hobbyProjects = [
-        {
-            text: "3D Printed Lamps (i love aesthetic lamps with warm lighting)",
-            subItems: [
-                { name: "Noe Lamp", to: "/tinkio-projects/noe-lamp" },
-                "Bino Lamp"
-            ]
-        },
-        "Vimputer (a digital typewriter with vim interface and infinite battery life)"
-    ];
+    // const hobbyProjects = [
+    //     {
+    //         text: "3D Printed Lamps (i love aesthetic lamps with warm lighting)",
+    //         subItems: [
+    //             { name: "Noe Lamp", to: "/tinkio-projects/noe-lamp" },
+    //             "Bino Lamp"
+    //         ]
+    //     },
+    //     "Vimputer (a digital typewriter with vim interface and infinite battery life)"
+    // ];
 
     const renderProjectItem = (project, index) => {
         if (project.linkPosition === "start") {
@@ -98,8 +98,9 @@ const AboutMe = () => {
                         {professionalProjects.map(renderProjectItem)}
                     </ul>
                     <br></br>
-                    <p>More hobbyist projects:</p>
-                    <ul>
+                    <p>
+                        More hobbyist projects found <Link to="/projects" className={style.Link}>here!</Link></p>
+                    {/* <ul>
                         {hobbyProjects.map((project, idx) => (
                             typeof project === 'string' ? (
                                 <li key={idx}>{project}</li>
@@ -122,7 +123,7 @@ const AboutMe = () => {
                                 </li>
                             )
                         ))}
-                    </ul>
+                    </ul> */}
                 </div>
 
             </div>
