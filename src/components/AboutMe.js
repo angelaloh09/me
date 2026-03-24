@@ -99,7 +99,8 @@ const AboutMe = () => {
                     </ul>
                     <br></br>
                     <p>
-                        More hobbyist projects found <Link to="/projects" className={style.Link}>here!</Link></p>
+                        More personal projects found &nbsp; 
+                        <Link to="/projects" className={style.Link}>here!</Link></p> 
                     {/* <ul>
                         {hobbyProjects.map((project, idx) => (
                             typeof project === 'string' ? (
