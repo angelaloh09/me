@@ -16,6 +16,7 @@ const Bookshelf = () => {
                     <h2>2026</h2>
                 </div>
                 {[
+                    {title: "Death On The Nile", author: "Agatha Christie"},
                     {title: "Super Nintendo", author: "Keza MacDonald"},
                     {title: "Where the Crawdads Sing", author: "Delia Owens"},
                     {title: "Poor Charlie's Almanack", author: "Charlie Munger"},

@@ -17,12 +17,11 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
   background: var(--img-back);
 }
 
 .photoItem:hover {
-  transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -30,11 +29,12 @@
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  transition: opacity 0.35s ease;
+  opacity: 0.88;
 }
 
 .photoItem:hover img {
-  transform: scale(1.05);
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

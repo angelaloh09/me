@@ -25,6 +25,7 @@ ReactDOM.render(
         <Route path='/thoughts/capacitive-touch' element={<CapacitiveTouch/>}/>
       <Route path='/photography' element={<Photography/>}/>
       <Route path='/projects' element={<Projects/>}/>
+      {/* Scratchpad: not linked in nav; visit #/scratchpad or restore a nav <Link> */}
       <Route path='/scratchpad' element={<Scratchpad/>}/>
       <Route path='/tinkio-projects/noe-lamp' element={<NoeLamp/>}/>
       <Route path='/tinkio-projects/cloud-vase' element={<CloudVase/>}/>
