@@ -99,7 +99,7 @@ const AboutMe = () => {
                     </ul>
                     <br></br>
                     <p>
-                        More personal projects found &nbsp; 
+                        More personal projects found&nbsp; 
                         <Link to="/projects" className={style.Link}>here!</Link></p> 
                     {/* <ul>
                         {hobbyProjects.map((project, idx) => (
