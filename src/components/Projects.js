@@ -29,12 +29,14 @@ const Projects = () => {
     return (
         <section className={`ideas ${style.projectsPage}`}>
             <Navbar/>
-            <div className="bookshelf"> 
+            <div className="bookshelf">
                 <div className="cards title">
                     <h1>Projects</h1>
                     <br></br>
                 </div>
+            </div>
 
+            <div className={style.galleryContainer}>
                 <div className={style.gallery}>
                   {projects.map((project, idx) => (
                     <Link key={idx} to={project.path} className={style.card}>
