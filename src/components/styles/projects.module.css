@@ -4,11 +4,11 @@
 }
 
 .gallery {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
   gap: 3rem;
   margin-top: 3rem;
-  align-items: center;
+  justify-content: center;
 }
 
 .card {
@@ -17,6 +17,8 @@
   display: block;
   width: 100%;
   max-width: 320px;
+  min-width: 0;
+  justify-self: center;
   opacity: 0;
   animation: cardFadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -88,6 +90,7 @@
 
 @media (max-width: 600px) {
   .gallery {
+    grid-template-columns: minmax(0, 320px);
     gap: 2.5rem;
     margin-top: 2rem;
   }
