@@ -12,7 +12,7 @@ const Bookshelf = () => {
                     <h1>Bookshelf</h1>
                     <br></br>
                 </div>
-                <div className="cards title">
+                <div className={`cards title ${style.yearSection}`}>
                     <h2>2026</h2>
                 </div>
                 {[
@@ -29,7 +29,7 @@ const Bookshelf = () => {
                         <span>{book.author}</span>
                     </div>
                 ))}
-                <div className="cards title">
+                <div className={`cards title ${style.yearSection}`}>
                     <h2>2025</h2>
                 </div>
                 {[
@@ -48,7 +48,7 @@ const Bookshelf = () => {
                         <span>{book.author}</span>
                     </div>
                 ))}
-                <div className="cards title">
+                <div className={`cards title ${style.yearSection}`}>
                     <h2>2024</h2>
                 </div>
                 {[

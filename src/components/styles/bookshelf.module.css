@@ -1,3 +1,7 @@
+.yearSection {
+  margin-top: 1.5rem;
+}
+
 .GridContainer {
   display: grid;
   grid-template-columns: 80% 20%;
