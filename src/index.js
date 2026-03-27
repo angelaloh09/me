@@ -12,6 +12,7 @@ import HowToAvoidAClimateDisaster from './components/books/HowToAvoidAClimateDis
 import CapacitiveTouch from './components/thoughts/capacitive-touch';
 import NoeLamp from './components/tinkio-projects/NoeLamp';
 import CloudVase from './components/tinkio-projects/CloudVase';
+import Vimputer from './components/tinkio-projects/Vimputer';
 
 
 ReactDOM.render(
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Route path='/scratchpad' element={<Scratchpad/>}/>
       <Route path='/tinkio-projects/noe-lamp' element={<NoeLamp/>}/>
       <Route path='/tinkio-projects/cloud-vase' element={<CloudVase/>}/>
+      <Route path='/tinkio-projects/vimputer' element={<Vimputer/>}/>
     </Routes>
   </Router>,
 

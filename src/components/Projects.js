@@ -18,6 +18,11 @@ const projects = [
     path: '/tinkio-projects/cloud-vase',
     image: cloudVaseImg,
   },
+  {
+    title: 'Vimputer',
+    path: '/tinkio-projects/vimputer',
+    image: null,
+  },
 ]
 
 const Projects = () => {
@@ -34,11 +39,19 @@ const Projects = () => {
                   {projects.map((project, idx) => (
                     <Link key={idx} to={project.path} className={style.card}>
                       <div className={style.cardImageWrapper}>
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className={style.cardImage}
-                        />
+                        {project.image ? (
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className={style.cardImage}
+                          />
+                        ) : (
+                          <div
+                            className={style.cardImagePlaceholder}
+                            aria-label={`${project.title} (image coming soon)`}
+                            role="img"
+                          />
+                        )}
                       </div>
                       <h3 className={style.cardTitle}>{project.title}</h3>
                     </Link>
