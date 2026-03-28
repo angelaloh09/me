@@ -19,6 +19,7 @@
     grid-column: 1;
     grid-row: 1 / -1;
     align-self: start;
+    margin-top: 6rem;
   }
 
   .ideas > *:not(.navbar) {
@@ -35,6 +36,15 @@
     padding-inline: 3rem;
     box-sizing: border-box;
   }
+
+  .ideas > .navbar {
+    margin-top: 6rem;
+  }
+}
+
+/* About Me (section.home) — match nav offset with .ideas pages */
+.home > .navbar {
+  margin-top: 6rem;
 }
 
 .bookshelf {
@@ -85,7 +95,7 @@
   font-family: Righteous;
   font-size: 50px;
   font-weight:lighter;
-  margin-top: 0.75rem;
+  margin-top: 6rem;
 }
 
 .cards h2 {
