@@ -6,11 +6,72 @@
   position: relative;
 }
 
+/* Sidebar nav + main column: main content aligns with top of page, not below full nav height */
+@media (min-width: 50em) {
+  .ideas {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  .ideas > .navbar {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: start;
+  }
+
+  .ideas > *:not(.navbar) {
+    grid-column: 2;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-inline: 6rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .ideas {
+    padding-inline: 3rem;
+    box-sizing: border-box;
+  }
+}
+
 .bookshelf {
   margin-left: auto;
   margin-right: auto; 
   max-width: min(800px, 90%);
   margin-bottom: 50px;
+}
+
+/* Bookshelf + Thoughts: rows centered on full viewport (incl. nav) via breakout + flex.
+   Beats `.ideas > *:not(.navbar) { max-width: 100% }`. */
+@media (min-width: 50em) {
+  .ideas > .bookshelf.bookshelf--narrow {
+    width: 100vw;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-7.5rem);
+  }
+
+  .ideas > .bookshelf.bookshelf--narrow > * {
+    max-width: min(800px, 90%);
+    width: 100%;
+  }
+}
+
+@media (max-width: 50em) {
+  .ideas > .bookshelf.bookshelf--narrow {
+    max-width: min(800px, 90%) !important;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-1.5rem);
+  }
 }
 
 
@@ -24,7 +85,7 @@
   font-family: Righteous;
   font-size: 50px;
   font-weight:lighter;
-  margin-top:3rem;
+  margin-top: 0.75rem;
 }
 
 .cards h2 {

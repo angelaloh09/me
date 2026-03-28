@@ -63,6 +63,8 @@
   align-items: center;
   z-index: 1000;
   cursor: pointer;
+  /* Span full .ideas grid so fixed overlay doesn’t sit only in column 2 */
+  grid-column: 1 / -1;
 }
 
 .lightboxContent {

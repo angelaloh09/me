@@ -6,14 +6,21 @@
 
 .GridContainer {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.75rem;
   color: var(--idea-grey);
   border-bottom: 0.5px dotted var(--idea-grey-underline);
   align-items: end;
   width: 100%;
-  justify-items: left;
-  margin-bottom: 2%;
+  justify-items: start;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.2rem;
   text-decoration: none;
+}
+
+.GridContainer span:nth-child(2) {
+  justify-self: stretch;
+  text-align: left;
 }
 
 .GridContainer:hover{

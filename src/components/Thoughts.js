@@ -9,7 +9,7 @@ const Thoughts = () => {
     return (
         <section className='ideas'>
             <Navbar/>
-            <div className="bookshelf"> 
+            <div className="bookshelf bookshelf--narrow">
                 <div className="cards title">
                     <h1>Thoughts</h1>
                     <br></br>

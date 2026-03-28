@@ -5,7 +5,8 @@
   align-items: end;
   width: 100%;
   justify-items: left;
-  margin-bottom: 2%;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0.2rem;
   color: var(--idea-grey);
 }
 
