@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
-import './styles/Styles.css'
+import bookshelf_img from './assets/bookshelf.png'
+import './styles/Home.css'
 import style from './styles/aboutme.module.css'
 
 const AboutMe = () => {
@@ -79,56 +80,35 @@ const AboutMe = () => {
     };
 
     return (
-        <section className='ideas'>
+        <section className="home">
             <Navbar/>
-            <div className={style.PagePadding}>
-                <div className="cards title">
-                    <h1>About Me</h1>
-                    <br></br>
+            <div className={`home__box ${style.aboutHomeBox}`}>
+                <div className={`home__content ${style.aboutColumn}`}>
+                    <div className="cards title">
+                        <h1>About Me</h1>
+                        <br />
+                    </div>
+                    <div className={style.Writing}>
+                        <p>Hi there!</p>
+                        <p>
+                            I'm a hardware engineer who wants to make tinkering on fun projects accessible to all!
+                            I have a curiosity for making the world a better place, and I'm always looking for new ways to do so.
+                            I love learning about how things work. Here are some of the things I've worked on:
+                        </p>
+                        <ul>
+                            {professionalProjects.map(renderProjectItem)}
+                        </ul>
+                        <br />
+                        <p>
+                            More personal projects found{' '}
+                            <Link to="/projects" className={style.Link}>here!</Link>
+                        </p>
+                    </div>
                 </div>
-                
-                <div className={style.Writing}>
-                    <p>Hi there!</p>
-                    <p>
-                        I'm a hardware engineer who wants to make tinkering on fun projects accessible to all! 
-                        I have a curiosity for making the world a better place, and I'm always looking for new ways to do so. 
-                        I love learning about how things work. Here are some of the things I've worked on:
-                    </p>
-                    <ul>
-                        {professionalProjects.map(renderProjectItem)}
-                    </ul>
-                    <br></br>
-                    <p>
-                        More personal projects found&nbsp; 
-                        <Link to="/projects" className={style.Link}>here!</Link></p> 
-                    {/* <ul>
-                        {hobbyProjects.map((project, idx) => (
-                            typeof project === 'string' ? (
-                                <li key={idx}>{project}</li>
-                            ) : (
-                                <li key={idx}>
-                                    {project.text}
-                                    <ul className={style.subList}>
-                                        {project.subItems.map((item, i) => (
-                                            <li key={i}>
-                                                {typeof item === 'string' ? (
-                                                    item
-                                                ) : (
-                                                    <Link to={item.to} className={style.Link}>
-                                                        {item.name}
-                                                    </Link>
-                                                )}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </li>
-                            )
-                        ))}
-                    </ul> */}
+                <div className="home__img">
+                    <img src={bookshelf_img} alt="Bookshelf illustration" />
                 </div>
-
             </div>
-
         </section>
     )
 }
