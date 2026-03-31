@@ -98,14 +98,11 @@ const Photography = () => {
     return (
         <section className='ideas'>
             <Navbar/>
-            <div className="bookshelf"> 
-                <div className="cards title">
+            <div className={style.photoPage}>
+                <div className={`cards title ${style.photoHeading}`}>
                     <h1>Photography</h1>
                     <br></br>
                 </div>
-            </div>
-            
-            <div className={style.photoGalleryContainer}>
                 <div className={style.photoGallery}>
                     {photos.map((photo, index) => (
                         <div key={index} className={style.photoItem} onClick={() => openLightbox(photo)}>
