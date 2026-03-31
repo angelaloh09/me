@@ -15,9 +15,12 @@ import photo8 from './photos/4B4F2FE8-3EF9-40C3-B869-F89F1FB81DDA.jpg'
 import photo9 from './photos/E43CBFC1-692C-430E-897D-A92BC655F5B7.JPG'
 import photo10 from './photos/EE4E56DC-D417-4D16-8E7B-F598FC816308.jpg'
 import photo11 from './photos/DSCF3761.jpg'
-import photo12 from './photos/IMG_1562 2.jpg'
-import photo13 from './photos/IMG_8183.jpg'
-
+import photo12 from './photos/IMG_8183.jpg'
+import photo13 from './photos/bridge.jpeg'
+import photo14 from './photos/field.jpeg'
+import photo15 from './photos/house.jpeg'
+import photo16 from './photos/night.jpeg'
+import photo17 from './photos/xi-hu-lake.jpeg'
 
 const Photography = () => {
     const [selectedPhoto, setSelectedPhoto] = useState(null)
@@ -30,11 +33,16 @@ const Photography = () => {
         { src: photo7, alt: 'Photo 7', location: 'Grindelwald, Switzerland' },
         { src: photo6, alt: 'Photo 6', location: 'The Getty, Los Angeles' },
         { src: photo4, alt: 'Photo 4', location: 'Point Arena, California' },
-        { src: photo13, alt: 'Photo 13', location: 'Sea Ranch, California' },
+        { src: photo12, alt: 'Photo 13', location: 'Sea Ranch, California' },
         { src: photo9, alt: 'Photo 9', location: 'Grindelwald, Switzerland' },
         { src: photo10, alt: 'Photo 10', location: 'Vitra Design Museum - Weil am Rhein, Germany' },
-        { src: photo12, alt: 'Photo 12', location: 'Summer Solstice - Stonehenge, England' },
-        { src: photo11, alt: 'Photo 11', location: 'Chapultepec, Mexico City' },
+        // { src: photo11, alt: 'Photo 11', location: 'Chapultepec, Mexico City' },
+        { src: photo1, alt: 'Photo 1', location: 'Grindelwald, Switzerland' },
+        { src: photo13, alt: 'Bridge', location: 'Hangzhou, China'},
+        { src: photo14, alt: 'Field', location: 'Hongcun, China'},
+        { src: photo15, alt: 'House', location: 'Hangzhou, China'},
+        { src: photo16, alt: 'Night', location: 'Hangzhou, China'},
+        { src: photo17, alt: 'West Lake', location: 'Hangzhou, China' },
     ]
 
     const openLightbox = (photo) => {
