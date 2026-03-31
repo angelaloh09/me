@@ -1,39 +1,8 @@
-.aboutHomeBox {
-  min-height: calc(100svh - 5rem);
-}
-
-@media (max-width: 1000px) {
-  .aboutHomeBox {
-    min-height: auto;
-  }
-}
-
-.aboutColumn {
-  text-align: left;
-}
-
-@media (min-width: 1000px) {
-  .aboutColumn {
-    align-items: flex-start;
-    justify-content: flex-start;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-@media (max-width: 1000px) {
-  .aboutColumn {
-    text-align: left !important;
-    align-items: flex-start !important;
-  }
-}
-
-.aboutColumn :global(.cards.title) {
-  width: 100%;
-}
-
-.aboutColumn .Writing {
-  width: 100%;
+.PagePadding{
+  margin-left: auto;
+  margin-right: auto; 
+  max-width: min(800px, 90%);
+  margin-bottom: 50px;
 }
 
 .Writing{
