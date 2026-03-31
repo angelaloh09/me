@@ -1,16 +1,16 @@
 .photoGalleryContainer {
-  max-width: min(800px, 90%);
+  max-width: min(1100px, 94%);
   margin: 0 auto;
   margin-bottom: 50px;
   width: 100%;
 }
 
+/* Masonry-style columns — mixed landscape/portrait pack tightly without cropping */
 .photoGallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+  column-count: 3;
+  column-gap: 36px;
+  column-fill: balance;
   width: 100%;
-  align-items: center;
 }
 
 .photoItem {
@@ -19,6 +19,9 @@
   cursor: pointer;
   transition: box-shadow 0.3s ease;
   background: var(--img-back);
+  break-inside: avoid;
+  margin-bottom: 36px;
+  display: block;
 }
 
 .photoItem:hover {
@@ -37,17 +40,25 @@
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .photoGallery {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
+    column-count: 2;
+    column-gap: 28px;
+  }
+
+  .photoItem {
+    margin-bottom: 28px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .photoGallery {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  .photoItem {
+    margin-bottom: 28px;
   }
 }
 
@@ -77,7 +88,7 @@
 
 .lightboxContent img {
   max-width: 100%;
-  max-height: 90vh;
+  max-height: min(82svh, calc(100svh - 6rem));
   object-fit: contain;
   cursor: default;
 }
