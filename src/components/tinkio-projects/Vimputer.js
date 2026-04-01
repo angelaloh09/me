@@ -13,7 +13,6 @@ const Vimputer = () => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [hoveredImage, setHoveredImage] = useState(null)
   const [shouldAnimateImage, setShouldAnimateImage] = useState(false)
-  const displayedImage = selectedImage
 
   return (
     <section className={`ideas ${style.vimputerSection}`}>
@@ -26,7 +25,7 @@ const Vimputer = () => {
                 {images.map((img, idx) => (
                   <div
                     key={idx}
-                    className={`${style.thumbnailWrapper} ${selectedImage === idx ? style.thumbnailActive : ''} ${(displayedImage === idx || hoveredImage === idx) ? style.thumbnailDisplayed : ''}`}
+                    className={`${style.thumbnailWrapper} ${selectedImage === idx ? style.thumbnailActive : ''} ${(selectedImage === idx || hoveredImage === idx) ? style.thumbnailDisplayed : ''}`}
                     onClick={() => {
                       if (idx !== selectedImage) {
                         setShouldAnimateImage(true)
@@ -46,10 +45,10 @@ const Vimputer = () => {
                 ))}
               </div>
               <div className={style.mainImageWrapper}>
-                {displayedImage !== null ? (
+                {selectedImage !== null ? (
                   <img
-                    key={displayedImage}
-                    src={images[displayedImage]}
+                    key={selectedImage}
+                    src={images[selectedImage]}
                     alt="Vimputer"
                     className={`${style.mainImage} ${shouldAnimateImage ? style.mainImageAnimated : ''}`}
                   />

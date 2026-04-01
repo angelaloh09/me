@@ -35,7 +35,7 @@ const Projects = () => {
           <br />
         </div>
         <div className={style.gallery}>
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <Link key={project.path} to={project.path} className={style.card}>
               <div className={style.cardImageWrapper}>
                 {project.image ? (

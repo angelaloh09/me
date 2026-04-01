@@ -20,7 +20,7 @@ const AboutMe = () => {
         },
         {
             text: "Founded a team to create an",
-            linkText: "automous beach roomba",
+            linkText: "autonomous beach roomba",
             url: "https://news.cornell.edu/stories/2022/12/students-design-robot-collect-microplastics-beaches",
             additionalText: "that collects macro+microplastics at Cornell.",
             linkPosition: "middle"

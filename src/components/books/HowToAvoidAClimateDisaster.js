@@ -14,11 +14,11 @@ const HowToAvoidAClimateDisaster = () => {
                   <br></br>
                 </div>
                 
-                <div class= {style.Writing}>
+                <div className={style.Writing}>
                   <p>
                   This is one of the best books I’ve read in quite some time! Bill Gates does a really great job of describing the challenges our world will face if developed countries aren’t able to reach zero carbon emissions by 2050. He highlights action steps that need to be taken and technologies currently in development or that need to be invented in order to achieve this ambitious goal of carbon-zero. Bill Gates also is objectively a really great writer. Even the way he starts his book is quite memorable. He says, “There are two numbers you need to know about climate change. The first is 51 billion. The other is zero. Fifty-one billion is how many tons of greenhouse gases the world typically adds to the atmosphere every year...This is where we are today. Zero is what we need to aim for” (3). 51 billion tons serves as a goal of a quantity we want to reduce, and Gates shows us how we can do this. This book not only conveys the sense of urgency we should all feel about the looming issue of climate change, but Gates also instills in the readers a sense of optimism that we will be able to avoid a climate disaster if we take action -- in technology, policy, and our daily lives -- today.
                   </p>
-                  <h3 class = {style.SubHeading}> 
+                  <h3 className={style.SubHeading}> 
                   1. WHY DO WE NEED TO REACH CARBON-ZERO BY 2050?
                   </h3>
                   <p>
@@ -41,7 +41,7 @@ const HowToAvoidAClimateDisaster = () => {
                     </ol>
                   </p>
 
-                  <h3 class = {style.SubHeading}>
+                  <h3 className={style.SubHeading}>
                   2. CURRENT STATE OF THE WORLD
                   </h3>
                   <p>
@@ -75,7 +75,7 @@ const HowToAvoidAClimateDisaster = () => {
 
 
 
-                  <h3 class = {style.SubHeading}>
+                  <h3 className={style.SubHeading}>
                   3. THE BIG FIVE PILLARS
                   </h3>
                   <h4>ELECTRICITY</h4>
