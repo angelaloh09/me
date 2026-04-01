@@ -109,34 +109,33 @@
 }
 
 .mainImageWrapper {
-  width: min(48vw, 560px);
+  width: min(42vw, 540px);
   max-width: 100%;
-  max-height: min(78vh, 680px);
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  overflow: visible;
+  aspect-ratio: 1599 / 2007;
+  overflow: hidden;
   background: transparent;
   justify-self: start;
+  position: relative;
 }
 
 .mainImageWrapperPortrait {
-  width: min(48vw, 560px);
+  width: min(42vw, 540px);
+  aspect-ratio: 1599 / 2007;
 }
 
 .mainImagePlaceholder {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  max-height: min(78vh, 680px);
+  aspect-ratio: 1599 / 2007;
   background: var(--cloud-vase-placeholder);
 }
 
 .mainImage {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: min(78vh, 680px);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   background: transparent;
   animation: fadeIn 0.35s ease forwards;
 }
@@ -152,8 +151,8 @@
 
 .thumbnailWrapper {
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  aspect-ratio: 1599 / 2007;
   cursor: pointer;
   overflow: hidden;
 }

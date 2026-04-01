@@ -130,8 +130,7 @@
 .cardImageWrapper {
   position: relative;
   width: 100%;
-  /* Portrait frame — all previews share the same height; vertical shots fill evenly */
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1599 / 2007;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.08);
