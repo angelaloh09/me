@@ -96,7 +96,7 @@ const Photography = () => {
     }, [selectedPhoto])
 
     return (
-        <section className='ideas'>
+        <section className={`ideas ${style.darkRoom}`}>
             <Navbar/>
             <div className={style.photoPage}>
                 <div className={`cards title ${style.photoHeading}`}>

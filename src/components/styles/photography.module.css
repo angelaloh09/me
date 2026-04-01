@@ -1,3 +1,45 @@
+/* Dark-room page shell (Photography only) */
+:global(.ideas).darkRoom {
+  --dark-room-bg: #1a1f2e;
+  --dark-room-tile: #283246;
+  background: var(--dark-room-bg);
+  color: #e8e6e3;
+}
+
+.darkRoom :global(.list__items) {
+  background: var(--dark-room-bg);
+  backdrop-filter: none;
+}
+
+@media (max-width: 50em) {
+  .darkRoom :global(.list__items) {
+    background-color: var(--dark-room-bg);
+    border-color: var(--dark-room-bg);
+  }
+
+  .darkRoom :global(.menu_icon .menu),
+  .darkRoom :global(.close_icon) {
+    color: #e8e6e3;
+  }
+}
+
+.darkRoom :global(.list__items li a) {
+  color: #c4c8e8;
+}
+
+.darkRoom :global(.list__items li a:hover) {
+  color: #dfe4ff;
+  text-decoration-color: #9aa3d4;
+}
+
+.darkRoom :global(.home__icon h1) {
+  color: #ffb38a;
+}
+
+.darkRoom :global(.home__icon h1:hover) {
+  text-decoration-color: #ffb38a;
+}
+
 .photoPage {
   max-width: min(1100px, 94%);
   margin-left: auto;
@@ -9,6 +51,10 @@
 .photoHeading {
   margin-bottom: 50px;
   text-align: left;
+}
+
+.photoHeading :global(h1) {
+  color: #eceae7;
 }
 
 /* Masonry-style columns — mixed landscape/portrait pack tightly without cropping */
@@ -24,14 +70,14 @@
   overflow: hidden;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
-  background: var(--img-back);
+  background: var(--dark-room-tile);
   break-inside: avoid;
   margin-bottom: 36px;
   display: block;
 }
 
 .photoItem:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
 }
 
 .photoItem img {
