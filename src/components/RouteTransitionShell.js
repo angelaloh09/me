@@ -1,34 +1,28 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import AppRoutes from './AppRoutes'
 import '../styles/routeTransitions.css'
 
 const DISSOLVE_MS = 520
 
-/**
- * Cross-dissolve: outgoing route fades out while incoming fades in (overlapping).
- * Uses two <Routes location={…}> trees so old and new pages render simultaneously.
- */
+const locationsMatch = (a, b) =>
+  a.pathname === b.pathname && a.search === b.search
+
 const RouteTransitionShell = () => {
   const location = useLocation()
   const [displayLocation, setDisplayLocation] = useState(location)
-  const timeoutRef = useRef(null)
 
-  const isDissolving =
-    location.pathname !== displayLocation.pathname ||
-    location.search !== displayLocation.search
+  const isDissolving = !locationsMatch(location, displayLocation)
 
   useEffect(() => {
-    if (!isDissolving) return undefined
+    if (locationsMatch(location, displayLocation)) return undefined
 
-    timeoutRef.current = setTimeout(() => {
+    const timer = setTimeout(() => {
       setDisplayLocation(location)
     }, DISSOLVE_MS)
 
-    return () => {
-      clearTimeout(timeoutRef.current)
-    }
-  }, [location, displayLocation, isDissolving])
+    return () => clearTimeout(timer)
+  }, [location, displayLocation])
 
   if (!isDissolving) {
     return (

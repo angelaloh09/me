@@ -1,5 +1,5 @@
 import React from 'react'
-import TransitionLink from './TransitionLink'
+import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/aboutme.module.css'
@@ -34,17 +34,6 @@ const AboutMe = () => {
         }
     ];
 
-    // const hobbyProjects = [
-    //     {
-    //         text: "3D Printed Lamps (i love aesthetic lamps with warm lighting)",
-    //         subItems: [
-    //             { name: "Noe Lamp", to: "/tinkio-projects/noe-lamp" },
-    //             "Bino Lamp"
-    //         ]
-    //     },
-    //     "Vimputer (a digital typewriter with vim interface and infinite battery life)"
-    // ];
-
     const renderProjectItem = (project, index) => {
         if (project.linkPosition === "start") {
             return (
@@ -60,78 +49,51 @@ const AboutMe = () => {
                     {" "}{project.text}
                 </li>
             );
-        } else {
-            return (
-                <li key={index}>
-                    {project.text}{" "}
-                    <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={style.Link}
-                    >
-                        {project.linkText}
-                    </a>
-                    {project.additionalText && <> {project.additionalText}</>}
-                </li>
-            );
         }
+        return (
+            <li key={index}>
+                {project.text}{" "}
+                <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={style.Link}
+                >
+                    {project.linkText}
+                </a>
+                {project.additionalText && <> {project.additionalText}</>}
+            </li>
+        );
     };
 
     return (
-        <section className='ideas'>
-            <Navbar/>
+        <section className="ideas">
+            <Navbar />
             <div className={style.PagePadding}>
                 <div className="cards title">
                     <h1>About Me</h1>
-                    <br></br>
+                    <br />
                 </div>
-                
+
                 <div className={style.Writing}>
                     <p>Hi there!</p>
                     <p>
-                        I'm a hardware engineer who wants to make tinkering on fun projects accessible to all! 
-                        I have a curiosity for making the world a better place, and I'm always looking for new ways to do so. 
+                        I'm a hardware engineer who wants to make tinkering on fun projects accessible to all!
+                        I have a curiosity for making the world a better place, and I'm always looking for new ways to do so.
                         I love learning about how things work. Here are some of the things I've worked on:
                     </p>
                     <ul>
                         {professionalProjects.map(renderProjectItem)}
                     </ul>
-                    <br></br>
+                    <br />
                     <p>
-                        More personal projects found&nbsp; 
-                        <TransitionLink to="/projects" className={style.Link}>here!</TransitionLink></p> 
-                    {/* <ul>
-                        {hobbyProjects.map((project, idx) => (
-                            typeof project === 'string' ? (
-                                <li key={idx}>{project}</li>
-                            ) : (
-                                <li key={idx}>
-                                    {project.text}
-                                    <ul className={style.subList}>
-                                        {project.subItems.map((item, i) => (
-                                            <li key={i}>
-                                                {typeof item === 'string' ? (
-                                                    item
-                                                ) : (
-                                                    <TransitionLink to={item.to} className={style.Link}>
-                                                        {item.name}
-                                                    </TransitionLink>
-                                                )}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </li>
-                            )
-                        ))}
-                    </ul> */}
+                        More personal projects found&nbsp;
+                        <Link to="/projects" className={style.Link}>here!</Link>
+                    </p>
                 </div>
-
             </div>
-
         </section>
     )
 }
 
 export default AboutMe
-

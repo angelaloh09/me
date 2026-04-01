@@ -1,3 +1,4 @@
+/* Animation duration must match DISSOLVE_MS in RouteTransitionShell.js */
 .crossfade-root {
   position: relative;
   min-height: 100vh;

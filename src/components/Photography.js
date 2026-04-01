@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/photography.module.css'
 
-// Import photos
 import photo1 from './photos/DSCF2560.jpg'
 import photo2 from './photos/DSCF2843.jpg'
 import photo3 from './photos/DSCF3635.jpg'
@@ -22,50 +21,52 @@ import photo15 from './photos/house.jpeg'
 import photo16 from './photos/night.jpeg'
 import photo17 from './photos/xi-hu-lake.jpeg'
 
+const PHOTOS = [
+    { src: photo8, alt: 'Photo 8', location: 'Grindelwald, Switzerland' },
+    { src: photo5, alt: 'Photo 5', location: 'Shanghai, China' },
+    { src: photo3, alt: 'Photo 3', location: 'Page, Arizona' },
+    { src: photo2, alt: 'Photo 2', location: 'Grindelwald, Switzerland' },
+    { src: photo7, alt: 'Photo 7', location: 'Grindelwald, Switzerland' },
+    { src: photo6, alt: 'Photo 6', location: 'The Getty, Los Angeles' },
+    { src: photo4, alt: 'Photo 4', location: 'Point Arena, California' },
+    { src: photo12, alt: 'Photo 13', location: 'Sea Ranch, California' },
+    { src: photo9, alt: 'Photo 9', location: 'Grindelwald, Switzerland' },
+    { src: photo10, alt: 'Photo 10', location: 'Vitra Design Museum - Weil am Rhein, Germany' },
+    { src: photo11, alt: 'Photo 11', location: 'Hongcun, China' },
+    { src: photo1, alt: 'Photo 1', location: 'Grindelwald, Switzerland' },
+    { src: photo13, alt: 'Bridge', location: 'Hangzhou, China' },
+    { src: photo14, alt: 'Field', location: 'Hongcun, China' },
+    { src: photo15, alt: 'House', location: 'Hangzhou, China' },
+    { src: photo16, alt: 'Night', location: 'Hangzhou, China' },
+    { src: photo17, alt: 'West Lake', location: 'Hangzhou, China' },
+]
+
 const Photography = () => {
     const [selectedPhoto, setSelectedPhoto] = useState(null)
-
-    const photos = [
-        { src: photo8, alt: 'Photo 8', location: 'Grindelwald, Switzerland' },
-        { src: photo5, alt: 'Photo 5', location: 'Shanghai, China' },
-        { src: photo3, alt: 'Photo 3', location: 'Page, Arizona' },
-        { src: photo2, alt: 'Photo 2', location: 'Grindelwald, Switzerland' },
-        { src: photo7, alt: 'Photo 7', location: 'Grindelwald, Switzerland' },
-        { src: photo6, alt: 'Photo 6', location: 'The Getty, Los Angeles' },
-        { src: photo4, alt: 'Photo 4', location: 'Point Arena, California' },
-        { src: photo12, alt: 'Photo 13', location: 'Sea Ranch, California' },
-        { src: photo9, alt: 'Photo 9', location: 'Grindelwald, Switzerland' },
-        { src: photo10, alt: 'Photo 10', location: 'Vitra Design Museum - Weil am Rhein, Germany' },
-        { src: photo11, alt: 'Photo 11', location: 'Hongcun, China' },
-        { src: photo1, alt: 'Photo 1', location: 'Grindelwald, Switzerland' },
-        { src: photo13, alt: 'Bridge', location: 'Hangzhou, China'},
-        { src: photo14, alt: 'Field', location: 'Hongcun, China'},
-        { src: photo15, alt: 'House', location: 'Hangzhou, China'},
-        { src: photo16, alt: 'Night', location: 'Hangzhou, China'},
-        { src: photo17, alt: 'West Lake', location: 'Hangzhou, China' },
-    ]
 
     const openLightbox = (photo) => {
         setSelectedPhoto(photo)
     }
 
-    const closeLightbox = () => {
+    const closeLightbox = useCallback(() => {
         setSelectedPhoto(null)
-    }
+    }, [])
 
-    const goToNextPhoto = () => {
-        if (!selectedPhoto) return
-        const currentIndex = photos.findIndex(photo => photo.src === selectedPhoto.src)
-        const nextIndex = (currentIndex + 1) % photos.length
-        setSelectedPhoto(photos[nextIndex])
-    }
+    const goToNextPhoto = useCallback(() => {
+        setSelectedPhoto((current) => {
+            if (!current) return null
+            const i = PHOTOS.findIndex((p) => p.src === current.src)
+            return PHOTOS[(i + 1) % PHOTOS.length]
+        })
+    }, [])
 
-    const goToPreviousPhoto = () => {
-        if (!selectedPhoto) return
-        const currentIndex = photos.findIndex(photo => photo.src === selectedPhoto.src)
-        const previousIndex = (currentIndex - 1 + photos.length) % photos.length
-        setSelectedPhoto(photos[previousIndex])
-    }
+    const goToPreviousPhoto = useCallback(() => {
+        setSelectedPhoto((current) => {
+            if (!current) return null
+            const i = PHOTOS.findIndex((p) => p.src === current.src)
+            return PHOTOS[(i - 1 + PHOTOS.length) % PHOTOS.length]
+        })
+    }, [])
 
     useEffect(() => {
         document.documentElement.classList.add('photography-dark-room')
@@ -76,7 +77,7 @@ const Photography = () => {
         const handleKeyDown = (e) => {
             if (!selectedPhoto) return
 
-            switch(e.key) {
+            switch (e.key) {
                 case 'ArrowRight':
                 case 'ArrowDown':
                     e.preventDefault()
@@ -98,18 +99,18 @@ const Photography = () => {
 
         window.addEventListener('keydown', handleKeyDown)
         return () => window.removeEventListener('keydown', handleKeyDown)
-    }, [selectedPhoto])
+    }, [selectedPhoto, goToNextPhoto, goToPreviousPhoto, closeLightbox])
 
     return (
         <section className={`ideas ${style.darkRoom}`}>
-            <Navbar/>
+            <Navbar />
             <div className={style.photoPage}>
                 <div className={`cards title ${style.photoHeading}`}>
                     <h1>Photography</h1>
-                    <br></br>
+                    <br />
                 </div>
                 <div className={style.photoGallery}>
-                    {photos.map((photo, index) => (
+                    {PHOTOS.map((photo, index) => (
                         <div key={index} className={style.photoItem} onClick={() => openLightbox(photo)}>
                             <img src={photo.src} alt={photo.alt} />
                         </div>
@@ -127,10 +128,8 @@ const Photography = () => {
                     </div>
                 </div>
             )}
-
         </section>
     )
 }
 
 export default Photography
-

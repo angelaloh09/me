@@ -1,6 +1,6 @@
 import React from 'react'
 import bookshelf_img from './assets/bookshelf.png'
-import TransitionLink from './TransitionLink'
+import { Link } from 'react-router-dom'
 // import React,{useState} from 'react'
 import './styles/Home.css'
 
@@ -14,11 +14,11 @@ const Home = () => {
                     <h1 className='content__header'>angela loh</h1>
                     <nav>
                         <ul>
-                            <li><TransitionLink to='/aboutme'>About Me</TransitionLink></li>
-                            <li><TransitionLink to='/bookshelf'>Bookshelf</TransitionLink></li>
-                            <li><TransitionLink to='/thoughts'>Thoughts</TransitionLink></li>
-                            <li><TransitionLink to='/photography'>Photography</TransitionLink></li>
-                            <li><TransitionLink to='/projects'>Projects</TransitionLink></li>
+                            <li><Link to="/aboutme">About Me</Link></li>
+                            <li><Link to="/bookshelf">Bookshelf</Link></li>
+                            <li><Link to="/thoughts">Thoughts</Link></li>
+                            <li><Link to="/photography">Photography</Link></li>
+                            <li><Link to="/projects">Projects</Link></li>
                         </ul>
                     </nav>
                   

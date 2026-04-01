@@ -13,9 +13,6 @@ import NoeLamp from './tinkio-projects/NoeLamp'
 import CloudVase from './tinkio-projects/CloudVase'
 import Vimputer from './tinkio-projects/Vimputer'
 
-/**
- * Shared route tree — used with an explicit `location` for cross-dissolve transitions.
- */
 const AppRoutes = ({ location }) => (
   <Routes location={location}>
     <Route path="/" element={<Home />} />

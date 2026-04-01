@@ -2,9 +2,10 @@ import React from 'react'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/projects.module.css'
-import TransitionLink from './TransitionLink'
+import { Link } from 'react-router-dom'
 import noeLampImg from './tinkio-projects/noe-lamp/noe-lamp-img1.jpg'
 import cloudVaseImg from './tinkio-projects/cloud-vase/img1.jpg'
+import vimputerImg from './tinkio-projects/vimputer/vimputer-highlevel.jpeg'
 
 
 const projects = [
@@ -21,7 +22,7 @@ const projects = [
   {
     title: 'Vimputer',
     path: '/tinkio-projects/vimputer',
-    image: null,
+    image: vimputerImg,
   },
 ]
 
@@ -39,7 +40,7 @@ const Projects = () => {
             <div className={style.galleryContainer}>
                 <div className={style.gallery}>
                   {projects.map((project, idx) => (
-                    <TransitionLink key={idx} to={project.path} className={style.card}>
+                    <Link key={idx} to={project.path} className={style.card}>
                       <div className={style.cardImageWrapper}>
                         {project.image ? (
                           <img
@@ -56,7 +57,7 @@ const Projects = () => {
                         )}
                       </div>
                       <h3 className={style.cardTitle}>{project.title}</h3>
-                    </TransitionLink>
+                    </Link>
                   ))}
                 </div>
             </div>

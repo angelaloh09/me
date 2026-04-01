@@ -1,6 +1,187 @@
-.placeholderCopy {
-  font-family: Poppins, sans-serif;
+.vimputerSection {
+  --vimputer-nav: #1e293b;
+  --vimputer-nav-hover: #0f172a;
+  --vimputer-bg: rgb(71, 78, 88);
+  --vimputer-gradient-1: rgba(200, 220, 235, 0.12);
+  --vimputer-gradient-2: rgba(180, 200, 215, 0.1);
+  --vimputer-gradient-3: rgba(160, 185, 200, 0.08);
+  --vimputer-body: #e8eef4;
+  --vimputer-placeholder: #d4d8de;
+  --vimputer-overlay: rgba(255, 255, 255, 0.22);
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--vimputer-bg);
+  background-image:
+    radial-gradient(ellipse 90% 70% at 20% 30%, var(--vimputer-gradient-1) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 80% 70%, var(--vimputer-gradient-2) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 55% at 50% 85%, var(--vimputer-gradient-3) 0%, transparent 50%);
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.vimputerSection :global(.home__icon h1) {
+  color: var(--vimputer-nav);
+}
+
+.vimputerSection :global(.home__icon h1:hover) {
+  text-decoration-color: var(--vimputer-nav);
+}
+
+.vimputerSection :global(.list__items li a) {
+  color: var(--vimputer-nav);
+}
+
+.vimputerSection :global(.list__items li a:hover) {
+  color: var(--vimputer-nav-hover);
+  text-decoration-color: var(--vimputer-nav-hover);
+}
+
+.vimputerSection :global(.list__items) {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.vimputerSection :global(.close_icon) {
+  color: var(--vimputer-nav);
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  padding-top: 5rem;
+}
+
+.container {
+  max-width: min(1100px, 95%);
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .imageColumn {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.imageColumn {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.thumbnailGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mainImageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.mainImagePlaceholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: var(--vimputer-placeholder);
+}
+
+.mainImage {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: var(--vimputer-placeholder);
+  animation: fadeIn 0.35s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.thumbnailWrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.thumbnailWrapper:hover {
+  border-color: var(--warm-cobalt);
+}
+
+.thumbnailWrapper.thumbnailActive {
+  border-color: var(--warm-cobalt);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: var(--vimputer-placeholder);
+}
+
+.thumbnailOverlay {
+  position: absolute;
+  inset: 0;
+  background: var(--vimputer-overlay);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.thumbnailWrapper:hover .thumbnailOverlay,
+.thumbnailWrapper.thumbnailDisplayed .thumbnailOverlay {
+  opacity: 0;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  color: var(--vimputer-body);
+  font-family: Righteous;
+  font-size: 36px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.body {
+  font-family: Poppins;
   font-size: 13px;
   line-height: 1.6;
-  color: var(--idea-grey);
+  color: var(--vimputer-body);
+  margin: 0;
+  font-style: italic;
 }
