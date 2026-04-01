@@ -5,14 +5,14 @@
 
 .home__icon h1{
     font-size:30px;
-    color: var(--nav-brand);
+    color: var(--main-orange);
     letter-spacing: 1px;
     font-weight: lighter;
 }
 
 .home__icon h1:hover{
     text-decoration: underline;
-    text-decoration-color: var(--nav-brand-hover);
+    text-decoration-color: var(--main-orange);
 }
 
 @media (min-width: 50em) {
@@ -53,7 +53,7 @@
 
 .list__items li a {
     text-decoration: none;
-    color: var(--nav-brand);
+    color: var(--warm-cobalt);
     font-size: 17px;
     font-family: Righteous;
     cursor: pointer;
@@ -70,8 +70,8 @@
 
 .list__items li a:hover {
     text-decoration: underline;
-    text-decoration-color: var(--nav-brand-hover);
-    color: var(--nav-brand-hover);
+    text-decoration-color: var(--warm-cobalt-hover);
+    color: var(--warm-cobalt-hover);
 }
 
 @media (max-width:50em) {

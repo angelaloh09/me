@@ -117,18 +117,18 @@
         font-size: 40px;
         text-align: center;
         font-weight: lighter;
-        color: var(--nav-brand);
+        color: var(--main-orange);
         text-transform: lowercase;
         line-height: 75px;
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-offset: 7px;
-        text-decoration-color: var(--nav-brand);
+        text-decoration-color: var(--main-orange);
         letter-spacing: 1px;
     }
 
     .home__content nav{
-        color: var(--nav-brand);
+        color: var(--warm-cobalt);
     }
     
     .home__content nav ul{
@@ -147,7 +147,7 @@
     
     .home__content nav li a{
         text-decoration: none;
-        color: var(--nav-brand);
+        color: var(--warm-cobalt);
         font-size: 17px;
         font-family: Righteous;
         cursor: pointer;
@@ -159,8 +159,8 @@
     
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--nav-brand-hover);
-        color: var(--nav-brand-hover);
+        text-decoration-color: var(--warm-cobalt-hover);
+        color: var(--warm-cobalt-hover);
     }
 }
 
@@ -191,7 +191,7 @@
         padding:30px;
     }
     .content__header {
-        color: var(--nav-brand);
+        color: var(--main-orange);
         padding-bottom: 6px;
         white-space: nowrap;
     }
@@ -206,7 +206,7 @@
     
     .home__content nav li a{
         text-decoration: none;
-        color: var(--nav-brand);
+        color: var(--warm-cobalt);
         font-size: 15px;
         font-family: Righteous;
         cursor: pointer;
@@ -218,8 +218,8 @@
     
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--nav-brand-hover);
-        color: var(--nav-brand-hover);
+        text-decoration-color: var(--warm-cobalt-hover);
+        color: var(--warm-cobalt-hover);
     }
 }
 
@@ -241,7 +241,7 @@
     }
     .home__content nav li a{
         text-decoration: none;
-        color: var(--nav-brand);
+        color: var(--warm-cobalt);
         cursor: pointer;
         pointer-events: auto;
         display: inline-block;
@@ -250,8 +250,8 @@
     }
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--nav-brand-hover);
-        color: var(--nav-brand-hover);
+        text-decoration-color: var(--warm-cobalt-hover);
+        color: var(--warm-cobalt-hover);
     }
     /* .home__content .small__p {
         font-size: 8px;

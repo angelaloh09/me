@@ -23,20 +23,20 @@
 }
 
 .cloudVaseSection :global(.home__icon h1) {
-  color: var(--nav-brand);
+  color: var(--cloud-vase-nav);
 }
 
 .cloudVaseSection :global(.home__icon h1:hover) {
-  text-decoration-color: var(--nav-brand-hover);
+  text-decoration-color: var(--cloud-vase-nav);
 }
 
 .cloudVaseSection :global(.list__items li a) {
-  color: var(--nav-brand);
+  color: var(--cloud-vase-nav);
 }
 
 .cloudVaseSection :global(.list__items li a:hover) {
-  color: var(--nav-brand-hover);
-  text-decoration-color: var(--nav-brand-hover);
+  color: var(--cloud-vase-nav-hover);
+  text-decoration-color: var(--cloud-vase-nav-hover);
 }
 
 .cloudVaseSection :global(.list__items) {

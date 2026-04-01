@@ -1,14 +1,14 @@
 .vimputerSection {
   --vimputer-nav: #3a3632;
   --vimputer-nav-hover: #2a2724;
+  /* Turquoise accent — this page only */
+  --vimputer-accent: #168989;
+  --vimputer-accent-hover: #26a8a8;
   /* Light birch / Scandinavian ply — blonde, slightly warm */
   --vimputer-bg: rgb(236, 226, 212);
   --vimputer-gradient-1: rgba(255, 252, 248, 0.85);
   --vimputer-gradient-2: rgba(255, 245, 235, 0.35);
   --vimputer-gradient-3: rgba(220, 210, 198, 0.45);
-  /* Cute mint / matcha for title + tagline */
-  --vimputer-mint: #6aab92;
-  --vimputer-mint-soft: #5c9a82;
   --vimputer-placeholder: #d4cbc0;
   --vimputer-overlay: rgba(255, 255, 255, 0.35);
 
@@ -26,20 +26,20 @@
 }
 
 .vimputerSection :global(.home__icon h1) {
-  color: var(--nav-brand);
+  color: var(--vimputer-accent);
 }
 
 .vimputerSection :global(.home__icon h1:hover) {
-  text-decoration-color: var(--nav-brand-hover);
+  text-decoration-color: var(--vimputer-accent-hover);
 }
 
 .vimputerSection :global(.list__items li a) {
-  color: var(--nav-brand);
+  color: var(--vimputer-accent);
 }
 
 .vimputerSection :global(.list__items li a:hover) {
-  color: var(--nav-brand-hover);
-  text-decoration-color: var(--nav-brand-hover);
+  color: var(--vimputer-accent-hover);
+  text-decoration-color: var(--vimputer-accent-hover);
 }
 
 .vimputerSection :global(.list__items) {
@@ -173,7 +173,7 @@
 }
 
 .title {
-  color: var(--vimputer-mint);
+  color: var(--vimputer-accent);
   font-family: Righteous;
   font-size: 36px;
   font-weight: lighter;
@@ -184,7 +184,7 @@
   font-family: Poppins;
   font-size: 13px;
   line-height: 1.6;
-  color: var(--vimputer-mint-soft);
+  color: var(--vimputer-accent-hover);
   margin: 0;
   font-style: italic;
 }

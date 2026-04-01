@@ -33,20 +33,21 @@
 }
 
 .darkRoom :global(.list__items li a) {
-  color: var(--nav-brand);
+  color: #c4c8e8;
 }
 
 .darkRoom :global(.list__items li a:hover) {
-  color: var(--nav-brand-hover);
-  text-decoration-color: var(--nav-brand-hover);
+  color: #dfe4ff;
+  text-decoration-color: #9aa3d4;
 }
 
 .darkRoom :global(.home__icon h1) {
-  color: var(--nav-brand);
+  color: #e98880;
 }
 
 .darkRoom :global(.home__icon h1:hover) {
-  text-decoration-color: var(--nav-brand-hover);
+  color: #f0a099;
+  text-decoration-color: #e98880;
 }
 
 .photoPage {
