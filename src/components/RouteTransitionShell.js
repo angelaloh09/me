@@ -24,10 +24,13 @@ const RouteTransitionShell = () => {
     return () => clearTimeout(timer)
   }, [location, displayLocation])
 
+  const outKey = `${displayLocation.pathname}${displayLocation.search || ''}`
+  const inKey = `${location.pathname}${location.search || ''}`
+
   if (!isDissolving) {
     return (
       <div className="crossfade-root">
-        <AppRoutes location={location} />
+        <AppRoutes key={inKey} location={location} />
       </div>
     )
   }
@@ -36,13 +39,13 @@ const RouteTransitionShell = () => {
     <div className="crossfade-root">
       <div
         className="route-layer route-layer--out"
-        key={`out-${displayLocation.key}`}
+        key={`out-${outKey}`}
         aria-hidden="true"
       >
-        <AppRoutes location={displayLocation} />
+        <AppRoutes key={outKey} location={displayLocation} />
       </div>
-      <div className="route-layer route-layer--in" key={`in-${location.key}`}>
-        <AppRoutes location={location} />
+      <div className="route-layer route-layer--in" key={`in-${inKey}`}>
+        <AppRoutes key={inKey} location={location} />
       </div>
     </div>
   )

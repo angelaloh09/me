@@ -14,7 +14,7 @@ import CloudVase from './tinkio-projects/CloudVase'
 import Vimputer from './tinkio-projects/Vimputer'
 
 const AppRoutes = ({ location }) => (
-  <Routes location={location}>
+  <Routes location={location} key={location.pathname}>
     <Route path="/" element={<Home />} />
     <Route path="/aboutme" element={<AboutMe />} />
     <Route path="/bookshelf" element={<Bookshelf />} />
