@@ -22,23 +22,23 @@ import photo16 from './photos/night.jpeg'
 import photo17 from './photos/xi-hu-lake.jpeg'
 
 const PHOTOS = [
-    { src: photo8, alt: 'Photo 8', location: 'Grindelwald, Switzerland' },
-    { src: photo5, alt: 'Photo 5', location: 'Shanghai, China' },
-    { src: photo3, alt: 'Photo 3', location: 'Page, Arizona' },
-    { src: photo2, alt: 'Photo 2', location: 'Grindelwald, Switzerland' },
-    { src: photo7, alt: 'Photo 7', location: 'Grindelwald, Switzerland' },
-    { src: photo6, alt: 'Photo 6', location: 'The Getty, Los Angeles' },
-    { src: photo4, alt: 'Photo 4', location: 'Point Arena, California' },
-    { src: photo12, alt: 'Photo 13', location: 'Sea Ranch, California' },
-    { src: photo9, alt: 'Photo 9', location: 'Grindelwald, Switzerland' },
-    { src: photo10, alt: 'Photo 10', location: 'Vitra Design Museum - Weil am Rhein, Germany' },
-    { src: photo11, alt: 'Photo 11', location: 'Hongcun, China' },
-    { src: photo1, alt: 'Photo 1', location: 'Grindelwald, Switzerland' },
-    { src: photo13, alt: 'Bridge', location: 'Hangzhou, China' },
-    { src: photo14, alt: 'Field', location: 'Hongcun, China' },
-    { src: photo15, alt: 'House', location: 'Hangzhou, China' },
-    { src: photo16, alt: 'Night', location: 'Hangzhou, China' },
-    { src: photo17, alt: 'West Lake', location: 'Hangzhou, China' },
+    { src: photo8, alt: 'Photo 8', location: 'Grindelwald, Switzerland', width: 4288, height: 2848 },
+    { src: photo5, alt: 'Photo 5', location: 'Shanghai, China', width: 4287, height: 2847 },
+    { src: photo3, alt: 'Photo 3', location: 'Page, Arizona', width: 2848, height: 4288 },
+    { src: photo2, alt: 'Photo 2', location: 'Grindelwald, Switzerland', width: 2228, height: 3354 },
+    { src: photo7, alt: 'Photo 7', location: 'Grindelwald, Switzerland', width: 4288, height: 2848 },
+    { src: photo6, alt: 'Photo 6', location: 'The Getty, Los Angeles', width: 841, height: 584 },
+    { src: photo4, alt: 'Photo 4', location: 'Point Arena, California', width: 2848, height: 2848 },
+    { src: photo12, alt: 'Photo 13', location: 'Sea Ranch, California', width: 3024, height: 3024 },
+    { src: photo9, alt: 'Photo 9', location: 'Grindelwald, Switzerland', width: 4288, height: 2848 },
+    { src: photo10, alt: 'Photo 10', location: 'Vitra Design Museum - Weil am Rhein, Germany', width: 3748, height: 2502 },
+    { src: photo11, alt: 'Photo 11', location: 'Hongcun, China', width: 4032, height: 3024 },
+    { src: photo1, alt: 'Photo 1', location: 'Grindelwald, Switzerland', width: 2349, height: 3537 },
+    { src: photo13, alt: 'Bridge', location: 'Hangzhou, China', width: 3734, height: 2801 },
+    { src: photo14, alt: 'Field', location: 'Hongcun, China', width: 4288, height: 2848 },
+    { src: photo15, alt: 'House', location: 'Hangzhou, China', width: 2135, height: 3248 },
+    { src: photo16, alt: 'Night', location: 'Hangzhou, China', width: 2680, height: 4035 },
+    { src: photo17, alt: 'West Lake', location: 'Hangzhou, China', width: 2306, height: 1463 },
 ]
 
 const Photography = () => {
@@ -112,7 +112,12 @@ const Photography = () => {
                 <div className={style.photoGallery}>
                     {PHOTOS.map((photo, index) => (
                         <div key={index} className={style.photoItem} onClick={() => openLightbox(photo)}>
-                            <img src={photo.src} alt={photo.alt} />
+                            <img
+                                src={photo.src}
+                                alt={photo.alt}
+                                width={photo.width}
+                                height={photo.height}
+                            />
                         </div>
                     ))}
                 </div>
@@ -121,7 +126,12 @@ const Photography = () => {
             {selectedPhoto && (
                 <div className={style.lightbox} onClick={closeLightbox}>
                     <div className={style.lightboxContent} onClick={(e) => e.stopPropagation()}>
-                        <img src={selectedPhoto.src} alt={selectedPhoto.alt} />
+                        <img
+                            src={selectedPhoto.src}
+                            alt={selectedPhoto.alt}
+                            width={selectedPhoto.width}
+                            height={selectedPhoto.height}
+                        />
                         {selectedPhoto.location && (
                             <p className={style.caption}>{selectedPhoto.location}</p>
                         )}
