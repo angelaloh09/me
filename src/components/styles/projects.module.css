@@ -141,8 +141,8 @@
 .card:hover .cardImageWrapper {
   border-color: rgba(255, 255, 255, 0.16);
   box-shadow:
-    0 10px 32px rgba(0, 0, 0, 0.45),
-    0 0 0 1px rgba(255, 255, 255, 0.06);
+    0 6px 20px rgba(255, 200, 110, 0.22),
+    0 0 24px rgba(255, 220, 150, 0.15);
 }
 
 .cardImage {
