@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/projects.module.css'
-import { Link } from 'react-router-dom'
+import TransitionLink from './TransitionLink'
 import noeLampImg from './tinkio-projects/noe-lamp/noe-lamp-img1.jpg'
 import cloudVaseImg from './tinkio-projects/cloud-vase/img1.jpg'
 
@@ -39,7 +39,7 @@ const Projects = () => {
             <div className={style.galleryContainer}>
                 <div className={style.gallery}>
                   {projects.map((project, idx) => (
-                    <Link key={idx} to={project.path} className={style.card}>
+                    <TransitionLink key={idx} to={project.path} className={style.card}>
                       <div className={style.cardImageWrapper}>
                         {project.image ? (
                           <img
@@ -56,7 +56,7 @@ const Projects = () => {
                         )}
                       </div>
                       <h3 className={style.cardTitle}>{project.title}</h3>
-                    </Link>
+                    </TransitionLink>
                   ))}
                 </div>
             </div>

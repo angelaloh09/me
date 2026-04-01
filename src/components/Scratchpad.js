@@ -6,8 +6,6 @@ import styles from './styles/Scratchpad.module.css';
 
 // import styles from './Scratchpad.module.css'; // Import as a module
 
-import { Link } from 'react-router-dom'
-
 const Scratchpad = () => {
     return (        
         <section className='ideas'>

@@ -1,0 +1,56 @@
+.crossfade-root {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  /* Fills any gap between two fading layers */
+  background: #fff8e7;
+}
+
+.route-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+/* Outgoing underneath, fading out — no pointer capture */
+.route-layer--out {
+  z-index: 1;
+  animation: routeDissolveOut 520ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+/* Incoming on top, fading in — receives clicks */
+.route-layer--in {
+  z-index: 2;
+  animation: routeDissolveIn 520ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: auto;
+}
+
+@keyframes routeDissolveOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes routeDissolveIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-layer--out,
+  .route-layer--in {
+    animation-duration: 0.01ms;
+  }
+}

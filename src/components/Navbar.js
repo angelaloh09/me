@@ -1,5 +1,5 @@
 import { Close, MenuOutlined } from '@material-ui/icons'
-import { Link } from 'react-router-dom'
+import TransitionLink from './TransitionLink'
 import React,{useState} from 'react'
 import './styles/Navbar.css'
 
@@ -24,12 +24,12 @@ const Navbar = () => {
                         <div className="close_icon">
                             <Close className='close' onClick={showUl}/>
                         </div>
-                        <li  class="home__icon"><Link to= '/'><h1>angela loh</h1></Link></li>
-                        <li><Link to='/aboutme'>About Me</Link></li>
-                        <li><Link to='/bookshelf'>Bookshelf</Link></li>
-                        <li><Link to='/thoughts'>Thoughts</Link></li>
-                        <li><Link to='/photography'>Photography</Link></li>
-                        <li><Link to='/projects'>Projects</Link></li>
+                        <li  class="home__icon"><TransitionLink to= '/'><h1>angela loh</h1></TransitionLink></li>
+                        <li><TransitionLink to='/aboutme'>About Me</TransitionLink></li>
+                        <li><TransitionLink to='/bookshelf'>Bookshelf</TransitionLink></li>
+                        <li><TransitionLink to='/thoughts'>Thoughts</TransitionLink></li>
+                        <li><TransitionLink to='/photography'>Photography</TransitionLink></li>
+                        <li><TransitionLink to='/projects'>Projects</TransitionLink></li>
                     </ul>
                 </nav>
         </div>

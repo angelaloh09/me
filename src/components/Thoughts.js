@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/thoughts.module.css'
-import { Link } from 'react-router-dom'
+import TransitionLink from './TransitionLink'
 
 
 const Thoughts = () => {
@@ -15,10 +15,10 @@ const Thoughts = () => {
                     <br></br>
                 </div>
 
-                <Link to= '/thoughts/capacitive-touch' class = {style.GridContainer}>
+                <TransitionLink to= '/thoughts/capacitive-touch' class = {style.GridContainer}>
                     <span>5.26.24</span>
                     <span>What is capacitive touch? And how does it work?</span>
-                </Link>
+                </TransitionLink>
 
                 {/* <div className={style.GridContainer}>
                         <span>5.18.24</span>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import TransitionLink from './TransitionLink'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/aboutme.module.css'
@@ -100,7 +100,7 @@ const AboutMe = () => {
                     <br></br>
                     <p>
                         More personal projects found&nbsp; 
-                        <Link to="/projects" className={style.Link}>here!</Link></p> 
+                        <TransitionLink to="/projects" className={style.Link}>here!</TransitionLink></p> 
                     {/* <ul>
                         {hobbyProjects.map((project, idx) => (
                             typeof project === 'string' ? (
@@ -114,9 +114,9 @@ const AboutMe = () => {
                                                 {typeof item === 'string' ? (
                                                     item
                                                 ) : (
-                                                    <Link to={item.to} className={style.Link}>
+                                                    <TransitionLink to={item.to} className={style.Link}>
                                                         {item.name}
-                                                    </Link>
+                                                    </TransitionLink>
                                                 )}
                                             </li>
                                         ))}
