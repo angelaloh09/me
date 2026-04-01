@@ -28,26 +28,26 @@
 
   .darkRoom :global(.menu_icon .menu),
   .darkRoom :global(.close_icon) {
-    color: #e8e6e3;
+    color: #eceae7;
   }
 }
 
 .darkRoom :global(.list__items li a) {
-  color: #c4c8e8;
+  color: #eceae7;
 }
 
 .darkRoom :global(.list__items li a:hover) {
-  color: #dfe4ff;
-  text-decoration-color: #9aa3d4;
+  color: #faf9f8;
+  text-decoration-color: rgba(236, 234, 231, 0.55);
 }
 
 .darkRoom :global(.home__icon h1) {
-  color: #e98880;
+  color: #eceae7;
 }
 
 .darkRoom :global(.home__icon h1:hover) {
-  color: #f0a099;
-  text-decoration-color: #e98880;
+  color: #faf9f8;
+  text-decoration-color: rgba(236, 234, 231, 0.55);
 }
 
 .photoPage {

@@ -3,12 +3,12 @@ import Navbar from '../Navbar'
 import '../styles/Styles.css'
 import style from '../styles/vimputer.module.css'
 
-import cover from './vimputer/DSCF6326.jpg'
 import img6306 from './vimputer/DSCF6306.jpg'
+import img6326 from './vimputer/DSCF6326.jpg'
 import img6323 from './vimputer/DSCF6323_2.jpeg'
 import desk from './vimputer/desk.jpeg'
 
-const images = [img6306, cover, img6323, desk]
+const images = [img6306, img6326, img6323, desk]
 
 const Vimputer = () => {
   const [selectedImage, setSelectedImage] = useState(0)
