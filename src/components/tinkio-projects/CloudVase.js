@@ -8,7 +8,7 @@ import img2 from './cloud-vase/img2.jpg'
 import dscf4748 from './cloud-vase/DSCF4748.jpg'
 import dscf4753 from './cloud-vase/DSCF4753.jpg'
 
-const images = [img1, dscf4748, img2, dscf4753]
+const images = [dscf4753, img1, dscf4748, img2]
 
 const CloudVase = () => {
     const [selectedImage, setSelectedImage] = useState(0)

@@ -93,7 +93,7 @@
 }
 
 .page {
-  max-width: min(1100px, 94%);
+  max-width: min(1100px, 96%);
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -130,6 +130,8 @@
 .cardImageWrapper {
   position: relative;
   width: 100%;
+  /* Portrait frame — all previews share the same height; vertical shots fill evenly */
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -145,14 +147,21 @@
 }
 
 .cardImage {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 .cardImagePlaceholder {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  min-height: 200px;
+  height: 100%;
+  min-height: 0;
   background: #b0b0b0;
 }
 
