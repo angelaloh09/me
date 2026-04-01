@@ -1,13 +1,13 @@
 .vimputerSection {
   /* Same dark brown family as Projects page (--projects-bg-deep / warm) */
-  --vimputer-text: #1a1512;
-  --vimputer-text-hover: #3f342a;
-  --vimputer-bg: rgb(232, 238, 208);
-  --vimputer-gradient-1: rgba(252, 246, 228, 0.9);
-  --vimputer-gradient-2: rgba(218, 232, 198, 0.52);
-  --vimputer-gradient-3: rgba(198, 212, 178, 0.5);
-  --vimputer-placeholder: #cfd8b0;
-  --vimputer-overlay: rgba(255, 255, 255, 0.35);
+  --vimputer-text: #d7ddd8;
+  --vimputer-text-hover: #f0f3ef;
+  --vimputer-bg: rgb(64, 72, 69);
+  --vimputer-gradient-1: rgba(130, 142, 136, 0.28);
+  --vimputer-gradient-2: rgba(98, 110, 105, 0.22);
+  --vimputer-gradient-3: rgba(42, 49, 47, 0.48);
+  --vimputer-placeholder: #5b6661;
+  --vimputer-overlay: rgba(255, 255, 255, 0.16);
 
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 
 .vimputerSection :global(.home__icon h1:hover) {
   color: var(--vimputer-text-hover);
-  text-decoration-color: rgba(26, 21, 18, 0.45);
+  text-decoration-color: rgba(240, 243, 239, 0.45);
 }
 
 .vimputerSection :global(.list__items li a) {
@@ -38,7 +38,7 @@
 
 .vimputerSection :global(.list__items li a:hover) {
   color: var(--vimputer-text-hover);
-  text-decoration-color: rgba(63, 52, 42, 0.55);
+  text-decoration-color: rgba(240, 243, 239, 0.5);
 }
 
 .vimputerSection :global(.menu_icon .menu) {

@@ -63,10 +63,10 @@ const Vimputer = () => {
               <p className={style.body}>
                 A tiny computer built for capturing ideas in Vim.
                 <br />
-                Months-long battery life (seriously) and a built-in mechanical keyboard.
+                Months-long battery life and a built-in mechanical keyboard.
                 <br />
                 <br />
-                Designed for my boyfriend - a programmer who loves Vim.
+                Designed with my boyfriend, a programmer who loves Vim.
                 <br />
                 Hand-soldered with love :)
               </p>
