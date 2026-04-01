@@ -34,12 +34,12 @@
 }
 
 .vimputerSection :global(.list__items li a) {
-  color: var(--vimputer-nav);
+  color: var(--angela-name-lime);
 }
 
 .vimputerSection :global(.list__items li a:hover) {
-  color: var(--vimputer-nav-hover);
-  text-decoration-color: var(--vimputer-nav-hover);
+  color: var(--angela-name-lime-hover);
+  text-decoration-color: var(--angela-name-lime-hover);
 }
 
 .vimputerSection :global(.list__items) {

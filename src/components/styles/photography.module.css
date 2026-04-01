@@ -33,12 +33,12 @@
 }
 
 .darkRoom :global(.list__items li a) {
-  color: #c4c8e8;
+  color: var(--angela-name-lime);
 }
 
 .darkRoom :global(.list__items li a:hover) {
-  color: #dfe4ff;
-  text-decoration-color: #9aa3d4;
+  color: var(--angela-name-lime-hover);
+  text-decoration-color: var(--angela-name-lime-hover);
 }
 
 .darkRoom :global(.home__icon h1) {

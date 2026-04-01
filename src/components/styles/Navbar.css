@@ -58,7 +58,7 @@
 
 .list__items li a {
     text-decoration: none;
-    color: var(--warm-cobalt);
+    color: var(--angela-name-lime);
     font-size: 17px;
     font-family: Righteous;
     cursor: pointer;
@@ -75,8 +75,8 @@
 
 .list__items li a:hover {
     text-decoration: underline;
-    text-decoration-color: var(--warm-cobalt-hover);
-    color: var(--warm-cobalt-hover);
+    text-decoration-color: var(--angela-name-lime-hover);
+    color: var(--angela-name-lime-hover);
 }
 
 /* @media (width: 50em){

@@ -131,7 +131,7 @@
     }
 
     .home__content nav{
-        color: var(--warm-cobalt);
+        color: var(--angela-name-lime);
     }
     
     .home__content nav ul{
@@ -150,7 +150,7 @@
     
     .home__content nav li a{
         text-decoration: none;
-        color: var(--warm-cobalt);
+        color: var(--angela-name-lime);
         font-size: 17px;
         font-family: Righteous;
         cursor: pointer;
@@ -162,8 +162,8 @@
     
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--warm-cobalt-hover);
-        color: var(--warm-cobalt-hover);
+        text-decoration-color: var(--angela-name-lime-hover);
+        color: var(--angela-name-lime-hover);
     }
 }
 
@@ -209,7 +209,7 @@
     
     .home__content nav li a{
         text-decoration: none;
-        color: var(--warm-cobalt);
+        color: var(--angela-name-lime);
         font-size: 15px;
         font-family: Righteous;
         cursor: pointer;
@@ -221,8 +221,8 @@
     
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--warm-cobalt-hover);
-        color: var(--warm-cobalt-hover);
+        text-decoration-color: var(--angela-name-lime-hover);
+        color: var(--angela-name-lime-hover);
     }
 }
 
@@ -244,7 +244,7 @@
     }
     .home__content nav li a{
         text-decoration: none;
-        color: var(--warm-cobalt);
+        color: var(--angela-name-lime);
         cursor: pointer;
         pointer-events: auto;
         display: inline-block;
@@ -253,8 +253,8 @@
     }
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--warm-cobalt-hover);
-        color: var(--warm-cobalt-hover);
+        text-decoration-color: var(--angela-name-lime-hover);
+        color: var(--angela-name-lime-hover);
     }
     /* .home__content .small__p {
         font-size: 8px;

@@ -7,12 +7,12 @@
 }
 
 .noeLampSection :global(.list__items li a) {
-  color: var(--lamp-warm-brown);
+  color: var(--angela-name-lime);
 }
 
 .noeLampSection :global(.list__items li a:hover) {
-  color: var(--lamp-body-color);
-  text-decoration-color: var(--lamp-body-color);
+  color: var(--angela-name-lime-hover);
+  text-decoration-color: var(--angela-name-lime-hover);
 }
 
 .noeLampSection :global(.list__items) {

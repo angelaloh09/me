@@ -31,12 +31,12 @@
 }
 
 .cloudVaseSection :global(.list__items li a) {
-  color: var(--cloud-vase-nav);
+  color: var(--angela-name-lime);
 }
 
 .cloudVaseSection :global(.list__items li a:hover) {
-  color: var(--cloud-vase-nav-hover);
-  text-decoration-color: var(--cloud-vase-nav-hover);
+  color: var(--angela-name-lime-hover);
+  text-decoration-color: var(--angela-name-lime-hover);
 }
 
 .cloudVaseSection :global(.list__items) {
