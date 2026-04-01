@@ -105,43 +105,35 @@
   gap: 0.5rem;
 }
 
+/* Natural aspect ratio; wrapper hugs the image (no letterboxing or side gutters) */
 .mainImageWrapper {
   position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  max-height: min(680px, calc(100svh - 11rem));
-  overflow: hidden;
+  width: fit-content;
+  max-width: 100%;
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background: var(--vimputer-placeholder);
 }
 
-/* Height budget: navbar + top padding — keeps portrait shots on one screen */
-.mainImageWrapperPortrait {
-  aspect-ratio: 2 / 3;
-  max-height: calc(100svh - 10rem);
-  width: min(100%, calc((100svh - 10rem) * 2 / 3));
-  max-width: 100%;
-  justify-self: center;
-}
-
-.mainImageWrapperPortrait .mainImage {
-  object-fit: contain;
+.mainImageWrapper:has(.mainImagePlaceholder) {
+  width: 100%;
 }
 
 .mainImagePlaceholder {
   width: 100%;
   aspect-ratio: 4 / 3;
-  max-height: min(680px, calc(100svh - 11rem));
+  max-height: min(400px, calc(100svh - 11rem));
   background: var(--vimputer-placeholder);
 }
 
 .mainImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  background: var(--vimputer-placeholder);
+  display: block;
+  max-width: 100%;
+  max-height: calc(100svh - 10rem);
+  width: auto;
+  height: auto;
   animation: fadeIn 0.35s ease forwards;
 }
 

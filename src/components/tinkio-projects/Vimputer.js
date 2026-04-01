@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Navbar from '../Navbar'
-import { useImageAspectOrientation } from '../../hooks/useImageAspectOrientation'
 import '../styles/Styles.css'
 import style from '../styles/vimputer.module.css'
 
@@ -15,7 +14,6 @@ const Vimputer = () => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [hoveredImage, setHoveredImage] = useState(null)
   const displayedImage = selectedImage
-  const { isPortrait, onMainImageLoad } = useImageAspectOrientation(displayedImage)
 
   return (
     <section className={`ideas ${style.vimputerSection}`}>
@@ -42,16 +40,13 @@ const Vimputer = () => {
                   </div>
                 ))}
               </div>
-              <div
-                className={`${style.mainImageWrapper} ${isPortrait ? style.mainImageWrapperPortrait : ''}`}
-              >
+              <div className={style.mainImageWrapper}>
                 {displayedImage !== null ? (
                   <img
                     key={displayedImage}
                     src={images[displayedImage]}
                     alt="Vimputer"
                     className={style.mainImage}
-                    onLoad={onMainImageLoad}
                   />
                 ) : (
                   <div className={style.mainImagePlaceholder} />

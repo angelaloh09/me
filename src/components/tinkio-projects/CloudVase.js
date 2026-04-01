@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Navbar from '../Navbar'
-import { useImageAspectOrientation } from '../../hooks/useImageAspectOrientation'
 import '../styles/Styles.css'
 import style from '../styles/cloud-vase.module.css'
 
@@ -15,7 +14,6 @@ const CloudVase = () => {
     const [selectedImage, setSelectedImage] = useState(0)
     const [hoveredImage, setHoveredImage] = useState(null)
     const displayedImage = selectedImage
-    const { isPortrait, onMainImageLoad } = useImageAspectOrientation(displayedImage)
 
     return (
         <section className={`ideas ${style.cloudVaseSection}`}>
@@ -43,16 +41,13 @@ const CloudVase = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div
-                                className={`${style.mainImageWrapper} ${isPortrait ? style.mainImageWrapperPortrait : ''}`}
-                            >
+                            <div className={style.mainImageWrapper}>
                                 {displayedImage !== null ? (
                                     <img
                                         key={displayedImage}
                                         src={images[displayedImage]}
                                         alt="Cloud Vase"
                                         className={style.mainImage}
-                                        onLoad={onMainImageLoad}
                                     />
                                 ) : (
                                     <div className={style.mainImagePlaceholder} />
