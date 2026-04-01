@@ -104,11 +104,6 @@
   position: relative;
 }
 
-.mainImageWrapperPortrait {
-  width: min(42vw, 540px);
-  aspect-ratio: 1599 / 2007;
-}
-
 .mainImagePlaceholder {
   width: 100%;
   aspect-ratio: 1599 / 2007;
@@ -123,6 +118,9 @@
   object-fit: cover;
   object-position: center;
   background: transparent;
+}
+
+.mainImageAnimated {
   animation: fadeIn 0.35s ease forwards;
 }
 

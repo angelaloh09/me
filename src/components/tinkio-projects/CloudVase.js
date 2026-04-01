@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Navbar from '../Navbar'
-import { useImageAspectOrientation } from '../../hooks/useImageAspectOrientation'
 import '../styles/Styles.css'
 import style from '../styles/cloud-vase.module.css'
 
@@ -13,8 +12,8 @@ const images = [dscf4753, img1, img2]
 const CloudVase = () => {
     const [selectedImage, setSelectedImage] = useState(0)
     const [hoveredImage, setHoveredImage] = useState(null)
+    const [shouldAnimateImage, setShouldAnimateImage] = useState(false)
     const displayedImage = selectedImage
-    const { isPortrait, onMainImageLoad } = useImageAspectOrientation(displayedImage)
 
     return (
         <section className={`ideas ${style.cloudVaseSection}`}>
@@ -29,7 +28,12 @@ const CloudVase = () => {
                                     <div
                                         key={idx}
                                         className={`${style.thumbnailWrapper} ${selectedImage === idx ? style.thumbnailActive : ''} ${(displayedImage === idx || hoveredImage === idx) ? style.thumbnailDisplayed : ''}`}
-                                        onClick={() => setSelectedImage(idx)}
+                                        onClick={() => {
+                                            if (idx !== selectedImage) {
+                                                setShouldAnimateImage(true)
+                                                setSelectedImage(idx)
+                                            }
+                                        }}
                                         onMouseEnter={() => setHoveredImage(idx)}
                                         onMouseLeave={() => setHoveredImage(null)}
                                     >
@@ -42,16 +46,13 @@ const CloudVase = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div
-                                className={`${style.mainImageWrapper} ${isPortrait ? style.mainImageWrapperPortrait : ''}`}
-                            >
+                            <div className={style.mainImageWrapper}>
                                 {displayedImage !== null ? (
                                     <img
                                         key={displayedImage}
                                         src={images[displayedImage]}
                                         alt="Cloud Vase"
-                                        className={style.mainImage}
-                                        onLoad={onMainImageLoad}
+                                        className={`${style.mainImage} ${shouldAnimateImage ? style.mainImageAnimated : ''}`}
                                     />
                                 ) : (
                                     <div className={style.mainImagePlaceholder} />
