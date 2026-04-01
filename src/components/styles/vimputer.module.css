@@ -1,13 +1,12 @@
 .vimputerSection {
-  --vimputer-nav: #3a3632;
-  --vimputer-nav-hover: #2a2724;
-  --vimputer-accent: #168989;
-  --vimputer-accent-hover: #26a8a8;
-  --vimputer-bg: rgb(205, 179, 79);
-  --vimputer-gradient-1: rgba(232, 210, 130, 0.78);
-  --vimputer-gradient-2: rgba(205, 179, 79, 0.45);
-  --vimputer-gradient-3: rgba(165, 135, 55, 0.52);
-  --vimputer-placeholder: #b89a4a;
+  /* Same dark brown family as Projects page (--projects-bg-deep / warm) */
+  --vimputer-text: #1a1512;
+  --vimputer-text-hover: #3f342a;
+  --vimputer-bg: rgb(232, 238, 208);
+  --vimputer-gradient-1: rgba(252, 246, 228, 0.9);
+  --vimputer-gradient-2: rgba(218, 232, 198, 0.52);
+  --vimputer-gradient-3: rgba(198, 212, 178, 0.5);
+  --vimputer-placeholder: #cfd8b0;
   --vimputer-overlay: rgba(255, 255, 255, 0.35);
 
   display: flex;
@@ -25,20 +24,25 @@
 }
 
 .vimputerSection :global(.home__icon h1) {
-  color: var(--vimputer-accent);
+  color: var(--vimputer-text);
 }
 
 .vimputerSection :global(.home__icon h1:hover) {
-  text-decoration-color: var(--vimputer-accent-hover);
+  color: var(--vimputer-text-hover);
+  text-decoration-color: rgba(26, 21, 18, 0.45);
 }
 
 .vimputerSection :global(.list__items li a) {
-  color: var(--vimputer-accent);
+  color: var(--vimputer-text);
 }
 
 .vimputerSection :global(.list__items li a:hover) {
-  color: var(--vimputer-accent-hover);
-  text-decoration-color: var(--vimputer-accent-hover);
+  color: var(--vimputer-text-hover);
+  text-decoration-color: rgba(63, 52, 42, 0.55);
+}
+
+.vimputerSection :global(.menu_icon .menu) {
+  color: var(--vimputer-text);
 }
 
 .vimputerSection :global(.list__items) {
@@ -47,7 +51,7 @@
 }
 
 .vimputerSection :global(.close_icon) {
-  color: var(--vimputer-nav);
+  color: var(--vimputer-text);
 }
 
 .contentWrapper {
@@ -56,12 +60,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem clamp(0.5rem, 2vw, 1.25rem);
-  padding-top: 4.5rem;
+  padding: 2rem 0;
+  padding-top: 5rem;
 }
 
 .container {
-  max-width: min(1400px, 98%);
+  max-width: min(980px, 92%);
   margin: 0 auto;
   margin-bottom: 50px;
   width: 100%;
@@ -70,9 +74,10 @@
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.58fr) minmax(0, 0.72fr);
-  gap: 2rem 2.75rem;
+  grid-template-columns: max-content minmax(28rem, 48rem);
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
   align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -94,9 +99,11 @@
 
 .imageColumn {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 0.75rem;
   align-items: center;
+  justify-items: start;
+  width: fit-content;
 }
 
 .thumbnailGrid {
@@ -105,35 +112,36 @@
   gap: 0.5rem;
 }
 
-/* Natural aspect ratio; wrapper hugs the image (no letterboxing or side gutters) */
 .mainImageWrapper {
-  position: relative;
-  width: fit-content;
+  width: min(48vw, 560px);
   max-width: 100%;
-  justify-self: center;
+  max-height: min(78vh, 680px);
   display: flex;
-  justify-content: center;
   align-items: flex-start;
-  background: var(--vimputer-placeholder);
+  justify-content: flex-start;
+  overflow: visible;
+  background: transparent;
+  justify-self: start;
 }
 
-.mainImageWrapper:has(.mainImagePlaceholder) {
-  width: 100%;
+.mainImageWrapperPortrait {
+  width: min(48vw, 560px);
 }
 
 .mainImagePlaceholder {
   width: 100%;
   aspect-ratio: 4 / 3;
-  max-height: min(400px, calc(100svh - 11rem));
+  max-height: min(78vh, 680px);
   background: var(--vimputer-placeholder);
 }
 
 .mainImage {
   display: block;
-  max-width: 100%;
-  max-height: calc(100svh - 10rem);
   width: auto;
+  max-width: 100%;
   height: auto;
+  max-height: min(78vh, 680px);
+  background: transparent;
   animation: fadeIn 0.35s ease forwards;
 }
 
@@ -190,13 +198,14 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  justify-self: end;
-  max-width: min(24rem, 100%);
-  padding-left: 0.75rem;
+  justify-self: start;
+  align-self: center;
+  max-width: 68ch;
+  text-align: left;
 }
 
 .title {
-  color: var(--vimputer-accent);
+  color: var(--vimputer-text);
   font-family: Righteous;
   font-size: 36px;
   font-weight: lighter;
@@ -207,7 +216,7 @@
   font-family: Poppins;
   font-size: 13px;
   line-height: 1.6;
-  color: var(--vimputer-accent-hover);
+  color: var(--vimputer-text);
   margin: 0;
   font-style: italic;
 }
