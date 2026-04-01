@@ -68,6 +68,11 @@ const Photography = () => {
     }
 
     useEffect(() => {
+        document.documentElement.classList.add('photography-dark-room')
+        return () => document.documentElement.classList.remove('photography-dark-room')
+    }, [])
+
+    useEffect(() => {
         const handleKeyDown = (e) => {
             if (!selectedPhoto) return
 

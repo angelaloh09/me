@@ -1,9 +1,18 @@
 /* Dark-room page shell (Photography only) */
+/* Match html/body/#root when class is set in Photography.js (avoids cream strip) */
+:global(html.photography-dark-room),
+:global(html.photography-dark-room) body,
+:global(html.photography-dark-room) #root {
+  background-color: #1a1f2e;
+}
+
 :global(.ideas).darkRoom {
   --dark-room-bg: #1a1f2e;
   --dark-room-tile: #283246;
   background: var(--dark-room-bg);
   color: #e8e6e3;
+  /* Padding so last child margin cannot collapse past the section (cream was showing) */
+  padding-bottom: 50px;
 }
 
 .darkRoom :global(.list__items) {
@@ -33,11 +42,12 @@
 }
 
 .darkRoom :global(.home__icon h1) {
-  color: #ffb38a;
+  color: #e98880;
 }
 
 .darkRoom :global(.home__icon h1:hover) {
-  text-decoration-color: #ffb38a;
+  color: #f0a099;
+  text-decoration-color: #e98880;
 }
 
 .photoPage {
@@ -45,7 +55,6 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  margin-bottom: 50px;
 }
 
 .photoHeading {
