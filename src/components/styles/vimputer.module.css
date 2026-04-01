@@ -3,11 +3,11 @@
   --vimputer-nav-hover: #2a2724;
   --vimputer-accent: #168989;
   --vimputer-accent-hover: #26a8a8;
-  --vimputer-bg: rgb(236, 226, 212);
-  --vimputer-gradient-1: rgba(255, 252, 248, 0.85);
-  --vimputer-gradient-2: rgba(255, 245, 235, 0.35);
-  --vimputer-gradient-3: rgba(220, 210, 198, 0.45);
-  --vimputer-placeholder: #d4cbc0;
+  --vimputer-bg: rgb(205, 179, 79);
+  --vimputer-gradient-1: rgba(232, 210, 130, 0.78);
+  --vimputer-gradient-2: rgba(205, 179, 79, 0.45);
+  --vimputer-gradient-3: rgba(165, 135, 55, 0.52);
+  --vimputer-placeholder: #b89a4a;
   --vimputer-overlay: rgba(255, 255, 255, 0.35);
 
   display: flex;
