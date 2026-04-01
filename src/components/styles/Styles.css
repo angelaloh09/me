@@ -1,7 +1,8 @@
 :root {
-  /* "angela loh" in nav + home hero — forest with a turquoise lean */
-  --angela-name-lime: #397062;
-  --angela-name-lime-hover: #4a8f83;
+  --nav-brand: #168989;
+  --nav-brand-hover: #26a8a8;
+  --warm-cobalt: #566dd0;
+  --warm-cobalt-hover: #6b82e0;
 }
 
 .ideas {

@@ -28,7 +28,6 @@
   
   :root {
   --main-black:#000000;
-  --main-orange:#FF5C00;
   --main-purple:#5643E9;
   --slides-purple:#a49ed2; 
   --nav-border: #c6c6c6;
@@ -38,8 +37,6 @@
   --idea-grey: #5F5C76;
   --idea-grey-underline: #6d6d6d;
   --photo-caption-yellow: #FFF8E7;
-  --warm-cobalt: #566DD0;
-  --warm-cobalt-hover: #6B82E0;
   --lamp-warm-brown: #5d3300;
   --lamp-body-color: #825927;
   --lamp-nav-title: #fbe1ab;
@@ -120,18 +117,18 @@
         font-size: 40px;
         text-align: center;
         font-weight: lighter;
-        color: var(--angela-name-lime);
+        color: var(--nav-brand);
         text-transform: lowercase;
         line-height: 75px;
         text-decoration: underline;
         text-decoration-thickness: 1px;
         text-underline-offset: 7px;
-        text-decoration-color: var(--angela-name-lime);
+        text-decoration-color: var(--nav-brand);
         letter-spacing: 1px;
     }
 
     .home__content nav{
-        color: var(--angela-name-lime);
+        color: var(--nav-brand);
     }
     
     .home__content nav ul{
@@ -150,7 +147,7 @@
     
     .home__content nav li a{
         text-decoration: none;
-        color: var(--angela-name-lime);
+        color: var(--nav-brand);
         font-size: 17px;
         font-family: Righteous;
         cursor: pointer;
@@ -162,8 +159,8 @@
     
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--angela-name-lime-hover);
-        color: var(--angela-name-lime-hover);
+        text-decoration-color: var(--nav-brand-hover);
+        color: var(--nav-brand-hover);
     }
 }
 
@@ -194,7 +191,7 @@
         padding:30px;
     }
     .content__header {
-        color: var(--angela-name-lime);
+        color: var(--nav-brand);
         padding-bottom: 6px;
         white-space: nowrap;
     }
@@ -209,7 +206,7 @@
     
     .home__content nav li a{
         text-decoration: none;
-        color: var(--angela-name-lime);
+        color: var(--nav-brand);
         font-size: 15px;
         font-family: Righteous;
         cursor: pointer;
@@ -221,8 +218,8 @@
     
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--angela-name-lime-hover);
-        color: var(--angela-name-lime-hover);
+        text-decoration-color: var(--nav-brand-hover);
+        color: var(--nav-brand-hover);
     }
 }
 
@@ -244,7 +241,7 @@
     }
     .home__content nav li a{
         text-decoration: none;
-        color: var(--angela-name-lime);
+        color: var(--nav-brand);
         cursor: pointer;
         pointer-events: auto;
         display: inline-block;
@@ -253,8 +250,8 @@
     }
     .home__content nav li a:hover{
         text-decoration: underline;
-        text-decoration-color: var(--angela-name-lime-hover);
-        color: var(--angela-name-lime-hover);
+        text-decoration-color: var(--nav-brand-hover);
+        color: var(--nav-brand-hover);
     }
     /* .home__content .small__p {
         font-size: 8px;

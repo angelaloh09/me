@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Close, MenuOutlined } from '@material-ui/icons'
+import './styles/Styles.css'
 import './styles/Navbar.css'
 
 const Navbar = () => {

@@ -1,18 +1,18 @@
 .noeLampSection :global(.home__icon h1) {
-  color: var(--angela-name-lime);
+  color: var(--nav-brand);
 }
 
 .noeLampSection :global(.home__icon h1:hover) {
-  text-decoration-color: var(--angela-name-lime-hover);
+  text-decoration-color: var(--nav-brand-hover);
 }
 
 .noeLampSection :global(.list__items li a) {
-  color: var(--angela-name-lime);
+  color: var(--nav-brand);
 }
 
 .noeLampSection :global(.list__items li a:hover) {
-  color: var(--angela-name-lime-hover);
-  text-decoration-color: var(--angela-name-lime-hover);
+  color: var(--nav-brand-hover);
+  text-decoration-color: var(--nav-brand-hover);
 }
 
 .noeLampSection :global(.list__items) {

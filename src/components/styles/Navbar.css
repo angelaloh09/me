@@ -1,8 +1,3 @@
-:root {
-    --warm-cobalt: #566DD0;
-    --warm-cobalt-hover: #6B82E0;
-}
-
 .navbar {
     position: relative;
     z-index: 100;
@@ -10,14 +5,14 @@
 
 .home__icon h1{
     font-size:30px;
-    color: var(--angela-name-lime);
+    color: var(--nav-brand);
     letter-spacing: 1px;
     font-weight: lighter;
 }
 
 .home__icon h1:hover{
     text-decoration: underline;
-    text-decoration-color: var(--angela-name-lime-hover);
+    text-decoration-color: var(--nav-brand-hover);
 }
 
 @media (min-width: 50em) {
@@ -58,7 +53,7 @@
 
 .list__items li a {
     text-decoration: none;
-    color: var(--angela-name-lime);
+    color: var(--nav-brand);
     font-size: 17px;
     font-family: Righteous;
     cursor: pointer;
@@ -75,13 +70,9 @@
 
 .list__items li a:hover {
     text-decoration: underline;
-    text-decoration-color: var(--angela-name-lime-hover);
-    color: var(--angela-name-lime-hover);
+    text-decoration-color: var(--nav-brand-hover);
+    color: var(--nav-brand-hover);
 }
-
-/* @media (width: 50em){
-
-} */
 
 @media (max-width:50em) {
     .navbar {
