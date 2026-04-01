@@ -5,9 +5,10 @@ import style from '../styles/vimputer.module.css'
 
 import typewriter from './vimputer/typewriter.jpeg'
 import img6326 from './vimputer/DSCF6326.jpg'
+import img6306 from './vimputer/DSCF6306.jpg'
 import desk from './vimputer/desk.jpeg'
 
-const images = [typewriter, img6326, desk]
+const images = [img6306, typewriter, img6326, desk]
 
 const Vimputer = () => {
   const [selectedImage, setSelectedImage] = useState(0)

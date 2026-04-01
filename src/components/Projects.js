@@ -5,7 +5,7 @@ import style from './styles/projects.module.css'
 import { Link } from 'react-router-dom'
 import noeLampImg from './tinkio-projects/noe-lamp/noe-lamp-img1.jpg'
 import cloudVaseImg from './tinkio-projects/cloud-vase/DSCF4753.jpg'
-import vimputerImg from './tinkio-projects/vimputer/typewriter.jpeg'
+import vimputerImg from './tinkio-projects/vimputer/DSCF6306.jpg'
 
 const projects = [
   {
@@ -22,6 +22,7 @@ const projects = [
     title: 'Vimputer',
     path: '/tinkio-projects/vimputer',
     image: vimputerImg,
+    objectPosition: 'center top',
   },
 ]
 
@@ -43,6 +44,7 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     className={style.cardImage}
+                    style={project.objectPosition ? { objectPosition: project.objectPosition } : undefined}
                   />
                 ) : (
                   <div
