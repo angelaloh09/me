@@ -1,3 +1,9 @@
+:root {
+  /* "angela loh" in nav + home hero — matcha / forest */
+  --angela-name-lime: #4a6b52;
+  --angela-name-lime-hover: #5f8a6a;
+}
+
 .ideas {
   width: 100%;
   min-height: 100vh;

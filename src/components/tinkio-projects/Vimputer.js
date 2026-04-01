@@ -56,7 +56,15 @@ const Vimputer = () => {
             <div className={style.textColumn}>
               <h1 className={style.title}>Vimputer</h1>
               <p className={style.body}>
-                A compact computer built around Vim.
+              A tiny computer built for capturing ideas in Vim. 
+              <br></br>
+              Months-long battery life (seriously) and a built-in mechanical keyboard.
+              <br></br>
+              <br></br>
+              Designed for my boyfriend - a programmer who loves Vim.
+              <br></br>
+              Hand-soldered with love :) 
+            
               </p>
             </div>
           </div>

@@ -1,13 +1,16 @@
 .vimputerSection {
-  --vimputer-nav: #1e293b;
-  --vimputer-nav-hover: #0f172a;
-  --vimputer-bg: rgb(71, 78, 88);
-  --vimputer-gradient-1: rgba(200, 220, 235, 0.12);
-  --vimputer-gradient-2: rgba(180, 200, 215, 0.1);
-  --vimputer-gradient-3: rgba(160, 185, 200, 0.08);
-  --vimputer-body: #e8eef4;
-  --vimputer-placeholder: #d4d8de;
-  --vimputer-overlay: rgba(255, 255, 255, 0.22);
+  --vimputer-nav: #3a3632;
+  --vimputer-nav-hover: #2a2724;
+  /* Light birch / Scandinavian ply — blonde, slightly warm */
+  --vimputer-bg: rgb(236, 226, 212);
+  --vimputer-gradient-1: rgba(255, 252, 248, 0.85);
+  --vimputer-gradient-2: rgba(255, 245, 235, 0.35);
+  --vimputer-gradient-3: rgba(220, 210, 198, 0.45);
+  /* Cute mint / matcha for title + tagline */
+  --vimputer-mint: #6aab92;
+  --vimputer-mint-soft: #5c9a82;
+  --vimputer-placeholder: #d4cbc0;
+  --vimputer-overlay: rgba(255, 255, 255, 0.35);
 
   display: flex;
   flex-direction: column;
@@ -23,11 +26,11 @@
 }
 
 .vimputerSection :global(.home__icon h1) {
-  color: var(--vimputer-nav);
+  color: var(--angela-name-lime);
 }
 
 .vimputerSection :global(.home__icon h1:hover) {
-  text-decoration-color: var(--vimputer-nav);
+  text-decoration-color: var(--angela-name-lime-hover);
 }
 
 .vimputerSection :global(.list__items li a) {
@@ -170,7 +173,7 @@
 }
 
 .title {
-  color: var(--vimputer-body);
+  color: var(--vimputer-mint);
   font-family: Righteous;
   font-size: 36px;
   font-weight: lighter;
@@ -181,7 +184,7 @@
   font-family: Poppins;
   font-size: 13px;
   line-height: 1.6;
-  color: var(--vimputer-body);
+  color: var(--vimputer-mint-soft);
   margin: 0;
   font-style: italic;
 }

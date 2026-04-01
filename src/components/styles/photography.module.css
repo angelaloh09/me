@@ -42,12 +42,11 @@
 }
 
 .darkRoom :global(.home__icon h1) {
-  color: #e98880;
+  color: var(--angela-name-lime);
 }
 
 .darkRoom :global(.home__icon h1:hover) {
-  color: #f0a099;
-  text-decoration-color: #e98880;
+  text-decoration-color: var(--angela-name-lime-hover);
 }
 
 .photoPage {

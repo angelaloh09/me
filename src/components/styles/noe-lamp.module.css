@@ -1,9 +1,9 @@
 .noeLampSection :global(.home__icon h1) {
-  color: var(--lamp-warm-brown);
+  color: var(--angela-name-lime);
 }
 
 .noeLampSection :global(.home__icon h1:hover) {
-  text-decoration-color: var(--lamp-body-color);
+  text-decoration-color: var(--angela-name-lime-hover);
 }
 
 .noeLampSection :global(.list__items li a) {
