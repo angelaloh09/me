@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/photography.module.css'
@@ -43,6 +43,7 @@ const PHOTOS = [
 
 const Photography = () => {
     const [selectedPhoto, setSelectedPhoto] = useState(null)
+    const lightboxImageRef = useRef(null)
 
     const openLightbox = (photo) => {
         setSelectedPhoto(photo)
@@ -51,6 +52,25 @@ const Photography = () => {
     const closeLightbox = useCallback(() => {
         setSelectedPhoto(null)
     }, [])
+
+    const handleLightboxClick = useCallback((e) => {
+        const image = lightboxImageRef.current
+        if (!image) {
+            closeLightbox()
+            return
+        }
+
+        const rect = image.getBoundingClientRect()
+        const clickedInsideImage =
+            e.clientX >= rect.left &&
+            e.clientX <= rect.right &&
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom
+
+        if (!clickedInsideImage) {
+            closeLightbox()
+        }
+    }, [closeLightbox])
 
     const goToNextPhoto = useCallback(() => {
         setSelectedPhoto((current) => {
@@ -124,13 +144,12 @@ const Photography = () => {
             </div>
 
             {selectedPhoto && (
-                <div className={style.lightbox} onClick={closeLightbox}>
-                    <div className={style.lightboxContent} onClick={(e) => e.stopPropagation()}>
+                <div className={style.lightbox} onClick={handleLightboxClick}>
+                    <div className={style.lightboxContent}>
                         <img
+                            ref={lightboxImageRef}
                             src={selectedPhoto.src}
                             alt={selectedPhoto.alt}
-                            width={selectedPhoto.width}
-                            height={selectedPhoto.height}
                         />
                         {selectedPhoto.location && (
                             <p className={style.caption}>{selectedPhoto.location}</p>
