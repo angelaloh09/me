@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../Navbar'
+import { useImageAspectOrientation } from '../../hooks/useImageAspectOrientation'
 import '../styles/Styles.css'
 import style from '../styles/noe-lamp.module.css'
 
@@ -12,8 +13,8 @@ const images = [img1, img2, img3]
 const NoeLamp = () => {
     const [selectedImage, setSelectedImage] = useState(0)
     const [hoveredImage, setHoveredImage] = useState(null)
-
     const displayedImage = selectedImage
+    const { isPortrait, onMainImageLoad } = useImageAspectOrientation(displayedImage)
 
     return (
         <section className={`ideas ${style.noeLampSection}`}>
@@ -41,13 +42,16 @@ const NoeLamp = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className={style.mainImageWrapper}>
+                            <div
+                                className={`${style.mainImageWrapper} ${isPortrait ? style.mainImageWrapperPortrait : ''}`}
+                            >
                                 {displayedImage !== null ? (
                                     <img
                                         key={displayedImage}
                                         src={images[displayedImage]}
                                         alt="Noe Lamp"
                                         className={style.mainImage}
+                                        onLoad={onMainImageLoad}
                                     />
                                 ) : (
                                     <div className={style.mainImagePlaceholder} />
