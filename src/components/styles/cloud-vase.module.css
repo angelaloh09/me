@@ -99,18 +99,26 @@
 .mainImageWrapper {
   position: relative;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: min(78vh, 680px);
+  overflow: hidden;
+  background: var(--cloud-vase-placeholder);
 }
 
 .mainImagePlaceholder {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 3;
+  max-height: min(78vh, 680px);
   background: var(--cloud-vase-placeholder);
 }
 
 .mainImage {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   background: var(--cloud-vase-placeholder);
   animation: fadeIn 0.35s ease forwards;
 }

@@ -3,10 +3,12 @@ import Navbar from '../Navbar'
 import '../styles/Styles.css'
 import style from '../styles/vimputer.module.css'
 
-import highlevel from './vimputer/vimputer-highlevel.jpeg'
-import closeup from './vimputer/vimputer-closeup.jpeg'
+import cover from './vimputer/DSCF6326.jpg'
+import img6306 from './vimputer/DSCF6306.jpg'
+import img6323 from './vimputer/DSCF6323_2.jpeg'
+import desk from './vimputer/desk.jpeg'
 
-const images = [highlevel, closeup]
+const images = [cover, img6306, img6323, desk]
 
 const Vimputer = () => {
   const [selectedImage, setSelectedImage] = useState(0)
@@ -56,15 +58,14 @@ const Vimputer = () => {
             <div className={style.textColumn}>
               <h1 className={style.title}>Vimputer</h1>
               <p className={style.body}>
-              A tiny computer built for capturing ideas in Vim. 
-              <br></br>
-              Months-long battery life (seriously) and a built-in mechanical keyboard.
-              <br></br>
-              <br></br>
-              Designed for my boyfriend - a programmer who loves Vim.
-              <br></br>
-              Hand-soldered with love :) 
-            
+                A tiny computer built for capturing ideas in Vim.
+                <br />
+                Months-long battery life (seriously) and a built-in mechanical keyboard.
+                <br />
+                <br />
+                Designed for my boyfriend - a programmer who loves Vim.
+                <br />
+                Hand-soldered with love :)
               </p>
             </div>
           </div>
