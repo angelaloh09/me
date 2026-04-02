@@ -50,22 +50,28 @@ const AboutMe = () => {
                         <br></br><br></br>
                         I have a curiosity for making the world a better place, and I'm always looking for new ways to do so.
                         I love learning about how things work. Below are some of the teams and projects I&apos;ve been part of.
+                        <br></br><br></br>
+                        Below are some of the teams & projects I've been lucky to be a part of. 
                     </p>
 
                     <section className={style.mediaGallery} aria-label="Work photos">
                         <div className={style.mediaCompanyBlock}>
-                            <h3 className={style.mediaHeading}>Figure</h3>
-                            <p className={style.mediaCaption}>
-                                <a
-                                    href="https://www.youtube.com/watch?v=IlG3X8zRI2I&t=9"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={style.Link}
-                                >
-                                    Robotic hands
-                                </a>
-                                {" "}at Figure, a humanoid robotics company.
-                            </p>
+                            <div className={style.mediaCompanyText}>
+                                <h3 className={style.mediaHeading}>Figure</h3>
+                                <p className={style.mediaCaption}> Figure Ai is designing a human-like robot that's mission is to help people.
+                                    <br></br> <br></br>
+                                    I was one of two electrical engineers who designed & engineered all of the electronics for the Figure 3 & 4&nbsp;
+                                    <a
+                                        href="https://www.youtube.com/watch?v=IlG3X8zRI2I&t=9"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={style.Link}
+                                    >
+                                        robotic hands
+                                    </a>
+                                    .
+                                </p>
+                            </div>
                             <div className={style.mediaRow}>
                                 {figurePhotos.map(({ src, alt }, i) => (
                                     <img
@@ -79,18 +85,20 @@ const AboutMe = () => {
                             </div>
                         </div>
                         <div className={style.mediaCompanyBlock}>
-                            <h3 className={style.mediaHeading}>Humane</h3>
-                            <p className={style.mediaCaption}>
-                                {"Humane AiPin's "}
-                                <a
-                                    href="https://www.youtube.com/watch?v=9lNIwOOMVHk&t=177s"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={style.Link}
-                                >
-                                    laser display
-                                </a>
-                            </p>
+                            <div className={style.mediaCompanyText}>
+                                <h3 className={style.mediaHeading}>Humane</h3>
+                                <p className={style.mediaCaption}>
+                                    {"Humane AiPin's "}
+                                    <a
+                                        href="https://www.youtube.com/watch?v=9lNIwOOMVHk&t=177s"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={style.Link}
+                                    >
+                                        laser display
+                                    </a>
+                                </p>
+                            </div>
                             <div className={style.mediaRow}>
                                 {humanePhotos.map(({ src, alt }, i) => (
                                     <img
@@ -104,20 +112,22 @@ const AboutMe = () => {
                             </div>
                         </div>
                         <div className={style.mediaCompanyBlock}>
-                            <h3 className={style.mediaHeading}>Cornell Nexus</h3>
-                            <p className={style.mediaCaption}>
-                                Founded a team to create an{" "}
-                                <a
-                                    href="https://news.cornell.edu/stories/2022/12/students-design-robot-collect-microplastics-beaches"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={style.Link}
-                                >
-                                    autonomous beach roomba
-                                </a>
-                                {" "}
-                                that collects macro+microplastics at Cornell.
-                            </p>
+                            <div className={style.mediaCompanyText}>
+                                <h3 className={style.mediaHeading}>Cornell Nexus</h3>
+                                <p className={style.mediaCaption}>
+                                    Founded a team to create an{" "}
+                                    <a
+                                        href="https://news.cornell.edu/stories/2022/12/students-design-robot-collect-microplastics-beaches"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={style.Link}
+                                    >
+                                        autonomous beach roomba
+                                    </a>
+                                    {" "}
+                                    that collects macro+microplastics at Cornell.
+                                </p>
+                            </div>
                             <div className={style.mediaRow}>
                                 {nexusPhotos.map(({ src, alt }, i) => (
                                     <img
@@ -131,20 +141,22 @@ const AboutMe = () => {
                             </div>
                         </div>
                         <div className={style.mediaCompanyBlock}>
-                            <h3 className={style.mediaHeading}>Pathfinding Autonomous Navigation</h3>
-                            <p className={style.mediaCaption}>
-                                Shipped{" "}
-                                <a
-                                    href="https://www.spacecraftresearch.com/pan"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={style.Link}
-                                >
-                                    two cube satellites
-                                </a>
-                                {" "}
-                                to space with the Cornell Space Systems Design Studio.
-                            </p>
+                            <div className={style.mediaCompanyText}>
+                                <h3 className={style.mediaHeading}>Pathfinding Autonomous Navigation</h3>
+                                <p className={style.mediaCaption}>
+                                    Shipped{" "}
+                                    <a
+                                        href="https://www.spacecraftresearch.com/pan"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={style.Link}
+                                    >
+                                        two cube satellites
+                                    </a>
+                                    {" "}
+                                    to space with the Cornell Space Systems Design Studio.
+                                </p>
+                            </div>
                             <div className={style.mediaRow}>
                                 {panPhotos.map(({ src, alt }, i) => (
                                     <img

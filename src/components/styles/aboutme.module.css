@@ -1,7 +1,7 @@
 .PagePadding{
   margin-left: auto;
   margin-right: auto; 
-  max-width: min(960px, 94%);
+  max-width: min(1180px, 96%);
   margin-bottom: 50px;
 }
 
@@ -28,16 +28,31 @@
   margin-bottom: 20px; /* Add extra space below each paragraph */
 }
 
-.Link { 
-  color: var(--idea-grey);
-  text-decoration: underline;
-  text-decoration-color: var(--warm-cobalt);
-  transition: color 0.2s ease;
+.Link {
+  color: var(--warm-cobalt);
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
 }
 
-.Link:hover {
+.Link:visited {
   color: var(--warm-cobalt);
-  text-decoration-color: var(--warm-cobalt);
+}
+
+.Link:hover,
+.Link:active {
+  color: var(--warm-cobalt-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--warm-cobalt-hover);
+}
+
+.Link:focus-visible {
+  color: var(--warm-cobalt-hover);
+  text-decoration: underline;
+  text-decoration-color: var(--warm-cobalt-hover);
+  outline: 2px solid var(--warm-cobalt-hover);
+  outline-offset: 2px;
 }
 
 .mediaGallery {
@@ -48,11 +63,18 @@
 }
 
 .mediaCompanyBlock {
+  display: grid;
+  grid-template-columns: minmax(12rem, min(34ch, 36%)) minmax(0, 1fr);
+  gap: 0.75rem 2.25rem;
+  align-items: start;
+  width: 100%;
+}
+
+.mediaCompanyText {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.65rem;
-  width: 100%;
+  gap: 0.5rem;
+  min-width: 0;
 }
 
 .mediaHeading {
@@ -61,10 +83,10 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--idea-grey);
+  color: var(--warm-cobalt);
   margin: 0;
   text-align: left;
-  align-self: flex-start;
+  line-height: 1.35;
 }
 
 .mediaCaption {
@@ -72,6 +94,7 @@
   font-size: 13px;
   line-height: 1.5;
   color: var(--idea-grey);
+  margin: 0;
   max-width: 100%;
 }
 
@@ -80,19 +103,28 @@
   margin: 0 0 0.5rem 0;
 }
 
+.Writing .mediaCompanyText .mediaCaption {
+  margin: 0;
+}
+
 .mediaRow {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
   align-items: stretch;
   width: 100%;
   min-width: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
+  .mediaCompanyBlock {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
   .mediaRow {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 14px;
+    gap: 16px;
   }
 }
 
