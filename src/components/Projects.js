@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/projects.module.css'
@@ -24,9 +24,19 @@ const projects = [
     image: vimputerImg,
     objectPosition: 'center top',
   },
+  {
+    title: 'Enzo Stool',
+    path: '/tinkio-projects/enzo-stool',
+    image: null,
+  },
 ]
 
 const Projects = () => {
+  useEffect(() => {
+    document.documentElement.classList.add('projects-page-root')
+    return () => document.documentElement.classList.remove('projects-page-root')
+  }, [])
+
   return (
     <section className={`ideas ${style.projectsPage}`}>
       <Navbar />

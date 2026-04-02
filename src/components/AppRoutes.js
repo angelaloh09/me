@@ -12,6 +12,7 @@ import CapacitiveTouch from './thoughts/capacitive-touch'
 import NoeLamp from './tinkio-projects/NoeLamp'
 import CloudVase from './tinkio-projects/CloudVase'
 import Vimputer from './tinkio-projects/Vimputer'
+import EnzoStool from './tinkio-projects/EnzoStool'
 
 const AppRoutes = ({ location }) => (
   <Routes location={location} key={location.pathname}>
@@ -27,6 +28,7 @@ const AppRoutes = ({ location }) => (
     <Route path="/tinkio-projects/noe-lamp" element={<NoeLamp />} />
     <Route path="/tinkio-projects/cloud-vase" element={<CloudVase />} />
     <Route path="/tinkio-projects/vimputer" element={<Vimputer />} />
+    <Route path="/tinkio-projects/enzo-stool" element={<EnzoStool />} />
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
 )

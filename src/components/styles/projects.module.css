@@ -13,6 +13,8 @@
   background-color: var(--projects-bg-deep);
   background-image: var(--projects-bg-image);
   position: relative;
+  /* Keeps child margins inside the painted area (no “footer” strip from margin collapse) */
+  display: flow-root;
 }
 
 .projectsPage::before {
@@ -97,7 +99,8 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  margin-bottom: 50px;
+  /* padding (not margin) so the section background covers the space below the gallery */
+  padding-bottom: 50px;
 }
 
 .heading {
@@ -105,11 +108,10 @@
   text-align: left;
 }
 
-/* Masonry columns — same pattern as Photography */
 .gallery {
-  column-count: 3;
-  column-gap: 20px;
-  column-fill: balance;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   width: 100%;
 }
 
@@ -119,8 +121,6 @@
   display: block;
   width: 100%;
   min-width: 0;
-  break-inside: avoid;
-  margin-bottom: 36px;
 }
 
 .card:hover {
@@ -182,22 +182,14 @@
 
 @media (max-width: 900px) {
   .gallery {
-    column-count: 2;
-    column-gap: 16px;
-  }
-
-  .card {
-    margin-bottom: 28px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
 @media (max-width: 520px) {
   .gallery {
-    column-count: 1;
-    column-gap: 0;
-  }
-
-  .card {
-    margin-bottom: 28px;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }

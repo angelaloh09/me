@@ -11,7 +11,7 @@
   }
 
   html, body {
-    background: #FFF8E7;
+    background: var(--img-back);
     min-height: 100%;
     overflow-x: hidden;
   }
@@ -23,7 +23,7 @@
   
   #root {
     min-height: 100vh;
-    background: #FFF8E7;
+    background: var(--img-back);
   }
   
   :root {
@@ -40,8 +40,21 @@
   --lamp-warm-brown: #5d3300;
   --lamp-body-color: #825927;
   --lamp-nav-title: #fbe1ab;
+
+  /* Projects index only — brown base under gradient (see Projects.js) */
+  --projects-root-base: #2c241c;
   }
   
+  html.projects-page-root,
+  html.projects-page-root body,
+  html.projects-page-root #root {
+    background: var(--projects-root-base);
+  }
+
+  html.projects-page-root .crossfade-root {
+    background: var(--projects-root-base);
+  }
+
   *::after,*::before {
   box-sizing: border-box;
   }
