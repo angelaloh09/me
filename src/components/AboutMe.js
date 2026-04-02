@@ -6,11 +6,11 @@ import style from './styles/aboutme.module.css'
 
 import figureHumanoid from './aboutme/figure/figure-3-humanoid-inc.webp'
 import figureHands from './aboutme/figure/07tGpPe3i4F68L0tyXv3myR-1.fit_lim.v1760032080.png'
-import humanePin from './aboutme/aipin/humane-ai-pin-2.jpg'
-import humaneAvif from './aboutme/aipin/3149228a35d0163499562fd248fe0605.avif'
+import humaneHero from './aboutme/aipin/hero-image.webp'
+import humaneBusiness from './aboutme/aipin/Humane-Ai-Pin-Business.webp'
 import nexusDesign from './aboutme/cornell-nexus/nexus-design.png'
 import nexusTeam from './aboutme/cornell-nexus/team.jpg'
-import panSatellite from './aboutme/cornell-pan/pan-2a_0.jpg'
+import panCubeSat from './aboutme/cornell-pan/cube-sat.jpeg'
 import panPhoto from './aboutme/cornell-pan/1711343033964.jpg'
 
 const figurePhotos = [
@@ -19,8 +19,8 @@ const figurePhotos = [
 ]
 
 const humanePhotos = [
-  { src: humanePin, alt: 'Humane Ai Pin' },
-  { src: humaneAvif, alt: 'Humane Ai Pin product' },
+  { src: humaneHero, alt: 'Humane Ai Pin' },
+  { src: humaneBusiness, alt: 'Humane Ai Pin business' },
 ]
 
 const nexusPhotos = [
@@ -29,8 +29,8 @@ const nexusPhotos = [
 ]
 
 const panPhotos = [
-  { src: panSatellite, alt: 'PAN cube satellite' },
   { src: panPhoto, alt: 'PAN project' },
+  { src: panCubeSat, alt: 'PAN cube satellite' },
 ]
 
 const AboutMe = () => {
