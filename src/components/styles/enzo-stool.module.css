@@ -1,12 +1,13 @@
 .enzoStoolSection {
-  --enzo-text: #d7ddd8;
-  --enzo-text-hover: #f0f3ef;
-  --enzo-bg: rgb(64, 72, 69);
-  --enzo-gradient-1: rgba(130, 142, 136, 0.28);
-  --enzo-gradient-2: rgba(98, 110, 105, 0.22);
-  --enzo-gradient-3: rgba(42, 49, 47, 0.48);
-  --enzo-placeholder: #5b6661;
-  --enzo-overlay: rgba(255, 255, 255, 0.16);
+  /* Burgundy / rust — less brown, more red (still warm, low-chroma) */
+  --enzo-text: #d9a898;
+  --enzo-text-hover: #ecc8b8;
+  --enzo-bg: rgb(44, 24, 26);
+  --enzo-gradient-1: rgba(185, 78, 72, 0.4);
+  --enzo-gradient-2: rgba(128, 48, 52, 0.36);
+  --enzo-gradient-3: rgba(28, 16, 20, 0.58);
+  --enzo-placeholder: #6e4044;
+  --enzo-overlay: rgba(255, 210, 210, 0.07);
 
   display: flex;
   flex-direction: column;
@@ -28,7 +29,7 @@
 
 .enzoStoolSection :global(.home__icon h1:hover) {
   color: var(--enzo-text-hover);
-  text-decoration-color: rgba(240, 243, 239, 0.45);
+  text-decoration-color: rgba(217, 168, 152, 0.45);
 }
 
 .enzoStoolSection :global(.list__items li a) {
@@ -37,7 +38,7 @@
 
 .enzoStoolSection :global(.list__items li a:hover) {
   color: var(--enzo-text-hover);
-  text-decoration-color: rgba(240, 243, 239, 0.5);
+  text-decoration-color: rgba(217, 168, 152, 0.5);
 }
 
 .enzoStoolSection :global(.menu_icon .menu) {
@@ -76,11 +77,6 @@
   grid-template-columns: max-content minmax(28rem, 48rem);
   gap: clamp(1.25rem, 2.5vw, 2.5rem);
   align-items: center;
-  justify-content: center;
-}
-
-.layoutTextOnly {
-  grid-template-columns: minmax(0, 48rem);
   justify-content: center;
 }
 
