@@ -24,7 +24,7 @@ const humanePhotos = [
 ]
 
 const nexusPhotos = [
-  { src: nexusDesign, alt: 'Cornell Nexus design' },
+  { src: nexusDesign, alt: 'Cornell Nexus design', zoomCrop: true },
   { src: nexusTeam, alt: 'Cornell Nexus team' },
 ]
 
@@ -66,10 +66,10 @@ const AboutMe = () => {
                     <section className={style.mediaGallery} aria-label="Work photos">
                         <div className={style.mediaCompanyBlock}>
                             <div className={style.mediaCompanyText}>
-                                <h3 className={style.mediaHeading}>Figure</h3>
-                                <p className={style.mediaCaption}> Figure Ai is designing a human-like robot that's mission is to help people.
+                                <h3 className={style.mediaHeading}>Figure Ai</h3>
+                                <p className={style.mediaCaption}> Figure AI is developing advanced human-like robots designed to support people by taking on dangerous and undesirable tasks.
                                     <br></br> <br></br>
-                                    I was one of two electrical engineers who designed & engineered all of the electronics for the Figure 3 & 4&nbsp;
+                                    I was one of two electrical engineers who designed, built, and tested all of the electronics for the Figure 3 & 4&nbsp;
                                     <a
                                         href="https://www.youtube.com/watch?v=IlG3X8zRI2I&t=9"
                                         target="_blank"
@@ -95,9 +95,11 @@ const AboutMe = () => {
                         </div>
                         <div className={style.mediaCompanyBlock}>
                             <div className={style.mediaCompanyText}>
-                                <h3 className={style.mediaHeading}>Humane</h3>
+                                <h3 className={style.mediaHeading}>Humane Ai Pin</h3>
                                 <p className={style.mediaCaption}>
-                                    {"Humane AiPin's "}
+                                    The Ai Pin is a mini wearable computer that serves as an intelligent assisant to help people experience the world without a screen.
+                                    <br></br><br></br>
+                                    I personally helped design & ship the&nbsp;
                                     <a
                                         href="https://www.youtube.com/watch?v=9lNIwOOMVHk&t=177s"
                                         target="_blank"
@@ -106,6 +108,7 @@ const AboutMe = () => {
                                     >
                                         laser display
                                     </a>
+                                    &nbsp;that projects the Ai Pin's interface onto the user's hand. 
                                 </p>
                             </div>
                             <div className={style.mediaRow}>
@@ -124,7 +127,7 @@ const AboutMe = () => {
                             <div className={style.mediaCompanyText}>
                                 <h3 className={style.mediaHeading}>Cornell Nexus</h3>
                                 <p className={style.mediaCaption}>
-                                    Founded a team to create an{" "}
+                                    I co-founded a team of 30+ students to create an{" "}
                                     <a
                                         href="https://news.cornell.edu/stories/2022/12/students-design-robot-collect-microplastics-beaches"
                                         target="_blank"
@@ -134,24 +137,39 @@ const AboutMe = () => {
                                         autonomous beach roomba
                                     </a>
                                     {" "}
-                                    that collects macro+microplastics at Cornell.
+                                    that filters out macro+microplastics from beach sand at Cornell University! 
+
+                                    <br></br> 
+                                    <br></br>
+                                    I've always deeply cared about the environment, and creating this project team was my way of making a difference during my time at school.
                                 </p>
                             </div>
                             <div className={style.mediaRow}>
-                                {nexusPhotos.map(({ src, alt }, i) => (
-                                    <img
-                                        key={`nexus-${i}`}
-                                        src={src}
-                                        alt={alt}
-                                        className={style.mediaImage}
-                                        loading="lazy"
-                                    />
-                                ))}
+                                {nexusPhotos.map(({ src, alt, zoomCrop }, i) =>
+                                    zoomCrop ? (
+                                        <div key={`nexus-${i}`} className={style.mediaImageCrop}>
+                                            <img
+                                                src={src}
+                                                alt={alt}
+                                                className={style.mediaImageZoomNexus}
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <img
+                                            key={`nexus-${i}`}
+                                            src={src}
+                                            alt={alt}
+                                            className={style.mediaImage}
+                                            loading="lazy"
+                                        />
+                                    )
+                                )}
                             </div>
                         </div>
                         <div className={style.mediaCompanyBlock}>
                             <div className={style.mediaCompanyText}>
-                                <h3 className={style.mediaHeading}>Pathfinding Autonomous Navigation</h3>
+                                <h3 className={style.mediaHeading}>Space Systems Design Studio</h3>
                                 <p className={style.mediaCaption}>
                                     Shipped{" "}
                                     <a
@@ -163,7 +181,19 @@ const AboutMe = () => {
                                         two cube satellites
                                     </a>
                                     {" "}
-                                    to space with the Cornell Space Systems Design Studio.
+                                    to space with the Cornell Space Systems Design Studio's Pathfinder Autonomous Navigation (PAN) project team.
+                                    <br></br>
+                                    <br></br>
+                                    Launched with NASA&apos;s CubeSat Launch Initiative (CSLI). Nasa's article about us{" "}
+                                    <a
+                                        href="https://www.nasa.gov/blogs/smallsatellites/2022/01/13/nasa-satellites-launch-aboard-virgin-orbits-launcherone/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={style.Link}
+                                    >
+                                        here
+                                    </a>
+                                    !
                                 </p>
                             </div>
                             <div className={style.mediaRow}>
@@ -182,8 +212,8 @@ const AboutMe = () => {
 
                     <br />
                     <p>
-                        More personal projects found&nbsp;
-                        <Link to="/projects" className={style.Link}>here!</Link>
+                        More of my hobbyist/personal projects can befound&nbsp;
+                        <Link to="/projects" className={style.Link}>here :)</Link>
                     </p>
                 </div>
             </div>
