@@ -1,22 +1,15 @@
 .enzoStoolSection {
-  /* Burgundy / rust — less brown, more red (still warm, low-chroma) */
+  /* Flat burgundy field (no gradients) */
   --enzo-text: #d9a898;
   --enzo-text-hover: #ecc8b8;
-  --enzo-bg: rgb(44, 24, 26);
-  --enzo-gradient-1: rgba(185, 78, 72, 0.4);
-  --enzo-gradient-2: rgba(128, 48, 52, 0.36);
-  --enzo-gradient-3: rgba(28, 16, 20, 0.58);
+  --enzo-bg: rgb(52, 30, 32);
   --enzo-placeholder: #6e4044;
   --enzo-overlay: rgba(255, 210, 210, 0.07);
 
   display: flex;
   flex-direction: column;
   position: relative;
-  background: var(--enzo-bg);
-  background-image:
-    radial-gradient(ellipse 90% 70% at 20% 30%, var(--enzo-gradient-1) 0%, transparent 60%),
-    radial-gradient(ellipse 80% 60% at 80% 70%, var(--enzo-gradient-2) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 55% at 50% 85%, var(--enzo-gradient-3) 0%, transparent 50%);
+  background-color: var(--enzo-bg);
   height: 100vh;
   max-height: 100vh;
   min-height: 0;

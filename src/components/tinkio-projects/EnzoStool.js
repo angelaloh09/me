@@ -63,7 +63,8 @@ const EnzoStool = () => {
               <p className={style.body}>
                 Original design by architect Italian architect Enzo Mari. His goal was to make furniture design accessible and recreatable by all. 
                 <br></br><br></br>
-                I saw it in the Västerås Public Library, and this is my recreation of it in mini protoype form. 
+                I saw it in the Västerås Library. This is my prototype recreation of it!
+                <br></br> 
                 Real wood version is coming soon :) 
               </p>
             </div>
