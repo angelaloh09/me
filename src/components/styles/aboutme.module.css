@@ -28,6 +28,10 @@
   margin-bottom: 20px; /* Add extra space below each paragraph */
 }
 
+.Writing .introBeforeGallery {
+  margin-bottom: 2.75rem;
+}
+
 .Link {
   color: var(--warm-cobalt);
   text-decoration: none;
@@ -56,10 +60,11 @@
 }
 
 .mediaGallery {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .mediaCompanyBlock {

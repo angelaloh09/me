@@ -45,11 +45,20 @@ const AboutMe = () => {
 
                 <div className={style.Writing}>
                     <p>Hi there!</p>
-                    <p>
+                    <p className={style.introBeforeGallery}>
                         I'm a hardware engineer who wants to make tinkering on fun projects accessible to all!
                         <br></br><br></br>
                         I have a curiosity for making the world a better place, and I'm always looking for new ways to do so.
-                        I love learning about how things work. Below are some of the teams and projects I&apos;ve been part of.
+                        I love learning about how things work. Today, I&apos;m currently building my own company called{" "}
+                        <a
+                            href="https://tinkio.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={style.Link}
+                        >
+                            Tinkio
+                        </a>
+                        .
                         <br></br><br></br>
                         Below are some of the teams & projects I've been lucky to be a part of. 
                     </p>
