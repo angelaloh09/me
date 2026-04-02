@@ -60,6 +60,22 @@ const AboutMe = () => {
                         </a>
                         .
                         <br></br><br></br>
+                        Always excited about meeting new people! Feel free to reach out to me via{" "}
+                        <a href="mailto:angelaloh09@gmail.com" className={style.Link}>
+                            email
+                        </a>
+                        {" "}
+                        or{" "}
+                        <a
+                            href="https://www.linkedin.com/in/angelalohh/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={style.Link}
+                        >
+                            linkedin
+                        </a>
+                        .
+                        <br></br><br></br>
                         Below are some of the teams & projects I've been lucky to be a part of. 
                     </p>
 
@@ -184,16 +200,16 @@ const AboutMe = () => {
                                     to space with the Cornell Space Systems Design Studio's Pathfinder Autonomous Navigation (PAN) project team.
                                     <br></br>
                                     <br></br>
-                                    Launched with NASA&apos;s CubeSat Launch Initiative (CSLI). Nasa's article about us{" "}
+                                    Launched with NASA&apos;s CubeSat Launch Initiative (CSLI).&nbsp;
                                     <a
                                         href="https://www.nasa.gov/blogs/smallsatellites/2022/01/13/nasa-satellites-launch-aboard-virgin-orbits-launcherone/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={style.Link}
                                     >
-                                        here
+                                        Nasa article
                                     </a>
-                                    !
+                                    &nbsp;about us!
                                 </p>
                             </div>
                             <div className={style.mediaRow}>
@@ -210,9 +226,8 @@ const AboutMe = () => {
                         </div>
                     </section>
 
-                    <br />
-                    <p>
-                        More of my hobbyist/personal projects can befound&nbsp;
+                    <p className={style.afterGalleryParagraph}>
+                        More of my hobbyist/personal projects can be found&nbsp;
                         <Link to="/projects" className={style.Link}>here :)</Link>
                     </p>
                 </div>

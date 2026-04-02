@@ -32,6 +32,10 @@
   margin-bottom: 2.75rem;
 }
 
+.Writing .afterGalleryParagraph {
+  margin-top: 2.25rem;
+}
+
 .Link {
   color: var(--warm-cobalt);
   text-decoration: none;
