@@ -4,68 +4,36 @@ import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/aboutme.module.css'
 
+import figureHumanoid from './aboutme/figure/figure-3-humanoid-inc.webp'
+import figureHands from './aboutme/figure/07tGpPe3i4F68L0tyXv3myR-1.fit_lim.v1760032080.png'
+import humanePin from './aboutme/aipin/humane-ai-pin-2.jpg'
+import humaneAvif from './aboutme/aipin/3149228a35d0163499562fd248fe0605.avif'
+import nexusDesign from './aboutme/cornell-nexus/nexus-design.png'
+import nexusTeam from './aboutme/cornell-nexus/team.jpg'
+import panSatellite from './aboutme/cornell-pan/pan-2a_0.jpg'
+import panPhoto from './aboutme/cornell-pan/1711343033964.jpg'
+
+const figurePhotos = [
+  { src: figureHumanoid, alt: 'Figure humanoid robot' },
+  { src: figureHands, alt: 'Figure robotic hands' },
+]
+
+const humanePhotos = [
+  { src: humanePin, alt: 'Humane Ai Pin' },
+  { src: humaneAvif, alt: 'Humane Ai Pin product' },
+]
+
+const nexusPhotos = [
+  { src: nexusDesign, alt: 'Cornell Nexus design' },
+  { src: nexusTeam, alt: 'Cornell Nexus team' },
+]
+
+const panPhotos = [
+  { src: panSatellite, alt: 'PAN cube satellite' },
+  { src: panPhoto, alt: 'PAN project' },
+]
+
 const AboutMe = () => {
-    const professionalProjects = [
-        {
-            text: "at Figure, a humanoid robotics company.",
-            linkText: "Robotic hands",
-            url: "https://www.youtube.com/watch?v=IlG3X8zRI2I&t=9",
-            linkPosition: "start"
-        },
-        {
-            text: "Humane AiPin's",
-            linkText: "laser display",
-            url: "https://www.youtube.com/watch?v=9lNIwOOMVHk&t=177s",
-            linkPosition: "middle"
-        },
-        {
-            text: "Founded a team to create an",
-            linkText: "autonomous beach roomba",
-            url: "https://news.cornell.edu/stories/2022/12/students-design-robot-collect-microplastics-beaches",
-            additionalText: "that collects macro+microplastics at Cornell.",
-            linkPosition: "middle"
-        },
-        {
-            text: "Shipped",
-            linkText: "two cube satellites",
-            url: "https://www.spacecraftresearch.com/pan",
-            additionalText: "to space with the Cornell Space Systems Design Studio.",
-            linkPosition: "middle"
-        }
-    ];
-
-    const renderProjectItem = (project, index) => {
-        if (project.linkPosition === "start") {
-            return (
-                <li key={index}>
-                    <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={style.Link}
-                    >
-                        {project.linkText}
-                    </a>
-                    {" "}{project.text}
-                </li>
-            );
-        }
-        return (
-            <li key={index}>
-                {project.text}{" "}
-                <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={style.Link}
-                >
-                    {project.linkText}
-                </a>
-                {project.additionalText && <> {project.additionalText}</>}
-            </li>
-        );
-    };
-
     return (
         <section className="ideas">
             <Navbar />
@@ -79,12 +47,118 @@ const AboutMe = () => {
                     <p>Hi there!</p>
                     <p>
                         I'm a hardware engineer who wants to make tinkering on fun projects accessible to all!
+                        <br></br><br></br>
                         I have a curiosity for making the world a better place, and I'm always looking for new ways to do so.
-                        I love learning about how things work. Here are some of the things I've worked on:
+                        I love learning about how things work. Below are some of the teams and projects I&apos;ve been part of.
                     </p>
-                    <ul>
-                        {professionalProjects.map(renderProjectItem)}
-                    </ul>
+
+                    <section className={style.mediaGallery} aria-label="Work photos">
+                        <div className={style.mediaCompanyBlock}>
+                            <h3 className={style.mediaHeading}>Figure</h3>
+                            <p className={style.mediaCaption}>
+                                <a
+                                    href="https://www.youtube.com/watch?v=IlG3X8zRI2I&t=9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={style.Link}
+                                >
+                                    Robotic hands
+                                </a>
+                                {" "}at Figure, a humanoid robotics company.
+                            </p>
+                            <div className={style.mediaRow}>
+                                {figurePhotos.map(({ src, alt }, i) => (
+                                    <img
+                                        key={`figure-${i}`}
+                                        src={src}
+                                        alt={alt}
+                                        className={style.mediaImage}
+                                        loading="lazy"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className={style.mediaCompanyBlock}>
+                            <h3 className={style.mediaHeading}>Humane</h3>
+                            <p className={style.mediaCaption}>
+                                {"Humane AiPin's "}
+                                <a
+                                    href="https://www.youtube.com/watch?v=9lNIwOOMVHk&t=177s"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={style.Link}
+                                >
+                                    laser display
+                                </a>
+                            </p>
+                            <div className={style.mediaRow}>
+                                {humanePhotos.map(({ src, alt }, i) => (
+                                    <img
+                                        key={`humane-${i}`}
+                                        src={src}
+                                        alt={alt}
+                                        className={style.mediaImage}
+                                        loading="lazy"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className={style.mediaCompanyBlock}>
+                            <h3 className={style.mediaHeading}>Cornell Nexus</h3>
+                            <p className={style.mediaCaption}>
+                                Founded a team to create an{" "}
+                                <a
+                                    href="https://news.cornell.edu/stories/2022/12/students-design-robot-collect-microplastics-beaches"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={style.Link}
+                                >
+                                    autonomous beach roomba
+                                </a>
+                                {" "}
+                                that collects macro+microplastics at Cornell.
+                            </p>
+                            <div className={style.mediaRow}>
+                                {nexusPhotos.map(({ src, alt }, i) => (
+                                    <img
+                                        key={`nexus-${i}`}
+                                        src={src}
+                                        alt={alt}
+                                        className={style.mediaImage}
+                                        loading="lazy"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className={style.mediaCompanyBlock}>
+                            <h3 className={style.mediaHeading}>Pathfinding Autonomous Navigation</h3>
+                            <p className={style.mediaCaption}>
+                                Shipped{" "}
+                                <a
+                                    href="https://www.spacecraftresearch.com/pan"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={style.Link}
+                                >
+                                    two cube satellites
+                                </a>
+                                {" "}
+                                to space with the Cornell Space Systems Design Studio.
+                            </p>
+                            <div className={style.mediaRow}>
+                                {panPhotos.map(({ src, alt }, i) => (
+                                    <img
+                                        key={`pan-${i}`}
+                                        src={src}
+                                        alt={alt}
+                                        className={style.mediaImage}
+                                        loading="lazy"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
                     <br />
                     <p>
                         More personal projects found&nbsp;
