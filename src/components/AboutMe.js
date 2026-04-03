@@ -45,12 +45,13 @@ const AboutMe = () => {
         <section className="ideas">
             <Navbar />
             <div className={style.PagePadding}>
-                <div className="cards title">
-                    <h1>About Me</h1>
-                    <br />
-                </div>
-
                 <div className={style.Writing}>
+                    <div className={style.aboutMainColumn}>
+                    <div className="cards title">
+                        <h1>About Me</h1>
+                        <br />
+                    </div>
+                    <div className={style.introBlock}>
                     <p>Hi there!</p>
                     <p className={style.introBeforeGallery}>
                         I'm a hardware engineer who wants to make tinkering on fun projects accessible to all!
@@ -85,6 +86,7 @@ const AboutMe = () => {
                         <br></br><br></br>
                         Below are some of the teams & projects I've been lucky to be a part of. 
                     </p>
+                    </div>
 
                     <section className={style.mediaGallery} aria-label="Work photos">
                         <div className={style.mediaCompanyBlock}>
@@ -264,6 +266,7 @@ const AboutMe = () => {
                         If you're curious... more of my hobbyist/personal projects can be found&nbsp;
                         <Link to="/projects" className={style.Link}>here :)</Link>
                     </p>
+                    </div>
                 </div>
             </div>
         </section>

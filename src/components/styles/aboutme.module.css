@@ -3,6 +3,8 @@
   margin-right: auto; 
   max-width: min(1180px, 96%);
   margin-bottom: 50px;
+  /* Keep in sync with .mediaRow max-width — intro span uses this in calc() */
+  --about-photo-max: 74ch;
 }
 
 .Writing{
@@ -26,6 +28,34 @@
 .Writing p {
   /* padding-left: 1%; */
   margin-bottom: 20px; /* Add extra space below each paragraph */
+}
+
+/*
+ * Match the *visible* width of each .mediaCompanyBlock row: text column + column gap + photo strip.
+ * Centered so left/right inset matches when the column is narrower than .Writing.
+ */
+.aboutMainColumn {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 721px) {
+  .aboutMainColumn {
+    max-width: calc(
+      min(40ch, 42%) +
+      3rem +
+      min(var(--about-photo-max, 74ch), max(0px, 100% - min(40ch, 42%) - 3rem))
+    );
+  }
+}
+
+.introBlock {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .Writing .introBeforeGallery {
@@ -73,6 +103,7 @@
 
 .mediaCompanyBlock {
   display: grid;
+  /* Text max stays min(40ch, 42%) — % only applies when smaller than 40ch, so %-only tweaks rarely show */
   grid-template-columns: minmax(13rem, min(40ch, 42%)) minmax(0, 1fr);
   gap: 0.75rem 3rem;
   align-items: center;
@@ -120,11 +151,14 @@
 
 .mediaRow {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
   gap: 18px;
   align-items: stretch;
   width: 100%;
   min-width: 0;
+  /* Stops photos stretching across all leftover width (the part % / minmax tweaks couldn’t affect) */
+  max-width: min(100%, var(--about-photo-max, 74ch));
+  justify-self: start;
 }
 
 @media (max-width: 720px) {
@@ -140,6 +174,7 @@
   .mediaRow {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 16px;
+    max-width: 100%;
   }
 }
 
