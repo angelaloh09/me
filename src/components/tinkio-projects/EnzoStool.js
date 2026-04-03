@@ -61,10 +61,27 @@ const EnzoStool = () => {
             <div className={style.textColumn}>
               <h1 className={style.title}>Enzo Stool</h1>
               <p className={style.body}>
-                Original design by architect Enzo Mari. His goal was to make furniture design accessible and recreatable by all. 
+                Original design by architect{' '}
+                <a
+                  href="https://www.casatigallery.com/designers/enzo-mari/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={style.bodyLink}
+                >
+                  Enzo Mari
+                </a>
+                . <br></br><br></br>His goal was to make design accessible and recreatable by all. <br></br>Read more about it {' '}
+                <a 
+                  href="https://filmandfurniture.com/product/hammer-nail-making-and-assembling-furniture-designs-inspired-by-enzo-mari/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={style.bodyLink}
+                >
+                  here. 
+                  </a>
                 <br></br><br></br>
                 I saw it in the Västerås Library. This is my prototype recreation of it!
-                <br></br> 
+                <br></br>
                 Real wood version is coming soon :) 
               </p>
             </div>
