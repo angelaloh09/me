@@ -2,12 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import './styles/Styles.css'
+import bookshelfStyle from './styles/bookshelf.module.css'
 import style from './styles/thoughts.module.css'
 
 /** Only items with `to` link to a written page. */
 const THOUGHT_SECTIONS = [
     {
-        category: 'SYSTEMS',
+        category: 'Systems',
         items: [
             { title: 'How does the electric grid actually work?' },
             {
@@ -21,7 +22,7 @@ const THOUGHT_SECTIONS = [
         ],
     },
     {
-        category: 'MANUFACTURING',
+        category: 'Manufacturing',
         items: [
             {
                 title:
@@ -38,7 +39,7 @@ const THOUGHT_SECTIONS = [
         ],
     },
     {
-        category: 'ENGINEERING',
+        category: 'Engineering',
         items: [
             {
                 title: 'What is capacitive touch? And how does it work?',
@@ -59,7 +60,7 @@ const THOUGHT_SECTIONS = [
         ],
     },
     {
-        category: 'ENERGY & BIO',
+        category: 'Energy & Bio',
         items: [
             {
                 title:
@@ -88,45 +89,36 @@ const Thoughts = () => {
                     <br />
                 </div>
 
-                <div className={style.thoughtBody}>
-                    <p className={style.thoughtIntro}>
-                        A living index of questions I&apos;ve explored, am exploring, or want to return to.
-                    </p>
-
-                    <div className={style.categoryWrap} aria-label="Questions by category">
-                        {THOUGHT_SECTIONS.map((section, idx) => (
-                            <section
-                                key={section.category}
-                                className={style.categorySection}
-                                aria-labelledby={`thoughts-heading-${idx}`}
-                            >
-                                <h2
-                                    id={`thoughts-heading-${idx}`}
-                                    className={style.categoryHeading}
-                                >
-                                    {section.category}
-                                </h2>
-                                <ul className={style.entryList}>
-                                    {section.items.map((item) => (
-                                        <li key={item.title} className={style.entryCard}>
-                                            {item.to ? (
-                                                <Link
-                                                    to={item.to}
-                                                    className={style.entryTitleLink}
-                                                >
-                                                    {item.title}
-                                                </Link>
-                                            ) : (
-                                                <span className={style.entryTitleStatic}>
-                                                    {item.title}
-                                                </span>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </section>
-                        ))}
-                    </div>
+                <div className={style.categoryWrap} aria-label="Questions by category">
+                    {THOUGHT_SECTIONS.map((section, idx) => (
+                        <section
+                            key={section.category}
+                            className={style.categorySection}
+                            aria-labelledby={`thoughts-heading-${idx}`}
+                        >
+                            <div className={`cards title ${bookshelfStyle.yearSection}`}>
+                                <h2 id={`thoughts-heading-${idx}`}>{section.category}</h2>
+                            </div>
+                            <ul className={style.entryList}>
+                                {section.items.map((item) => (
+                                    <li key={item.title} className={style.entryCard}>
+                                        {item.to ? (
+                                            <Link
+                                                to={item.to}
+                                                className={style.entryTitleLink}
+                                            >
+                                                {item.title}
+                                            </Link>
+                                        ) : (
+                                            <span className={style.entryTitleStatic}>
+                                                {item.title}
+                                            </span>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    ))}
                 </div>
             </div>
         </section>

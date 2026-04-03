@@ -2,6 +2,10 @@
   margin-top: 1.5rem;
 }
 
+.yearSection h2 {
+  color: var(--warm-cobalt, #566dd0);
+}
+
 .GridContainer {
   display: grid;
   grid-template-columns: 80% 20%;
