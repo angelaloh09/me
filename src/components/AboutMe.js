@@ -10,6 +10,8 @@ import humaneHero from './aboutme/aipin/hero-image.webp'
 import humaneBusiness from './aboutme/aipin/Humane-Ai-Pin-Business.webp'
 import nexusDesign from './aboutme/cornell-nexus/nexus-design.png'
 import nexusTeam from './aboutme/cornell-nexus/team.jpg'
+import eggschangeJpg from './aboutme/eggschange/643952616_26511148778489828_8323879253633527544_n.jpg'
+import eggschangeAvif from './aboutme/eggschange/88e104_a6943a6d4a75497686b2758331e31d80.avif'
 import panCubeSat from './aboutme/cornell-pan/cube-sat.jpeg'
 import panPhoto from './aboutme/cornell-pan/1711343033964.jpg'
 
@@ -26,6 +28,11 @@ const humanePhotos = [
 const nexusPhotos = [
   { src: nexusDesign, alt: 'Cornell Nexus design', zoomCrop: true },
   { src: nexusTeam, alt: 'Cornell Nexus team' },
+]
+
+const eggschangePhotos = [
+  { src: eggschangeJpg, alt: 'Eggschange' },
+  { src: eggschangeAvif, alt: 'Eggschange project' },
 ]
 
 const panPhotos = [
@@ -83,7 +90,7 @@ const AboutMe = () => {
                         <div className={style.mediaCompanyBlock}>
                             <div className={style.mediaCompanyText}>
                                 <h3 className={style.mediaHeading}>Figure Ai</h3>
-                                <p className={style.mediaCaption}> Figure AI is developing advanced human-like robots designed to support people by taking on dangerous and undesirable tasks.
+                                <p className={style.mediaCaption}> Figure AI builds advanced humanoid robots to take on dangerous and undesirable tasks.
                                     <br></br> <br></br>
                                     I was one of two electrical engineers who designed, built, and tested all of the electronics for the Figure 3 & 4&nbsp;
                                     <a
@@ -104,7 +111,8 @@ const AboutMe = () => {
                                         src={src}
                                         alt={alt}
                                         className={style.mediaImage}
-                                        loading="lazy"
+                                        loading="eager"
+                                        decoding="async"
                                     />
                                 ))}
                             </div>
@@ -113,9 +121,9 @@ const AboutMe = () => {
                             <div className={style.mediaCompanyText}>
                                 <h3 className={style.mediaHeading}>Humane Ai Pin</h3>
                                 <p className={style.mediaCaption}>
-                                    The Ai Pin is a mini wearable computer that serves as an intelligent assisant to help people experience the world without a screen.
+                                The Ai Pin is a wearable computer that acts as an intelligent assistant and helps people engage with the world without a screen.
                                     <br></br><br></br>
-                                    I personally helped design & ship the&nbsp;
+                                    I helped design & ship the&nbsp;
                                     <a
                                         href="https://www.youtube.com/watch?v=9lNIwOOMVHk&t=177s"
                                         target="_blank"
@@ -124,7 +132,7 @@ const AboutMe = () => {
                                     >
                                         laser display
                                     </a>
-                                    &nbsp;that projects the Ai Pin's interface onto the user's hand. 
+                                    &nbsp;that projects the interface onto the user's hand. 
                                 </p>
                             </div>
                             <div className={style.mediaRow}>
@@ -134,7 +142,8 @@ const AboutMe = () => {
                                         src={src}
                                         alt={alt}
                                         className={style.mediaImage}
-                                        loading="lazy"
+                                        loading="eager"
+                                        decoding="async"
                                     />
                                 ))}
                             </div>
@@ -143,21 +152,21 @@ const AboutMe = () => {
                             <div className={style.mediaCompanyText}>
                                 <h3 className={style.mediaHeading}>Cornell Nexus</h3>
                                 <p className={style.mediaCaption}>
-                                    I co-founded a team of 30+ students to create an{" "}
+                                    I co-founded a 30+ student team to build an{" "}
                                     <a
                                         href="https://news.cornell.edu/stories/2022/12/students-design-robot-collect-microplastics-beaches"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={style.Link}
                                     >
-                                        autonomous beach roomba
+                                        autonomous "beach roomba"
                                     </a>
                                     {" "}
-                                    that filters out macro+microplastics from beach sand at Cornell University! 
+                                    that filters out macro+micro-plastics from sand at Cornell. 
 
                                     <br></br> 
                                     <br></br>
-                                    I've always deeply cared about the environment, and creating this project team was my way of making a difference during my time at school.
+                                    I've always deeply cared about the environment. This was my way of making a tangible impact during my time throughout university.
                                 </p>
                             </div>
                             <div className={style.mediaRow}>
@@ -168,7 +177,8 @@ const AboutMe = () => {
                                                 src={src}
                                                 alt={alt}
                                                 className={style.mediaImageZoomNexus}
-                                                loading="lazy"
+                                                loading="eager"
+                                                decoding="async"
                                             />
                                         </div>
                                     ) : (
@@ -177,7 +187,8 @@ const AboutMe = () => {
                                             src={src}
                                             alt={alt}
                                             className={style.mediaImage}
-                                            loading="lazy"
+                                            loading="eager"
+                                            decoding="async"
                                         />
                                     )
                                 )}
@@ -197,17 +208,17 @@ const AboutMe = () => {
                                         two cube satellites
                                     </a>
                                     {" "}
-                                    to space with the Cornell Space Systems Design Studio's Pathfinder Autonomous Navigation (PAN) project team.
+                                    to space with Cornell's Space Systems Design Studio (Pathfinder Autonomous Navigation team).
                                     <br></br>
                                     <br></br>
-                                    Launched with NASA&apos;s CubeSat Launch Initiative (CSLI).&nbsp;
+                                    Launched with NASA&apos;s CubeSat Launch Initiative.&nbsp;
                                     <a
                                         href="https://www.nasa.gov/blogs/smallsatellites/2022/01/13/nasa-satellites-launch-aboard-virgin-orbits-launcherone/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={style.Link}
                                     >
-                                        Nasa article
+                                        NASA article
                                     </a>
                                     &nbsp;about us!
                                 </p>
@@ -219,7 +230,30 @@ const AboutMe = () => {
                                         src={src}
                                         alt={alt}
                                         className={style.mediaImage}
-                                        loading="lazy"
+                                        loading="eager"
+                                        decoding="async"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                        <div className={style.mediaCompanyBlock}>
+                            <div className={style.mediaCompanyText}>
+                                <h3 className={style.mediaHeading}>The Eggschange Project</h3>
+                                <p className={style.mediaCaption}>
+                                Eggschange is a student-run microfinance initiative partnering with rural farmers in China, selling their eggs to our school community and returning proceeds to support their income and children’s education.
+                                <br></br><br></br>
+                                I dedicated all four of my high school years to this project, serving as President for the final two years.
+                                </p>
+                            </div>
+                            <div className={style.mediaRow}>
+                                {eggschangePhotos.map(({ src, alt }, i) => (
+                                    <img
+                                        key={`eggschange-${i}`}
+                                        src={src}
+                                        alt={alt}
+                                        className={style.mediaImage}
+                                        loading="eager"
+                                        decoding="async"
                                     />
                                 ))}
                             </div>
@@ -227,7 +261,7 @@ const AboutMe = () => {
                     </section>
 
                     <p className={style.afterGalleryParagraph}>
-                        More of my hobbyist/personal projects can be found&nbsp;
+                        If you're curious... more of my hobbyist/personal projects can be found&nbsp;
                         <Link to="/projects" className={style.Link}>here :)</Link>
                     </p>
                 </div>

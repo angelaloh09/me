@@ -33,7 +33,7 @@
 }
 
 .Writing .afterGalleryParagraph {
-  margin-top: 2.25rem;
+  margin-top: 3rem;
 }
 
 .Link {
@@ -160,6 +160,10 @@
   object-position: center;
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.06);
+  /* Stable compositing with route crossfade (opacity + transform) */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  contain: paint;
 }
 
 /* Zoom past in-image rounded corners (nexus-design.png) */
@@ -170,6 +174,9 @@
   overflow: hidden;
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.06);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  contain: paint;
 }
 
 .mediaImageZoomNexus {
@@ -179,6 +186,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transform: scale(1.02);
+  backface-visibility: hidden;
+  transform: translateZ(0) scale(1.02);
   transform-origin: center center;
 }

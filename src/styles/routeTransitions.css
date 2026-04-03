@@ -15,6 +15,9 @@
   width: 100%;
   min-height: 100vh;
   min-height: 100svh;
+  /* Reduces img flicker while opacity/transform animate (WebKit/Blink) */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Outgoing underneath, fading out — no pointer capture */
