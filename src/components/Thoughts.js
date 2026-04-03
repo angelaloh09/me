@@ -16,22 +16,58 @@ const ENTRIES = [
         title: 'What is capacitive touch? And how does it work?',
         status: 'written',
         to: '/thoughts/capacitive-touch',
-        teaser: 'How touchscreens detect your finger without moving parts.',
     },
     {
-        title: 'Why do some interfaces feel more intuitive than others?',
+        title: 'How does the electric grid work?',
         status: 'open_question',
-        teaser: 'Affordance, motion, expectation — and why “obvious” is hard to ship.',
     },
     {
-        title: 'What makes an object feel “high quality”?',
-        status: 'in_progress',
-        teaser: 'Materials, weight, and the stories we tell ourselves.',
+        title: 'How does Ikea create its furniture at the scale & price it does?',
+        status: 'open_question',
     },
     {
-        title: 'Quick notes on haptic feedback',
-        status: 'notes_only',
-        teaser: 'Scribbles from a weekend rabbit hole.',
+        title: 'Weather modification & cloud seeding?!',
+        status: 'open_question',
+    },
+    {
+        title: "How does a zipper work? What's the history behind the design?",
+        status: 'open_question',
+    },
+    {
+        title: 'Vacuum chambers are so cool…',
+        status: 'open_question',
+    },
+    {
+        title: 'Why do humans have fingerprints?',
+        status: 'open_question',
+    },
+    {
+        title: "What's the optimization strategy for traffic lights across a dense city like NYC?",
+        status: 'open_question',
+    },
+    {
+        title: 'How do companies like Amazon optimize warehouses to ship millions of items daily?',
+        status: 'open_question',
+    },
+    {
+        title:
+            'Noise-cancelling headphones are a super cool technology. Need to learn more about beam-forming.',
+        status: 'open_question',
+    },
+    {
+        title:
+            'What different additive manufacturing processes exist today? What is the most ground-breaking 3D printing material possible?',
+        status: 'open_question',
+    },
+    {
+        title:
+            'Always really fascinated by the Gates Foundation\'s "Reinvent the Toilet Challenge". How do you actually develop a waterless, off-grid toilet that sanitizes human waste in an efficient + sustainable manner? How would I design this toilet?',
+        status: 'open_question',
+    },
+    {
+        title:
+            "Look into advanced geothermal drilling technologies & how these technologies tap into the earth's heat to generate renewable energy.",
+        status: 'open_question',
     },
 ]
 
@@ -39,7 +75,7 @@ const Thoughts = () => {
     return (
         <section className="ideas">
             <Navbar />
-            <div className={style.thoughtsPage}>
+            <div className="bookshelf">
                 <div className="cards title">
                     <h1>Thoughts</h1>
                     <br />
@@ -47,7 +83,7 @@ const Thoughts = () => {
 
                 <div className={style.thoughtBody}>
                     <p className={style.thoughtIntro}>
-                        A collection of questions I&apos;ve researched, partially explored, or want to return to.
+                    A living index of questions I’ve explored, am exploring, or want to return to.
                     </p>
 
                     <ul className={style.entryList} aria-label="Questions and write-ups">
