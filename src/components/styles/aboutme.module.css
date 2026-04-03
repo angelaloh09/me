@@ -78,7 +78,8 @@
 }
 
 .Writing .afterGalleryParagraph {
-  margin-top: var(--about-section-gap);
+  margin-top: var(--about-section-gap-half);
+  padding-top: var(--about-section-gap-half);
   position: relative;
 }
 
@@ -87,7 +88,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(-1 * var(--about-section-gap-half) - 0.5px);
+  top: 0;
   border-top: 1px solid rgba(95, 92, 118, 0.14);
 }
 

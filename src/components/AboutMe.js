@@ -59,7 +59,10 @@ const AboutMe = () => {
                     </p>
                     <p>
                         I have a curiosity for making the world a better place, and I&apos;m always looking for new ways to do so.
-                        I love learning about how things work. Today, I&apos;m currently building my own company called{" "}
+                        I love learning about how things work. 
+                        
+                        <br></br><br></br>
+                        Today, I&apos;m currently building my own company,{" "}
                         <a
                             href="https://tinkio.com"
                             target="_blank"
@@ -68,7 +71,7 @@ const AboutMe = () => {
                         >
                             Tinkio
                         </a>
-                        .
+                        . Below are some of the teams & past projects I&apos;ve been lucky to be a part of.
                     </p>
                     <p className={style.introBeforeGallery}>
                         Always excited about meeting new people! Feel free to reach out to me via{" "}
@@ -86,9 +89,6 @@ const AboutMe = () => {
                             linkedin
                         </a>
                         .
-                        <span className={style.introBreakLine}>
-                            Below are some of the teams & projects I&apos;ve been lucky to be a part of.
-                        </span>
                     </p>
                     </div>
 
@@ -246,9 +246,9 @@ const AboutMe = () => {
                             <div className={style.mediaCompanyText}>
                                 <h3 className={style.mediaHeading}>The Eggschange Project</h3>
                                 <p className={style.mediaCaption}>
-                                Eggschange is a student-run microfinance initiative partnering with rural farmers in China, selling their eggs to our school community and returning proceeds to support their income and children’s education.
+                                Eggschange is a microfinance initiative partnering with rural farmers in China, selling their eggs to our school community and returning proceeds to support their income and children’s education.
                                 <br></br><br></br>
-                                I dedicated all four of my high school years to this project, serving as President for the final two years.
+                                I dedicated all of my high school years to this project, serving as President for the final two.
                                 </p>
                             </div>
                             <div className={style.mediaRow}>
