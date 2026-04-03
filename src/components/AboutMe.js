@@ -53,11 +53,12 @@ const AboutMe = () => {
 
                     <div className={style.Writing}>
                     <div className={style.introBlock}>
-                    <p>Hi there!</p>
-                    <p className={style.introBeforeGallery}>
-                        I'm a hardware engineer who wants to make tinkering on fun projects accessible to all!
-                        <br></br><br></br>
-                        I have a curiosity for making the world a better place, and I'm always looking for new ways to do so.
+                    <p className={style.introLead}>Hi there!</p>
+                    <p>
+                        I&apos;m a hardware engineer who wants to make tinkering on fun projects accessible to all.
+                    </p>
+                    <p>
+                        I have a curiosity for making the world a better place, and I&apos;m always looking for new ways to do so.
                         I love learning about how things work. Today, I&apos;m currently building my own company called{" "}
                         <a
                             href="https://tinkio.com"
@@ -68,7 +69,8 @@ const AboutMe = () => {
                             Tinkio
                         </a>
                         .
-                        <br></br><br></br>
+                    </p>
+                    <p className={style.introBeforeGallery}>
                         Always excited about meeting new people! Feel free to reach out to me via{" "}
                         <a href="mailto:angelaloh09@gmail.com" className={style.Link}>
                             email
@@ -83,9 +85,7 @@ const AboutMe = () => {
                         >
                             linkedin
                         </a>
-                        .
-                        <br></br><br></br>
-                        Below are some of the teams & projects I've been lucky to be a part of. 
+                        . Below are some of the teams & projects I&apos;ve been lucky to be a part of.
                     </p>
                     </div>
 
