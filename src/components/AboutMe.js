@@ -217,7 +217,7 @@ const AboutMe = () => {
                                     to space with Cornell's Space Systems Design Studio (Pathfinder Autonomous Navigation team).
                                     <br></br>
                                     <br></br>
-                                    Launched with NASA&apos;s CubeSat Launch Initiative.&nbsp;
+                                    We were selected to launch with NASA&apos;s CubeSat Launch Initiative.&nbsp;
                                     <a
                                         href="https://www.nasa.gov/blogs/smallsatellites/2022/01/13/nasa-satellites-launch-aboard-virgin-orbits-launcherone/"
                                         target="_blank"
@@ -226,7 +226,7 @@ const AboutMe = () => {
                                     >
                                         NASA article
                                     </a>
-                                    &nbsp;about us!
+                                    &nbsp;on us!
                                 </p>
                             </div>
                             <div className={style.mediaRow}>

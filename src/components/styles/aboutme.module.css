@@ -49,12 +49,12 @@
 }
 
 @media (min-width: 721px) {
+  /*
+   * CRA/react-scripts 3’s CSS parser cannot handle nested min()/max() inside calc().
+   * Approximate the same column width: text track (~40ch) + gap + photo cap (--about-photo-max).
+   */
   .aboutMainColumn {
-    max-width: calc(
-      min(40ch, 42%) +
-      3rem +
-      min(var(--about-photo-max, 74ch), max(0px, 100% - min(40ch, 42%) - 3rem))
-    );
+    max-width: calc(40ch + 3rem + var(--about-photo-max));
   }
 }
 
