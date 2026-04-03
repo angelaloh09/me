@@ -4,70 +4,77 @@ import Navbar from './Navbar'
 import './styles/Styles.css'
 import style from './styles/thoughts.module.css'
 
-const STATUS_LABEL = {
-    written: 'Written',
-    in_progress: 'In Progress',
-    open_question: 'Open Question',
-    notes_only: 'Notes Only',
-}
-
-const ENTRIES = [
+/** Only items with `to` link to a written page. */
+const THOUGHT_SECTIONS = [
     {
-        title: 'What is capacitive touch? And how does it work?',
-        status: 'written',
-        to: '/thoughts/capacitive-touch',
+        category: 'SYSTEMS',
+        items: [
+            { title: 'How does the electric grid actually work?' },
+            {
+                title:
+                    "What's the optimization strategy for traffic lights in a dense city?",
+            },
+            {
+                title:
+                    'How do companies like Amazon and Alibaba optimize warehouses to ship millions of items daily?',
+            },
+        ],
     },
     {
-        title: 'How does the electric grid work?',
-        status: 'open_question',
+        category: 'MANUFACTURING',
+        items: [
+            {
+                title:
+                    'How does IKEA produce furniture at such scale and low cost?',
+            },
+            {
+                title: 
+                    'How are cardboard and plastics recycled and reprocessed at industrial scale?',
+            },
+            {
+                title:
+                    'Why is it difficult to 3D print with pure wood or sawdust, and what limits wood-based filaments today?',
+            },
+        ],
     },
     {
-        title: 'How does Ikea create its furniture at the scale & price it does?',
-        status: 'open_question',
+        category: 'ENGINEERING',
+        items: [
+            {
+                title: 'What is capacitive touch? And how does it work?',
+                to: '/thoughts/capacitive-touch',
+            },
+            {
+                title:
+                    "How does a zipper work, and what's the history behind its design?",
+            },
+            {
+                title:
+                    'What is the history behind vacuum chambers. How have they been refined over time?',
+            },
+            {
+                title:
+                    'How do noise-canceling headphones work, especially techniques like beamforming?',
+            },
+        ],
     },
     {
-        title: 'Weather modification & cloud seeding?!',
-        status: 'open_question',
-    },
-    {
-        title: "How does a zipper work? What's the history behind the design?",
-        status: 'open_question',
-    },
-    {
-        title: 'Vacuum chambers are so cool…',
-        status: 'open_question',
-    },
-    {
-        title: 'Why do humans have fingerprints?',
-        status: 'open_question',
-    },
-    {
-        title: "What's the optimization strategy for traffic lights across a dense city like NYC?",
-        status: 'open_question',
-    },
-    {
-        title: 'How do companies like Amazon optimize warehouses to ship millions of items daily?',
-        status: 'open_question',
-    },
-    {
-        title:
-            'Noise-cancelling headphones are a super cool technology. Need to learn more about beam-forming.',
-        status: 'open_question',
-    },
-    {
-        title:
-            'What different additive manufacturing processes exist today? What is the most ground-breaking 3D printing material possible?',
-        status: 'open_question',
-    },
-    {
-        title:
-            'Always really fascinated by the Gates Foundation\'s "Reinvent the Toilet Challenge". How do you actually develop a waterless, off-grid toilet that sanitizes human waste in an efficient + sustainable manner? How would I design this toilet?',
-        status: 'open_question',
-    },
-    {
-        title:
-            "Look into advanced geothermal drilling technologies & how these technologies tap into the earth's heat to generate renewable energy.",
-        status: 'open_question',
+        category: 'ENERGY & BIO',
+        items: [
+            {
+                title:
+                    'How does weather modification (e.g., cloud seeding) actually work?',
+            },
+            {
+                title:
+                    "How do advanced geothermal drilling technologies tap into the earth's heat for energy?",
+            },
+            { title: 'Why do humans have fingerprints?' },
+            {
+                title:
+                    'How do you design a waterless, off-grid toilet that safely processes human waste?',
+            }
+        ],
     },
 ]
 
@@ -83,35 +90,43 @@ const Thoughts = () => {
 
                 <div className={style.thoughtBody}>
                     <p className={style.thoughtIntro}>
-                    A living index of questions I’ve explored, am exploring, or want to return to.
+                        A living index of questions I&apos;ve explored, am exploring, or want to return to.
                     </p>
 
-                    <ul className={style.entryList} aria-label="Questions and write-ups">
-                        {ENTRIES.map((entry) => {
-                            const pillClass = `${style.statusPill} ${style[`status_${entry.status}`]}`
-                            const titleRow = (
-                                <div className={style.entryTitleRow}>
-                                    {entry.status === 'written' && entry.to ? (
-                                        <Link to={entry.to} className={style.entryTitleLink}>
-                                            {entry.title}
-                                        </Link>
-                                    ) : (
-                                        <span className={style.entryTitleStatic}>{entry.title}</span>
-                                    )}
-                                    <span className={pillClass}>{STATUS_LABEL[entry.status]}</span>
-                                </div>
-                            )
-
-                            return (
-                                <li key={entry.title} className={style.entryCard}>
-                                    {titleRow}
-                                    {entry.teaser ? (
-                                        <p className={style.entryTeaser}>{entry.teaser}</p>
-                                    ) : null}
-                                </li>
-                            )
-                        })}
-                    </ul>
+                    <div className={style.categoryWrap} aria-label="Questions by category">
+                        {THOUGHT_SECTIONS.map((section, idx) => (
+                            <section
+                                key={section.category}
+                                className={style.categorySection}
+                                aria-labelledby={`thoughts-heading-${idx}`}
+                            >
+                                <h2
+                                    id={`thoughts-heading-${idx}`}
+                                    className={style.categoryHeading}
+                                >
+                                    {section.category}
+                                </h2>
+                                <ul className={style.entryList}>
+                                    {section.items.map((item) => (
+                                        <li key={item.title} className={style.entryCard}>
+                                            {item.to ? (
+                                                <Link
+                                                    to={item.to}
+                                                    className={style.entryTitleLink}
+                                                >
+                                                    {item.title}
+                                                </Link>
+                                            ) : (
+                                                <span className={style.entryTitleStatic}>
+                                                    {item.title}
+                                                </span>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </section>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

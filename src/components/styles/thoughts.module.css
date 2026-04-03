@@ -4,7 +4,7 @@
   max-width: min(800px, 90%);
 }
 
-/* Thoughts index — question + status pill (compact spacing) */
+/* Thoughts index — grouped by category (Bookshelf-style row type) */
 
 .thoughtBody {
   font-family: Poppins, sans-serif;
@@ -14,11 +14,33 @@
 }
 
 .thoughtIntro {
-  margin: 0 0 1.85rem 0;
+  margin: 0 0 2.75rem 0;
   max-width: 42rem;
   font-size: 13px;
   line-height: 1.5;
-  color: var(--idea-grey, #5f5c76);
+  color: rgba(95, 92, 118, 0.72);
+}
+
+.categoryWrap {
+  margin: 0;
+}
+
+.categorySection {
+  margin: 0 0 2rem 0;
+}
+
+.categorySection:last-child {
+  margin-bottom: 0;
+}
+
+.categoryHeading {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  color: var(--main-purple, #5643e9);
+  margin: 0 0 0.6rem 0;
+  line-height: 1.35;
 }
 
 .entryList {
@@ -33,27 +55,14 @@
   border-bottom: 1px solid rgba(95, 92, 118, 0.1);
 }
 
-.entryCard:first-of-type {
-  padding-top: 0.2rem;
-}
-
-.entryCard:last-child {
+.entryList .entryCard:last-child {
   border-bottom: none;
   padding-bottom: 0;
 }
 
-.entryTitleRow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.35rem 0.5rem;
-  justify-content: space-between;
-}
-
 /* Match Bookshelf rows: global .cards h3 pre, span, a → Poppins 13px / weight 100 */
 .entryTitleLink {
-  flex: 1 1 12rem;
-  min-width: 0;
+  display: block;
   font-family: Poppins, sans-serif;
   font-size: 13px;
   font-weight: 100;
@@ -76,61 +85,12 @@
 }
 
 .entryTitleStatic {
-  flex: 1 1 12rem;
-  min-width: 0;
+  display: block;
   font-family: Poppins, sans-serif;
   font-size: 13px;
   font-weight: 100;
   line-height: 1.5;
   color: var(--idea-grey);
-}
-
-.entryTeaser {
-  margin: 0.35rem 0 0 0;
-  max-width: 40rem;
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 100;
-  color: var(--idea-grey);
-  opacity: 0.9;
-}
-
-.statusPill {
-  display: inline-block;
-  flex-shrink: 0;
-  font-family: Poppins, sans-serif;
-  font-size: 13px;
-  font-weight: 100;
-  letter-spacing: 0.02em;
-  text-transform: none;
-  line-height: 1.5;
-  padding: 0.12rem 0.4rem;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.status_written {
-  color: var(--warm-cobalt, #566dd0);
-  background: rgba(86, 109, 208, 0.08);
-  border-color: rgba(86, 109, 208, 0.22);
-}
-
-.status_in_progress {
-  color: #6b5344;
-  background: rgba(200, 140, 60, 0.1);
-  border-color: rgba(180, 120, 50, 0.2);
-}
-
-.status_open_question {
-  color: var(--main-purple, #5643e9);
-  background: rgba(86, 67, 233, 0.06);
-  border-color: rgba(86, 67, 233, 0.18);
-}
-
-.status_notes_only {
-  color: var(--idea-grey, #5f5c76);
-  background: rgba(95, 92, 118, 0.06);
-  border-color: rgba(95, 92, 118, 0.15);
 }
 
 /* TODO: these are called out in the cap touch.js file. And are specific to that use case (only slides and no text below the slides.

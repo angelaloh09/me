@@ -217,3 +217,32 @@
   margin: 0;
   font-style: italic;
 }
+
+/* Lighter purple than site default cobalt — reads clearly on Vimputer bg */
+.bodyLink {
+  font-style: italic;
+  color: #b4bcf0;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.bodyLink:visited {
+  color: #b4bcf0;
+}
+
+.bodyLink:hover,
+.bodyLink:active {
+  color: #d0d6f8;
+  text-decoration: underline;
+  text-decoration-color: #d0d6f8;
+}
+
+.bodyLink:focus-visible {
+  color: #d0d6f8;
+  text-decoration: underline;
+  text-decoration-color: #d0d6f8;
+  outline: 2px solid #c8cff5;
+  outline-offset: 2px;
+}

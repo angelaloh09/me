@@ -62,7 +62,16 @@ const Vimputer = () => {
             <div className={style.textColumn}>
               <h1 className={style.title}>Vimputer</h1>
               <p className={style.body}>
-                A tiny computer built for capturing ideas in Vim.
+                A tiny computer built for capturing ideas in{' '}
+                <a
+                  href="https://www.vim.org/about.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={style.bodyLink}
+                >
+                  Vim
+                </a>
+                .
                 <br />
                 Months-long battery life and a built-in mechanical keyboard.
                 <br />
