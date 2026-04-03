@@ -85,7 +85,10 @@ const AboutMe = () => {
                         >
                             linkedin
                         </a>
-                        . Below are some of the teams & projects I&apos;ve been lucky to be a part of.
+                        .
+                        <span className={style.introBreakLine}>
+                            Below are some of the teams & projects I&apos;ve been lucky to be a part of.
+                        </span>
                     </p>
                     </div>
 

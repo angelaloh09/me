@@ -5,6 +5,8 @@
   margin-bottom: 50px;
   /* Keep in sync with .mediaRow max-width — intro span uses this in calc() */
   --about-photo-max: 74ch;
+  --about-section-gap: 3rem;
+  --about-section-gap-half: 1.5rem;
 }
 
 .Writing{
@@ -67,11 +69,26 @@
 }
 
 .Writing .introBeforeGallery {
-  margin-bottom: 2.75rem;
+  margin-bottom: 0;
+}
+
+.introBreakLine {
+  display: block;
+  margin-top: var(--about-intro-break-gap);
 }
 
 .Writing .afterGalleryParagraph {
-  margin-top: 3rem;
+  margin-top: var(--about-section-gap);
+  position: relative;
+}
+
+.Writing .afterGalleryParagraph::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(-1 * var(--about-section-gap-half) - 0.5px);
+  border-top: 1px solid rgba(95, 92, 118, 0.14);
 }
 
 .Link {
@@ -102,11 +119,21 @@
 }
 
 .mediaGallery {
-  margin-top: 3rem;
-  padding-top: 1rem;
+  position: relative;
+  margin-top: var(--about-section-gap);
+  padding-top: 0;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: var(--about-section-gap);
+}
+
+.mediaGallery::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(-1 * var(--about-section-gap-half) - 0.5px);
+  border-top: 1px solid rgba(95, 92, 118, 0.14);
 }
 
 .mediaCompanyBlock + .mediaCompanyBlock {
@@ -118,7 +145,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(-1.5rem - 0.5px);
+  top: calc(-1 * var(--about-section-gap-half) - 0.5px);
   border-top: 1px solid rgba(95, 92, 118, 0.14);
 }
 
