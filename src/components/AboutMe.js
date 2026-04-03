@@ -45,12 +45,13 @@ const AboutMe = () => {
         <section className="ideas">
             <Navbar />
             <div className={style.PagePadding}>
-                <div className={style.Writing}>
-                    <div className={style.aboutMainColumn}>
-                    <div className="cards title">
+                <div className={style.aboutMainColumn}>
+                    <div className={`cards title ${style.aboutPageTitle}`}>
                         <h1>About Me</h1>
                         <br />
                     </div>
+
+                    <div className={style.Writing}>
                     <div className={style.introBlock}>
                     <p>Hi there!</p>
                     <p className={style.introBeforeGallery}>
