@@ -4,11 +4,12 @@
   max-width: min(800px, 90%);
 }
 
+/* Legacy grid row (kept for any older markup) */
 .GridContainer {
   display: grid;
   grid-template-columns: 20% 80%;
-  color: var(--idea-grey);
-  border-bottom: 0.5px dotted var(--idea-grey-underline);
+  color: var(--idea-grey, #5f5c76);
+  border-bottom: 0.5px dotted var(--idea-grey-underline, #6d6d6d);
   align-items: end;
   width: 100%;
   justify-items: left;
@@ -19,7 +20,143 @@
 .GridContainer:hover{
   cursor: pointer;
   color: var(--main-purple);
-} 
+}
+
+/* —— Thoughts index (living question list) —— */
+
+.thoughtsPage {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: min(720px, 92%);
+  margin-bottom: 50px;
+  padding-bottom: 2rem;
+}
+
+.thoughtBody {
+  font-family: Poppins, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--idea-grey, #5f5c76);
+}
+
+.thoughtIntro {
+  margin: 0 0 1.75rem 0;
+  max-width: 42rem;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--idea-grey, #5f5c76);
+}
+
+.entryList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entryCard {
+  margin: 0;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid rgba(95, 92, 118, 0.12);
+}
+
+.entryCard:first-of-type {
+  padding-top: 0.35rem;
+}
+
+.entryCard:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.entryTitleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 0.75rem;
+  justify-content: space-between;
+}
+
+.entryTitleLink {
+  flex: 1 1 12rem;
+  min-width: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--warm-cobalt, #566dd0);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.entryTitleLink:hover,
+.entryTitleLink:focus-visible {
+  color: var(--warm-cobalt-hover, #6b82e0);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.entryTitleLink:focus-visible {
+  outline: 2px solid var(--warm-cobalt-hover, #6b82e0);
+  outline-offset: 3px;
+}
+
+.entryTitleStatic {
+  flex: 1 1 12rem;
+  min-width: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--idea-grey, #5f5c76);
+}
+
+.entryTeaser {
+  margin: 0.55rem 0 0 0;
+  max-width: 40rem;
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--idea-grey, #5f5c76);
+  opacity: 0.92;
+}
+
+.statusPill {
+  display: inline-block;
+  flex-shrink: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.status_written {
+  color: var(--warm-cobalt, #566dd0);
+  background: rgba(86, 109, 208, 0.1);
+  border-color: rgba(86, 109, 208, 0.28);
+}
+
+.status_in_progress {
+  color: #8a5a2b;
+  background: rgba(200, 140, 60, 0.12);
+  border-color: rgba(180, 120, 50, 0.25);
+}
+
+.status_open_question {
+  color: var(--main-purple, #5643e9);
+  background: rgba(86, 67, 233, 0.08);
+  border-color: rgba(86, 67, 233, 0.22);
+}
+
+.status_notes_only {
+  color: #5a5a6a;
+  background: rgba(95, 92, 118, 0.08);
+  border-color: rgba(95, 92, 118, 0.18);
+}
 
 /* TODO: these are called out in the cap touch.js file. And are specific to that use case (only slides and no text below the slides.
           betware of the margin-bottom to give some margin to the last bottom slide. */
