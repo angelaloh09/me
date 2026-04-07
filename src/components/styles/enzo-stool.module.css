@@ -52,12 +52,6 @@
     background-color: var(--enzo-bg);
     border-color: rgba(255, 255, 255, 0.08);
   }
-
-  .enzoStoolSection :global(.navbar) {
-    min-height: 3.5rem;
-    background: var(--enzo-bg);
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-  }
 }
 
 .enzoStoolSection :global(.close_icon) {

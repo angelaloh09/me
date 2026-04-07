@@ -31,12 +31,6 @@
     background-color: rgb(112, 110, 81);
     border-color: rgba(255, 255, 255, 0.12);
   }
-
-  .noeLampSection :global(.navbar) {
-    min-height: 3.5rem;
-    background: rgb(112, 110, 81);
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
-  }
 }
 
 .noeLampSection {
