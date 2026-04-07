@@ -45,9 +45,26 @@
   color: var(--vimputer-text);
 }
 
-.vimputerSection :global(.list__items) {
-  background: transparent;
-  backdrop-filter: none;
+@media (min-width: 50em) {
+  .vimputerSection :global(.list__items) {
+    background: rgba(64, 72, 69, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (max-width: 50em) {
+  .vimputerSection :global(.list__items) {
+    background-color: var(--vimputer-bg);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .vimputerSection :global(.navbar) {
+    min-height: 3.5rem;
+    background: var(--vimputer-bg);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 .vimputerSection :global(.close_icon) {
@@ -84,10 +101,6 @@
   .layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .imageColumn {
-    grid-template-columns: auto 1fr;
   }
 
   .textColumn {
@@ -245,4 +258,28 @@
   text-decoration-color: #d0d6f8;
   outline: 2px solid #c8cff5;
   outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .imageColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .thumbnailGrid {
+    flex-direction: row;
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .mainImageWrapper {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+  }
 }

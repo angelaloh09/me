@@ -15,9 +15,28 @@
   text-decoration-color: var(--lamp-body-color);
 }
 
-.noeLampSection :global(.list__items) {
-  background: transparent;
-  backdrop-filter: none;
+/* Desktop: readable frosted strip. Mobile overlay + defaults in Navbar.css need
+   an opaque base — do not use transparent at max-width or the open menu is see-through. */
+@media (min-width: 50em) {
+  .noeLampSection :global(.list__items) {
+    background: rgba(112, 110, 81, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 50em) {
+  .noeLampSection :global(.list__items) {
+    background-color: rgb(112, 110, 81);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .noeLampSection :global(.navbar) {
+    min-height: 3.5rem;
+    background: rgb(112, 110, 81);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
+  }
 }
 
 .noeLampSection {
@@ -65,10 +84,6 @@
   .layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .imageColumn {
-    grid-template-columns: auto 1fr;
   }
 
   .textColumn {
@@ -208,4 +223,29 @@
   color: var(--lamp-nav-title);
   margin: 0;
   font-style: italic;
+}
+
+/* Mobile: full-width hero, thumbnails below — overrides .imageColumn / .mainImageWrapper above */
+@media (max-width: 768px) {
+  .imageColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .thumbnailGrid {
+    flex-direction: row;
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .mainImageWrapper {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+  }
 }
