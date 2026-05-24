@@ -73,7 +73,7 @@
     background-image: var(--projects-bg-image);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    border-color: rgba(255, 255, 255, 0.08);
+    border: none;
   }
 
   /* Same subtle grain as the page when the full-screen menu is open */

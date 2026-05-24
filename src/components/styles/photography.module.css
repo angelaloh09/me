@@ -23,7 +23,7 @@
 @media (max-width: 50em) {
   .darkRoom :global(.list__items) {
     background-color: var(--dark-room-bg);
-    border-color: var(--dark-room-bg);
+    border: none;
   }
 
   .darkRoom :global(.menu_icon .menu),

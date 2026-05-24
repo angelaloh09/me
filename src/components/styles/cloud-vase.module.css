@@ -42,10 +42,10 @@
 
 @media (min-width: 50em) {
   .cloudVaseSection :global(.list__items) {
-    background: rgba(158, 175, 193, 0.82);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
   }
 }
 

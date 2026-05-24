@@ -15,14 +15,14 @@
   text-decoration-color: var(--lamp-body-color);
 }
 
-/* Desktop: readable frosted strip. Mobile overlay + defaults in Navbar.css need
-   an opaque base — do not use transparent at max-width or the open menu is see-through. */
+/* Desktop: same field as the page — no frosted strip or border line. Mobile overlay
+   keeps an opaque base from Navbar.css + rules below so the open menu is not see-through. */
 @media (min-width: 50em) {
   .noeLampSection :global(.list__items) {
-    background: rgba(112, 110, 81, 0.82);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
   }
 }
 
