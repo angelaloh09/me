@@ -16,6 +16,9 @@ const Bookshelf = () => {
                     <h2>2026</h2>
                 </div>
                 {[
+                    {title: "How to Hide an Empire", author: "Daniel Immerwahr"},
+                    {title: "How to Win Friends and Influence People", author: "Dale Carnegie"},
+                    {title: "The Toyota Production System", author: "Taiichi Ohno"},
                     {title: "Range", author: "David Epstein"},
                     {title: "Death On The Nile", author: "Agatha Christie"},
                     {title: "Super Nintendo", author: "Keza MacDonald"},
