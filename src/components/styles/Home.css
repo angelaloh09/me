@@ -39,8 +39,8 @@
   --lamp-body-color: #825927;
   --lamp-nav-title: #fbe1ab;
 
-  /* Projects index only — brown base under gradient (see Projects.js) */
-  --projects-root-base: #2c241c;
+  /* Projects index only — rice/tea paper base under wash (see Projects.js) */
+  --projects-root-base: #eddcc8;
   }
   
   html.projects-page-root,

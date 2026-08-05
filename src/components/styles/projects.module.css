@@ -1,14 +1,16 @@
-/* Warm dark brown “paper / leather” field — scoped to /projects only */
+/* Rice / tea paper field — scoped to /projects only.
+   Warmer washi + tea stains; sepia ink type so photos stay primary. */
 .projectsPage {
-  --projects-bg-deep: #1a1512;
-  --projects-bg-mid: #2c241c;
-  --projects-bg-warm: #3f342a;
-  --projects-text: rgb(255, 254, 240);
-  --projects-text-soft: rgba(255, 254, 240, 0.78);
+  --projects-bg-deep: #eddcc8;
+  --projects-bg-mid: #f5e7d4;
+  --projects-bg-lift: #e6d0b4;
+  /* Warm sepia / umber ink — reads as written on tea paper, not cool charcoal */
+  --projects-text: #4d3424;
+  --projects-text-soft: rgba(77, 52, 36, 0.7);
   --projects-bg-image:
-    radial-gradient(ellipse 95% 85% at 82% 38%, rgba(95, 78, 58, 0.45) 0%, transparent 50%),
-    radial-gradient(ellipse 65% 55% at 12% 88%, rgba(20, 17, 14, 0.95) 0%, transparent 45%),
-    linear-gradient(165deg, #241e18 0%, var(--projects-bg-mid) 42%, var(--projects-bg-warm) 72%, #1f1a16 100%);
+    radial-gradient(ellipse 90% 70% at 78% 22%, rgba(214, 168, 100, 0.28) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 55% at 14% 86%, rgba(196, 148, 96, 0.2) 0%, transparent 50%),
+    linear-gradient(165deg, #f8edd9 0%, var(--projects-bg-mid) 40%, var(--projects-bg-lift) 72%, #e8d4b8 100%);
 
   background-color: var(--projects-bg-deep);
   background-image: var(--projects-bg-image);
@@ -22,8 +24,8 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.12;
-  mix-blend-mode: overlay;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -40,22 +42,22 @@
   color: var(--projects-text);
 }
 
-/* Nav readable on dark brown */
+/* Nav readable on rice paper */
 .projectsPage :global(.home__icon h1) {
   color: var(--projects-text);
 }
 
 .projectsPage :global(.home__icon h1:hover) {
-  text-decoration-color: rgba(255, 254, 240, 0.45);
+  text-decoration-color: rgba(77, 52, 36, 0.4);
 }
 
 .projectsPage :global(.list__items li a) {
-  color: rgba(255, 254, 240, 0.92);
+  color: rgba(77, 52, 36, 0.88);
 }
 
 .projectsPage :global(.list__items li a:hover) {
   color: var(--projects-text);
-  text-decoration-color: rgba(255, 254, 240, 0.5);
+  text-decoration-color: rgba(77, 52, 36, 0.45);
 }
 
 /* Nav uses the same field as the page — no frosted strip or different wash */
@@ -76,14 +78,14 @@
     border: none;
   }
 
-  /* Same subtle grain as the page when the full-screen menu is open */
+  /* Same subtle fiber grain as the page when the full-screen menu is open */
   .projectsPage :global(.list__items)::before {
     content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.12;
-    mix-blend-mode: overlay;
+    opacity: 0.07;
+    mix-blend-mode: multiply;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 }
@@ -134,17 +136,17 @@
   width: 100%;
   aspect-ratio: 1599 / 2007;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(77, 52, 36, 0.05);
+  border: 1px solid rgba(77, 52, 36, 0.1);
   transition: border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.3s ease;
 }
 
 .card:hover .cardImageWrapper {
-  border-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(77, 52, 36, 0.22);
   box-shadow:
-    0 6px 20px rgba(255, 200, 110, 0.22),
-    0 0 24px rgba(255, 220, 150, 0.15);
+    0 8px 22px rgba(120, 80, 40, 0.14),
+    0 0 0 1px rgba(210, 168, 100, 0.25);
 }
 
 .cardImage {
