@@ -1,16 +1,15 @@
 /* Rice / tea paper field — scoped to /projects only.
-   Warmer washi + tea stains; sepia ink type so photos stay primary. */
+   Soft washi wash with faint tea stains; ink-toned type so photos stay primary. */
 .projectsPage {
-  --projects-bg-deep: #eddcc8;
-  --projects-bg-mid: #f5e7d4;
-  --projects-bg-lift: #e6d0b4;
-  /* Warm sepia / umber ink — reads as written on tea paper, not cool charcoal */
-  --projects-text: #4d3424;
-  --projects-text-soft: rgba(77, 52, 36, 0.7);
+  --projects-bg-deep: #ebe4d6;
+  --projects-bg-mid: #f2ebe0;
+  --projects-bg-lift: #e4dac8;
+  --projects-text: #3a342c;
+  --projects-text-soft: rgba(58, 52, 44, 0.72);
   --projects-bg-image:
-    radial-gradient(ellipse 90% 70% at 78% 22%, rgba(214, 168, 100, 0.28) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 55% at 14% 86%, rgba(196, 148, 96, 0.2) 0%, transparent 50%),
-    linear-gradient(165deg, #f8edd9 0%, var(--projects-bg-mid) 40%, var(--projects-bg-lift) 72%, #e8d4b8 100%);
+    radial-gradient(ellipse 90% 70% at 78% 22%, rgba(196, 168, 120, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 55% at 14% 86%, rgba(168, 148, 118, 0.18) 0%, transparent 50%),
+    linear-gradient(165deg, #f5efe6 0%, var(--projects-bg-mid) 40%, var(--projects-bg-lift) 72%, #e8dfd0 100%);
 
   background-color: var(--projects-bg-deep);
   background-image: var(--projects-bg-image);
@@ -19,17 +18,7 @@
   display: flow-root;
 }
 
-.projectsPage::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.07;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Only the main content stacks above the grain layer — not the navbar, or the
+/* Only the main content stacks above the field — not the navbar, or the
    menu button sits under .page and does not receive taps on mobile. */
 .projectsPage > .page {
   position: relative;
@@ -48,16 +37,16 @@
 }
 
 .projectsPage :global(.home__icon h1:hover) {
-  text-decoration-color: rgba(77, 52, 36, 0.4);
+  text-decoration-color: rgba(58, 52, 44, 0.4);
 }
 
 .projectsPage :global(.list__items li a) {
-  color: rgba(77, 52, 36, 0.88);
+  color: rgba(58, 52, 44, 0.88);
 }
 
 .projectsPage :global(.list__items li a:hover) {
   color: var(--projects-text);
-  text-decoration-color: rgba(77, 52, 36, 0.45);
+  text-decoration-color: rgba(58, 52, 44, 0.45);
 }
 
 /* Nav uses the same field as the page — no frosted strip or different wash */
@@ -78,16 +67,6 @@
     border: none;
   }
 
-  /* Same subtle fiber grain as the page when the full-screen menu is open */
-  .projectsPage :global(.list__items)::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.07;
-    mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
 }
 
 .projectsPage :global(.menu_icon .menu) {
@@ -136,17 +115,17 @@
   width: 100%;
   aspect-ratio: 1599 / 2007;
   overflow: hidden;
-  background: rgba(77, 52, 36, 0.05);
-  border: 1px solid rgba(77, 52, 36, 0.1);
+  background: rgba(58, 52, 44, 0.06);
+  border: 1px solid rgba(58, 52, 44, 0.1);
   transition: border-color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.3s ease;
 }
 
 .card:hover .cardImageWrapper {
-  border-color: rgba(77, 52, 36, 0.22);
+  border-color: rgba(58, 52, 44, 0.22);
   box-shadow:
-    0 8px 22px rgba(120, 80, 40, 0.14),
-    0 0 0 1px rgba(210, 168, 100, 0.25);
+    0 8px 22px rgba(90, 70, 40, 0.12),
+    0 0 0 1px rgba(196, 168, 120, 0.2);
 }
 
 .cardImage {
@@ -157,6 +136,23 @@
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+.cardImageHover {
+  opacity: 0;
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .cardImageHover {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardImageHover {
+    transition: none;
+  }
 }
 
 .cardImagePlaceholder {
