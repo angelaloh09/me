@@ -9,8 +9,10 @@ import cloudVaseImg from './tinkio-projects/cloud-vase/DSCF4753.jpg'
 import cloudVaseHoverImg from './tinkio-projects/cloud-vase/img1.jpg'
 import vimputerImg from './tinkio-projects/vimputer/DSCF6306.jpg'
 import vimputerHoverImg from './tinkio-projects/vimputer/typewriter.jpeg'
-import enzoStoolImg from './tinkio-projects/enzo-stool/DSCF6369.jpg'
-import enzoStoolHoverImg from './tinkio-projects/enzo-stool/DSCF6350.jpg'
+import enzoStoolImg from './tinkio-projects/enzo-stool/DSCF6350.jpg'
+import enzoStoolHoverImg from './tinkio-projects/enzo-stool/DSCF6358.jpg'
+import moonstoneLampImg from './tinkio-projects/moonstone-lamp/moonstone-lamp-img1.jpg'
+import moonstoneLampHoverImg from './tinkio-projects/moonstone-lamp/moonstone-lamp-img2.jpg'
 
 const projects = [
   {
@@ -37,6 +39,12 @@ const projects = [
     path: '/tinkio-projects/enzo-stool',
     image: enzoStoolImg,
     hoverImage: enzoStoolHoverImg,
+  },
+  {
+    title: 'Moonstone Lamp',
+    path: '/tinkio-projects/moonstone-lamp',
+    image: moonstoneLampImg,
+    hoverImage: moonstoneLampHoverImg,
   },
 ]
 
