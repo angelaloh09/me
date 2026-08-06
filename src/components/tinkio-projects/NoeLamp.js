@@ -7,7 +7,7 @@ import img1 from './noe-lamp/noe-lamp-img1.jpg'
 import img2 from './noe-lamp/noe-lamp-img2.jpg'
 import img3 from './noe-lamp/noe-lamp-img3.jpg'
 
-const images = [img1, img2, img3]
+const images = [img2, img1, img3]
 
 const NoeLamp = () => {
     const [selectedImage, setSelectedImage] = useState(0)

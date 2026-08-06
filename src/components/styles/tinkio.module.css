@@ -1,0 +1,350 @@
+/* Tinkio project page — grid bg adapted from tinkiall/tinkiweb styles-landing.css */
+.tinkioSection {
+  --tinkio-text: #111111;
+  --tinkio-text-hover: #000000;
+  --tinkio-bg: #fff1e1;
+  --tinkio-link: #ff5126;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--tinkio-bg);
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ─── Hero grid background (from tinkiall) ───────────────────────────────── */
+.heroPageBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  --grid-cell: clamp(30.4px, 5.6vw, 43.2px);
+  --grid-line: 1px;
+}
+
+.bgGrid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.62;
+  background: linear-gradient(
+    90deg,
+    hsl(6, 88%, 64%) 0%,
+    hsl(28, 90%, 60%) 16%,
+    hsl(44, 92%, 56%) 33%,
+    hsl(44, 90%, 58%) 50%,
+    hsl(215, 72%, 62%) 66%,
+    hsl(285, 58%, 68%) 83%,
+    hsl(6, 88%, 64%) 100%
+  );
+  background-size: 240% 100%;
+  animation: bgGridPanH 38s ease-in-out infinite alternate;
+  mask-image: repeating-linear-gradient(
+    to bottom,
+    #000 0,
+    #000 var(--grid-line),
+    transparent var(--grid-line),
+    transparent var(--grid-cell)
+  );
+  -webkit-mask-image: repeating-linear-gradient(
+    to bottom,
+    #000 0,
+    #000 var(--grid-line),
+    transparent var(--grid-line),
+    transparent var(--grid-cell)
+  );
+}
+
+.bgGrid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.58;
+  background: linear-gradient(
+    180deg,
+    hsl(330, 65%, 68%) 0%,
+    hsl(6, 88%, 62%) 20%,
+    hsl(44, 90%, 58%) 40%,
+    hsl(130, 45%, 58%) 60%,
+    hsl(200, 65%, 62%) 80%,
+    hsl(280, 55%, 66%) 100%
+  );
+  background-size: 100% 220%;
+  animation: bgGridPanV 46s ease-in-out infinite alternate;
+  mask-image: repeating-linear-gradient(
+    to right,
+    #000 0,
+    #000 var(--grid-line),
+    transparent var(--grid-line),
+    transparent var(--grid-cell)
+  );
+  -webkit-mask-image: repeating-linear-gradient(
+    to right,
+    #000 0,
+    #000 var(--grid-line),
+    transparent var(--grid-line),
+    transparent var(--grid-cell)
+  );
+}
+
+.bgGridFill {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bgShape {
+  position: absolute;
+  width: var(--grid-cell);
+  height: var(--grid-cell);
+  opacity: 0.52;
+  animation: shapeScale var(--shape-dur, 3s) ease-in-out infinite alternate;
+  animation-delay: var(--shape-delay, 0s);
+}
+
+.bgShapeCircle {
+  border-radius: 50%;
+}
+
+.bgShape1 { background: hsl(0, 76%, 58%);   left: 9%;  top: 16%; --shape-dur: 3.2s; --shape-delay: 0s; }
+.bgShape2 { background: hsl(142, 54%, 46%); left: 76%; top: 21%; --shape-dur: 2.7s; --shape-delay: 0.9s; }
+.bgShape3 { background: hsl(218, 72%, 56%); left: 76%; top: 84%; --shape-dur: 3.8s; --shape-delay: 1.7s; }
+.bgShape4 { background: hsl(32, 88%, 56%);  left: 14%; top: 71%; --shape-dur: 2.4s; --shape-delay: 0.4s; }
+.bgShape5 { background: hsl(88, 64%, 50%);  left: 86%; top: 63%; --shape-dur: 3.5s; --shape-delay: 1.2s; }
+
+.bgContentGlow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 92% 72% at 50% 40%,
+    rgba(255, 253, 250, 0.55) 0%,
+    rgba(255, 238, 224, 0.08) 42%,
+    transparent 68%
+  );
+  opacity: 0.055;
+}
+
+@keyframes shapeScale {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+@keyframes bgGridPanH {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes bgGridPanV {
+  0% { background-position: 50% 0%; }
+  100% { background-position: 50% 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bgGrid::before,
+  .bgGrid::after,
+  .bgShape {
+    animation: none;
+  }
+}
+
+/* ─── Nav / content ──────────────────────────────────────────────────────── */
+.tinkioSection :global(.home__icon h1) {
+  color: var(--tinkio-text);
+}
+
+.tinkioSection :global(.home__icon h1:hover) {
+  color: var(--tinkio-text-hover);
+  text-decoration-color: rgba(17, 17, 17, 0.4);
+}
+
+.tinkioSection :global(.list__items li a) {
+  color: var(--tinkio-text);
+}
+
+.tinkioSection :global(.list__items li a:hover) {
+  color: var(--tinkio-text-hover);
+  text-decoration-color: rgba(17, 17, 17, 0.45);
+}
+
+.tinkioSection :global(.menu_icon .menu) {
+  color: var(--tinkio-text);
+}
+
+@media (min-width: 50em) {
+  .tinkioSection :global(.list__items) {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+  }
+}
+
+@media (max-width: 50em) {
+  .tinkioSection :global(.list__items) {
+    background-color: var(--tinkio-bg);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+.tinkioSection :global(.close_icon) {
+  color: var(--tinkio-text);
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  padding-top: 5rem;
+}
+
+.container {
+  max-width: min(980px, 92%);
+  margin: 0 auto;
+  margin-bottom: 50px;
+  width: 100%;
+  min-height: 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: max-content minmax(28rem, 48rem);
+  gap: clamp(1.25rem, 2.5vw, 2.5rem);
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .textColumn {
+    justify-self: stretch;
+    max-width: none;
+    padding-left: 0;
+  }
+}
+
+.imageColumn {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+  justify-items: start;
+  width: fit-content;
+}
+
+.mainImageWrapper {
+  width: min(42vw, 540px);
+  max-width: 100%;
+  aspect-ratio: 1599 / 2007;
+  overflow: hidden;
+  background: transparent;
+  justify-self: start;
+  position: relative;
+}
+
+.mainImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: transparent;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-self: start;
+  align-self: center;
+  max-width: 68ch;
+  text-align: left;
+}
+
+.title {
+  color: var(--tinkio-text);
+  font-family: Righteous;
+  font-size: 36px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.body {
+  font-family: Poppins;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--tinkio-text);
+  margin: 0;
+  font-style: italic;
+}
+
+.bodyLink {
+  font-style: italic;
+  color: var(--tinkio-link);
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.bodyLink:visited {
+  color: var(--tinkio-link);
+}
+
+.bodyLink:hover,
+.bodyLink:active {
+  color: #cc3a14;
+  text-decoration: underline;
+  text-decoration-color: #cc3a14;
+}
+
+.bodyLink:focus-visible {
+  color: #cc3a14;
+  text-decoration: underline;
+  text-decoration-color: #cc3a14;
+  outline: 2px solid rgba(255, 81, 38, 0.5);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .imageColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .mainImageWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+}

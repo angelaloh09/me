@@ -14,6 +14,7 @@ import CloudVase from './tinkio-projects/CloudVase'
 import Vimputer from './tinkio-projects/Vimputer'
 import EnzoStool from './tinkio-projects/EnzoStool'
 import MoonstoneLamp from './tinkio-projects/MoonstoneLamp'
+import Tinkio from './tinkio-projects/Tinkio'
 
 const AppRoutes = ({ location }) => (
   <Routes location={location} key={location.pathname}>
@@ -31,6 +32,7 @@ const AppRoutes = ({ location }) => (
     <Route path="/tinkio-projects/vimputer" element={<Vimputer />} />
     <Route path="/tinkio-projects/enzo-stool" element={<EnzoStool />} />
     <Route path="/tinkio-projects/moonstone-lamp" element={<MoonstoneLamp />} />
+    <Route path="/tinkio-projects/tinkio" element={<Tinkio />} />
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
 )
