@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1cead9357f3cef495f008e2182cf18c",
+    "revision": "e6b0cce86cf54b1f03e9dfe99b690a1b",
     "url": "/index.html"
   },
   {
-    "revision": "6aa959bab0f16e51c1d2",
-    "url": "/static/css/main.5e5e569f.chunk.css"
+    "revision": "b818783d5d0dead18789",
+    "url": "/static/css/main.13b737b6.chunk.css"
   },
   {
-    "revision": "7b3f3769456028261e2b",
-    "url": "/static/js/2.f6915a76.chunk.js"
+    "revision": "b5c123875d27c427d647",
+    "url": "/static/js/2.00b57711.chunk.js"
   },
   {
     "revision": "6c6de3550efe4efbe73ea374966c0981",
-    "url": "/static/js/2.f6915a76.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.00b57711.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6aa959bab0f16e51c1d2",
-    "url": "/static/js/main.b06bea62.chunk.js"
+    "revision": "b818783d5d0dead18789",
+    "url": "/static/js/main.4cb8b24f.chunk.js"
   },
   {
     "revision": "113885a85f93ea0d218e",
@@ -156,6 +156,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/img2.1b3fbf73.jpg"
   },
   {
+    "revision": "f5c1f0ef5405cc2aedcbcd6f0957d777",
+    "url": "/static/media/moonstone-lamp-img1.f5c1f0ef.jpg"
+  },
+  {
+    "revision": "a0ff93503bd2ad3107dc6d3a5de381c4",
+    "url": "/static/media/moonstone-lamp-img2.a0ff9350.jpg"
+  },
+  {
     "revision": "943f4b38183ae4e68119f12531b8b529",
     "url": "/static/media/nexus-design.943f4b38.png"
   },
@@ -178,6 +186,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "73abe20af8f2a9291b364133164a360c",
     "url": "/static/media/team.73abe20a.jpg"
+  },
+  {
+    "revision": "6de001f72100e8b3017c0f507b1ed2b0",
+    "url": "/static/media/tinkio-cover.6de001f7.jpg"
   },
   {
     "revision": "810532f40910c8f980fd91ca2d07c960",
