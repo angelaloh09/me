@@ -17,6 +17,7 @@ const Bookshelf = () => {
                 </div>
                 {[
                     {title: "How to Hide an Empire", author: "Daniel Immerwahr"},
+                    {title: "Galapagos", author: "Kurt Vonnegut"},
                     {title: "How to Win Friends and Influence People", author: "Dale Carnegie"},
                     {title: "The Toyota Production System", author: "Taiichi Ohno"},
                     {title: "Range", author: "David Epstein"},
@@ -42,7 +43,6 @@ const Bookshelf = () => {
                     {title: "Chip War", author: "Chris Miller"},
                     {title: "Ultra-processed People", author: "Chris van Tulleken"},
                     {title: "The Art of Running", author: "Andrea Marcolongo"},
-                    {title: "Galapagos", author: "Kurt Vonnegut"},
                     {title: "Elon Musk", author: "Walter Isaacson"},
                     {title: "Norwegian Wood", author: "Haruki Murakami" },
                     {title: "The Book Thief", author: "Markus Zusak"},
